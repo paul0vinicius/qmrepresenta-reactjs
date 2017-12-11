@@ -34,7 +34,7 @@ class Votacao extends Component {
 
     vota(value){
       const newState = {idVotacao: this.props.idVotacao, score: value};
-      this.setState(newState);
+      this.setState({ score:value });
       this.props.callbackParent(newState);
     }
 
