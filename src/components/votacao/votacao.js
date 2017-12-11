@@ -3,7 +3,6 @@ import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 
 class Votacao extends Component {
-
   constructor(props) {
     super(props);
     this.state = { score: 0 };
@@ -33,25 +32,24 @@ class Votacao extends Component {
     );
   }
 
+    vota(value){
+      const newState = {idVotacao: this.props.idVotacao, score: value};
+      this.setState(newState);
+      this.props.callbackParent(newState);
+    }
 
+// Declarar constantes e eliminar números mágicos (ler sobre a melhor forma de fazer isso)
     votaSim(){
-      this.setState({
-        score: 1
-      });
+      this.vota(1);
     }
 
     votaNao(){
-      this.setState({
-        score: -1
-      });
+      this.vota(-1);
     }
 
     votaNaoSei(){
-      this.setState({
-        score: 0
-      });
+      this.vota(0)
     }
-
 }
 
 export default Votacao;
