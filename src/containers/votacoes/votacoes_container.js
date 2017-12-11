@@ -6,7 +6,7 @@ class VotacoesContainer extends Component {
 
   constructor(props){
     super(props);
-    this.state = { score_total: 0, votacoes: [] };
+    this.state = { scoreTotal: 0, votacoes: [], idVotacao: 0 };
   }
 
   render() {
@@ -14,17 +14,23 @@ class VotacoesContainer extends Component {
       for(var i = 0; i < nomesVotacoes.length; i++){
         votacoes.push(<Votacao key = {nomesVotacoes[i].id_votacao}
                                idVotacao = {nomesVotacoes[i].id_votacao}
-                               nomeVotacao = {nomesVotacoes[i].nome_votacao} />);
+                               nomeVotacao = {nomesVotacoes[i].nome_votacao}
+                               callbackParent = { (newState) => this.onChildChange(newState) }
+                                />);
       }
-      return <div className="VotacoesContainer">{votacoes}</div>;
+      return <div className="VotacoesContainer">{votacoes}Id:{this.state.idVotacao}/Value:{this.state.scoreTotal}</div>;
   }
 
-  calculaScoreTotal(){
+// Mapear todas as votações pelo ID no estilo: <idVotacao>|<valorVoto>
+  onChildChange(newState){
+    // Atualizar as votações com um for e setar o novo estado com o que fora passado.
+    console.log(newState);
     this.setState({
-      votacoes: ['a']
-    });
-    console.log(this.state.votacoes);
+      scoreTotal: newState.score,
+      idVotacao: newState.idVotacao
+    })
   }
+
 }
 
 export default VotacoesContainer;
