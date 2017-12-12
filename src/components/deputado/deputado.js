@@ -3,6 +3,10 @@ import Grid from 'material-ui/Grid';
 import Avatar from 'material-ui/Avatar';
 
 class Deputado extends Component {
+  constructor(props){
+    super(props);
+    this.votacoes = props.votacoes;
+  }
 
   render() {
     return(
@@ -10,6 +14,8 @@ class Deputado extends Component {
         <Grid container className="flexGrow:1">
           <Grid item xs={12} sm={2}>
             <Avatar alt="" src={this.props.foto} />
+            <p>{this.props.idDeputado}</p>
+            <p>{this.props.score}</p>
           </Grid>
           <Grid item xs={12} sm={4}>
             {this.props.nome}
