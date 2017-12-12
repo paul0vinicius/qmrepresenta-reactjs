@@ -5,7 +5,7 @@ import Button from 'material-ui/Button';
 class Votacao extends Component {
   constructor(props) {
     super(props);
-    this.state = { score: 0 };
+    this.state = { value: 0 };
   }
 
   render(){
@@ -14,7 +14,7 @@ class Votacao extends Component {
         <Grid container className="flexGrow:1">
           <Grid item xs={12} sm={4}>
             {this.props.nomeVotacao}
-            <p>{this.state.score}</p>
+            <p>{this.state.value}</p>
           </Grid>
           <Grid item xs={2} sm={4}>
             <Button onClick={this.votaSim.bind(this)} raised color="primary">
@@ -32,9 +32,9 @@ class Votacao extends Component {
     );
   }
 
-    vota(value){
-      const newState = {idVotacao: this.props.idVotacao, score: value};
-      this.setState({ score:value });
+    vota(newValue){
+      const newState = {idVotacao: this.props.idVotacao, value: newValue};
+      this.setState({ value:newValue });
       this.props.callbackParent(newState);
     }
 
