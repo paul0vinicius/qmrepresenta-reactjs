@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import logo from './images/logo.svg';
 import './App.css';
 import Navbar from './components/navbar/navbar.js';
-import VotacoesContainer from './containers/votacoes/votacoes_container.js';
-import DeputadosContainer from './containers/deputados/deputados_container.js';
-import Grid from 'material-ui/Grid';
+import MainContainer from './containers/main/main_container.js';
 
 class App extends Component {
   render() {
@@ -22,14 +20,7 @@ class App extends Component {
           Dê sua opinião nos temas listados e os deputados serão ordenados pela semelhança com a sua opinião dada.
           Você pode também selecionar seu estado ou filtrar pelo nome.
         </p>
-        <Grid container className="flexGrow:1">
-          <Grid item xs={12} sm={8}>
-            <VotacoesContainer />
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <DeputadosContainer />
-          </Grid>
-        </Grid>
+        <MainContainer />
       </div>
     );
   }
