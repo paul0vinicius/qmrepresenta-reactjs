@@ -9,7 +9,7 @@ class DeputadosContainer extends Component {
   }
 
   render(){
-    let deputados = [];
+    var deputados = [];
 
     for(var i = 0; i < infoDeputados.length; i++){
       deputados.push(<Deputado key = {infoDeputados[i].id_deputado}
@@ -25,12 +25,12 @@ class DeputadosContainer extends Component {
 
     console.log(deputados);
 
-    // Aqui entram os tipos de ordenação que inicialmente são feitas pelo cálculo,
-    // mas existem outras variáveis influenciando.
-    // No momento tá contando só as votações iguais.
+    // Ordena por compatibilidade
     deputados.sort(function(a, b){
-      return a.props.score > b.props.score;
-    }).reverse();
+      if (a.props.score > b.props.score) return -1;
+      else if (a.props.score < b.props.score) return 1;
+      else return 0;
+    });
 
     return <div className="DeputadosContainer">{deputados}</div>;
 
@@ -38,6 +38,8 @@ class DeputadosContainer extends Component {
 
   // Modificar script para gerar JSON no formato id_dep:{id_votacao: value}. Esse for é para fazer essa transformação,
   // mas se conseguirmos modificar o script para gerar o json pronto, basta retornar as votações.
+  // Transforma um array do tipo: [{id_votacao: x, value_name: sim/nao/abstencao, tema: z, value:0/1/-1/-2}] para um
+  // dicionário do tipo: id_dep:{id_votacao: value}
   getVotacoes(){
     var todasVotacoes = {};
     for (var i = 0; i < infoDeputados.length; i++){
