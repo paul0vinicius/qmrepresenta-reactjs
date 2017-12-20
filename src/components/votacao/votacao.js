@@ -61,7 +61,7 @@ class Votacao extends Component {
 
 Votacao.propTypes = {
   /** Título da votação em questão*/
-  nomeVotacao: PropTypes.number,
+  nomeVotacao: PropTypes.string,
   /** Voto do usuário do site*/
   value: PropTypes.number,
   /** Identificador único da votação*/
