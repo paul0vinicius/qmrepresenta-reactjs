@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
+import PropTypes from 'prop-types';
 
+/**
+* Componente que armazena as informações referentes à uma votação, tais como seu nome, detalhes sobre a ementa e a
+* opinião do usuário do site. O usuário vota *sim*, *não* ou *não sei* para cada votação a fim de saber a compatibilidade
+* entre ele e os deputados.
+*/
 class Votacao extends Component {
   constructor(props) {
     super(props);
@@ -51,5 +57,15 @@ class Votacao extends Component {
       this.vota(0)
     }
 }
+
+
+Votacao.propTypes = {
+  /** Título da votação em questão*/
+  nomeVotacao: PropTypes.number,
+  /** Voto do usuário do site*/
+  value: PropTypes.number,
+  /** Identificador único da votação*/
+  idVotacao: PropTypes.number
+};
 
 export default Votacao;
