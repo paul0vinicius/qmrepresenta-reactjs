@@ -28,16 +28,19 @@ class MainContainer extends Component {
   // Cria um dicionário com chave = deputado_id e o valor = dicionário de votações
   // Percorre cada deputado, pega suas votações e verifica a similaridade das votações
   // com as escolhidas no site. Em seguida atualiza o estado com os scores dos deputados.
+  // TODO: Corrigir JSON para casos onde aparece 'obstrução'.
+  // Fórmula de compatibilidade: score(u,d) = votacoes_iguais(u,d)/total_votacoes(u,d)
   calculaCompatibilidade(newState){
     var newScoreDeputados = {};
     for (var deputado in this.todasVotacoes){
       var score = 0;
+      var ambosVotaram = 0;
       for (var idVotacao in newState){
-        if ((newState[idVotacao] === this.todasVotacoes[deputado][idVotacao]) && newState[idVotacao] != 0) {
-          score++;
-        }
+        if (newState[idVotacao] === this.todasVotacoes[deputado][idVotacao]) score++;
+        if ((newState[idVotacao] !== 0) && (this.todasVotacoes[deputado][idVotacao] !== 0)) ambosVotaram++;
       }
-      newScoreDeputados[deputado] = score;
+      if (ambosVotaram === 0) ambosVotaram = 1;
+      newScoreDeputados[deputado] = (score/ambosVotaram) * 100.0;
     }
 
     this.setState({
