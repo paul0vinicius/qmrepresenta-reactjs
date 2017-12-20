@@ -38,7 +38,7 @@ class Deputado extends Component {
 Deputado.propTypes = {
   /** Votos do deputado em cada votação.
    * O formato das votações é um array do tipo: [{id_votacao: x, value_name: sim/nao/abstencao, tema: z, value:0/1/-1/-2}]*/
-  votacoes: PropTypes.object,
+  votacoes: PropTypes.array,
   /** Nome eleitoral*/
   nome: PropTypes.string,
   /** Partido atual (Ou última filiação válida)*/
