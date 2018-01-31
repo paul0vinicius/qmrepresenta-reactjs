@@ -12,16 +12,18 @@ class MainContainer extends Component {
 
   render() {
     return(
-      <Grid container className="flexGrow:1">
-        <Grid item xs={12} sm={8}>
-          <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
+      <div>
+        <Grid container spacing={8}>
+          <Grid item xs={12} sm={8}>
+            <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
+          </Grid>
+          <Grid item xs={12} sm={3}>
+            <DeputadosContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
+                                scoreDeputados = {this.state.scoreDeputados}
+            />
+          </Grid>
         </Grid>
-        <Grid item xs={12} sm={4}>
-          <DeputadosContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
-                              scoreDeputados = {this.state.scoreDeputados}
-          />
-        </Grid>
-      </Grid>
+      </div>
     );
   }
 
