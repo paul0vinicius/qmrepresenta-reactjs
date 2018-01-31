@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Deputado from '../../components/deputado/deputado.js';
 import infoDeputados from '../../data/deputados.json';
+import Card, { CardActions, CardContent } from 'material-ui/Card';
 
 class DeputadosContainer extends Component {
 
@@ -23,7 +24,7 @@ class DeputadosContainer extends Component {
                                />);
     }
 
-    console.log(deputados);
+    //console.log(deputados);
 
     // Ordena por compatibilidade
     deputados.sort(function(a, b){
@@ -32,7 +33,16 @@ class DeputadosContainer extends Component {
       else return 0;
     });
 
-    return <div className="DeputadosContainer">{deputados}</div>;
+        var cardStyle = {
+          margin: '2%',
+          display: 'block',
+          width: '32vw',
+          transitionDuration: '0.3s',
+          height: '40vw',
+          overflow: 'auto'
+    }
+
+    return <div className="DeputadosContainer"><Card style={cardStyle}>{deputados}</Card></div>;
 
   }
 
@@ -54,7 +64,7 @@ class DeputadosContainer extends Component {
 
   componentDidMount() {
     this.props.pegaVotacoesDeputados(this.getVotacoes());
-    console.log(this.getVotacoes());
+    //console.log(this.getVotacoes());
   }
 }
 
