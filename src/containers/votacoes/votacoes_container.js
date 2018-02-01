@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Votacao from '../../components/votacao/votacao.js';
 import nomesVotacoes from '../../data/nomes_votacoes.json';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
+import IconButton from 'material-ui/IconButton';
+import ArrowBack from 'material-ui-icons/ArrowBack';
+import ArrowForward from 'material-ui-icons/ArrowForward';
 
 class VotacoesContainer extends Component {
   constructor(props){
@@ -24,7 +27,42 @@ class VotacoesContainer extends Component {
           transitionDuration: '0.3s'
     }
 
-    return <div className="VotacoesContainer"><Card style={cardStyle}>{this.state.votacaoAtual}</Card></div>;
+    return <div className="VotacoesContainer">
+            <Card style={cardStyle}>
+              {this.state.votacaoAtual}
+              {this.state.dicVotacoes[this.state.votacaoAtual.key]}
+              <IconButton aria-label="Previous" onClick={this.votacaoAnterior.bind(this)}>
+                <ArrowBack/>
+              </IconButton>
+              <IconButton aria-label="Next" onClick={this.proximaVotacao.bind(this)}>
+                <ArrowForward/>
+              </IconButton>
+            </Card>
+           </div>;
+  }
+
+  votacaoAnterior(){
+    var proxIndex = this.state.indexVotacao > 0 ? this.state.indexVotacao - 1 : 0;
+    var proxVotacao = this.state.arrVotacoes[proxIndex];
+
+    console.log(proxIndex);
+
+    this.setState({
+      indexVotacao: proxIndex,
+      votacaoAtual: proxVotacao
+    });
+  }
+
+  proximaVotacao(){
+    var proxIndex = this.state.indexVotacao < nomesVotacoes.length-1 ? this.state.indexVotacao + 1 : nomesVotacoes.length-1;
+    var proxVotacao = this.state.arrVotacoes[proxIndex];
+
+    console.log(proxIndex);
+
+    this.setState({
+      indexVotacao: proxIndex,
+      votacaoAtual: proxVotacao
+    });
   }
 
   inicializaDicionarioVotacoes(){
@@ -57,7 +95,7 @@ class VotacoesContainer extends Component {
     var votacoesNewState = this.state.dicVotacoes;
     var proxIndex = this.state.indexVotacao + 1;
     var proxVotacao = this.state.arrVotacoes[proxIndex];
-    // console.log(votacoesNewState);
+    console.log(votacoesNewState);
 
     // Atualiza dicionário
     votacoesNewState[newState.idVotacao] = newState.value;
@@ -68,6 +106,7 @@ class VotacoesContainer extends Component {
       votacaoAtual: proxVotacao
     });
     console.log(this.state.indexVotacao);
+    console.log(this.state.dicVotacoes);
     // Avisa ao componente principal (main_container) que a pessoa votou em um novo tópico.
     this.props.onVotacoesChange(votacoesNewState);
   }
