@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Deputado from '../../components/deputado/deputado.js';
 import infoDeputados from '../../data/deputados.json';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
+import ReactPaginate from 'react-paginate';
 
 class DeputadosContainer extends Component {
 
@@ -42,7 +43,19 @@ class DeputadosContainer extends Component {
           overflow: 'auto'
     }
 
-    return <div className="DeputadosContainer"><Card style={cardStyle}>{deputados}</Card></div>;
+    return <div className="DeputadosContainer">
+      <Card style={cardStyle}>{deputados}</Card>
+      <ReactPaginate previousLabel={"previous"}
+                       nextLabel={"next"}
+                       breakLabel={<a href="">...</a>}
+                       breakClassName={"break-me"}
+                       pageCount={10}
+                       marginPagesDisplayed={2}
+                       pageRangeDisplayed={5}
+                       containerClassName={"pagination"}
+                       subContainerClassName={"pages pagination"}
+                       activeClassName={"active"} />
+    </div>;
 
   }
 
