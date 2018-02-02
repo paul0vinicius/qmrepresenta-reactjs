@@ -22,9 +22,9 @@ class VotacoesContainer extends Component {
   render() {
 
         var cardStyle = {
-          margin: '2%',
-          width: '95%',
-          transitionDuration: '0.3s'
+          float: 'left',
+          width: '60%',
+          margin: '2%'
     }
 
     return <div className="VotacoesContainer">
@@ -93,17 +93,15 @@ class VotacoesContainer extends Component {
   onChildChange(newState){
     // Recupera o dicionário de votações ainda não atualizado
     var votacoesNewState = this.state.dicVotacoes;
-    var proxIndex = this.state.indexVotacao + 1;
-    var proxVotacao = this.state.arrVotacoes[proxIndex];
     console.log(votacoesNewState);
+
+    this.proximaVotacao();
 
     // Atualiza dicionário
     votacoesNewState[newState.idVotacao] = newState.value;
 
     this.setState({
-      dicVotacoes: votacoesNewState,
-      indexVotacao: proxIndex,
-      votacaoAtual: proxVotacao
+      dicVotacoes: votacoesNewState
     });
     console.log(this.state.indexVotacao);
     console.log(this.state.dicVotacoes);
