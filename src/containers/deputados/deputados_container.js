@@ -3,6 +3,7 @@ import Deputado from '../../components/deputado/deputado.js';
 import infoDeputados from '../../data/deputados.json';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import ReactPaginate from 'react-paginate';
+import Divider from 'material-ui/Divider';
 
 class DeputadosContainer extends Component {
 
@@ -35,28 +36,20 @@ class DeputadosContainer extends Component {
     });
 
         var cardStyle = {
-          margin: '2%',
-          display: 'block',
-          width: '32vw',
-          transitionDuration: '0.3s',
-          height: '40vw',
-          overflow: 'auto'
+          float: 'right',
+          overflowX: 'hidden',
+          overflowY: 'hidden',
+          width: '30%',
+          height: '95%',
+          margin: '2%'
     }
 
     return <div className="DeputadosContainer">
-      <Card style={cardStyle}>{deputados}</Card>
-      <ReactPaginate previousLabel={"previous"}
-                       nextLabel={"next"}
-                       breakLabel={<a href="">...</a>}
-                       breakClassName={"break-me"}
-                       pageCount={10}
-                       marginPagesDisplayed={2}
-                       pageRangeDisplayed={5}
-                       containerClassName={"pagination"}
-                       subContainerClassName={"pages pagination"}
-                       activeClassName={"active"} />
-    </div>;
-
+            <Card style={cardStyle}>
+              {deputados.slice(0,5)}
+              <Divider />
+            </Card>
+          </div>;
   }
 
   // Modificar script para gerar JSON no formato id_dep:{id_votacao: value}. Esse for é para fazer essa transformação,
