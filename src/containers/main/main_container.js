@@ -13,10 +13,16 @@ class MainContainer extends Component {
   render() {
     return(
       <div>
-        <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
-        <DeputadosContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
-                            scoreDeputados = {this.state.scoreDeputados}
-                            />
+        <Grid container spacing={24}>
+          <Grid item xs>
+            <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
+          </Grid>
+          <Grid item xs>
+            <DeputadosContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
+                                scoreDeputados = {this.state.scoreDeputados}
+                                />
+          </Grid>
+        </Grid>
       </div>
     );
   }
@@ -32,11 +38,12 @@ class MainContainer extends Component {
       var score = 0;
       var ambosVotaram = 0;
       for (var idVotacao in newState){
-        if (newState[idVotacao] === this.todasVotacoes[deputado][idVotacao]) score++;
+        if (newState[idVotacao] === this.todasVotacoes[deputado][idVotacao] &&
+            newState[idVotacao] !== 0) score++;
         if ((newState[idVotacao] !== 0) && (this.todasVotacoes[deputado][idVotacao] !== 0)) ambosVotaram++;
       }
       if (ambosVotaram === 0) ambosVotaram = 1;
-      newScoreDeputados[deputado] = (score/ambosVotaram) * 100.0;
+      newScoreDeputados[deputado] = score/ambosVotaram;
     }
 
     this.setState({
