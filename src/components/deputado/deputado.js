@@ -16,17 +16,18 @@ class Deputado extends Component {
   render() {
     return(
       <div className="Deputado">
-        <Grid container className="flexGrow:1">
+        <Grid container>
           <Grid item xs={12} sm={2}>
             <Avatar alt="" src={this.props.foto} />
-            <p>{this.props.idDeputado}</p>
-            <p>{this.props.score}</p>
           </Grid>
           <Grid item xs={12} sm={4}>
             {this.props.nome}
           </Grid>
           <Grid item xs={12} sm={2}>
             {this.props.partido}/{this.props.uf}
+          </Grid>
+          <Grid item xs={12} sm={2}>
+            {this.props.score}
           </Grid>
         </Grid>
       </div>
