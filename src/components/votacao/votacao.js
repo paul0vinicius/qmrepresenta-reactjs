@@ -18,18 +18,17 @@ class Votacao extends Component {
     return(
       <div className="Votacao">
         <Grid container className="flexGrow:1">
-          <Grid item xs={12} sm={4}>
+          <Grid item xs>
             {this.props.nomeVotacao}
-            <p>{this.state.value}</p>
           </Grid>
-          <Grid item xs={2} sm={4}>
-            <Button onClick={this.votaSim.bind(this)} raised color="primary">
+          <Grid item xs>
+            <Button onClick={this.votaSim.bind(this)} raised>
               Sim
             </Button>
-            <Button onClick={this.votaNaoSei.bind(this)} raised color="contrast">
+            <Button onClick={this.votaNaoSei.bind(this)} raised>
               Não sei
             </Button>
-            <Button onClick={this.votaNao.bind(this)} raised color="accent">
+            <Button onClick={this.votaNao.bind(this)} raised>
               Não
             </Button>
           </Grid>
