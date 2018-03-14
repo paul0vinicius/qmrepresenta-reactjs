@@ -46,8 +46,7 @@ class DeputadosContainer extends Component {
 
     return <div className="DeputadosContainer">
             <Card style={cardStyle}>
-              {deputados.slice(0,5)}
-              <Divider />
+              {deputados}
             </Card>
           </div>;
   }
@@ -65,6 +64,7 @@ class DeputadosContainer extends Component {
       }
       todasVotacoes[infoDeputados[i].id_deputado] = votacoes;
     }
+    console.log(todasVotacoes);
     return todasVotacoes;
   }
 
