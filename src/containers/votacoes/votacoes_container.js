@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Votacao from '../../components/votacao/votacao.js';
 import nomesVotacoes from '../../data/nomes_votacoes.json';
+import 'rc-collapse/assets/index.css';
+import Collapse, { Panel } from 'rc-collapse';
+import Card, { CardActions, CardContent } from 'material-ui/Card';
 
 class VotacoesContainer extends Component {
   constructor(props){
@@ -13,16 +16,26 @@ class VotacoesContainer extends Component {
       var votacoes = [];
       // Acho que dá pra substituir por um map
       for(var i = 0; i < nomesVotacoes.length; i++){
-        votacoes.push(<Votacao key = {nomesVotacoes[i].id_votacao}
-                               idVotacao = {nomesVotacoes[i].id_votacao}
-                               nomeVotacao = {nomesVotacoes[i].nome_votacao}
-                               callbackParent = { (newState) => this.onChildChange(newState) }
-                                />);
+        votacoes.push(
+          <Panel header={nomesVotacoes[i].nome_votacao} key={i}>
+            <Collapse defaultActiveKey="1">
+              <Votacao key = {nomesVotacoes[i].id_votacao}
+                                   idVotacao = {nomesVotacoes[i].id_votacao}
+                                   nomeVotacao = {nomesVotacoes[i].nome_votacao}
+                                   callbackParent = { (newState) => this.onChildChange(newState) }
+                                    />
+            </Collapse>
+          </Panel>
+                     );
       }
 
       return (
         <div className="VotacoesContainer">
-          {votacoes}
+          <Card>
+            <Collapse accordion={true}>
+              {votacoes}
+            </Collapse>
+          </Card>
         </div>
       );
   }
