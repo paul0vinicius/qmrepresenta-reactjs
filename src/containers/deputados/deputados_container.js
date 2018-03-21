@@ -5,6 +5,14 @@ import Card, { CardActions, CardContent } from 'material-ui/Card';
 import ReactPaginate from 'react-paginate';
 import Divider from 'material-ui/Divider';
 
+const cardStyle = {
+  margin: '3vh',
+  overflowY: 'scroll',
+  overflowX: 'hidden',
+  height: '90vh',
+  width: '50vh'
+};
+
 class DeputadosContainer extends Component {
 
   constructor(props){
@@ -34,15 +42,6 @@ class DeputadosContainer extends Component {
       else if (a.props.score < b.props.score) return 1;
       else return 0;
     });
-
-        var cardStyle = {
-          float: 'right',
-          overflowX: 'hidden',
-          overflowY: 'hidden',
-          width: '30%',
-          height: '95%',
-          margin: '2%'
-    }
 
     return <div className="DeputadosContainer">
             <Card style={cardStyle}>
