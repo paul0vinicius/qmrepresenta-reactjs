@@ -17,16 +17,16 @@ class Deputado extends Component {
     return(
       <div className="Deputado">
         <Grid container>
-          <Grid item xs={12} sm={2}>
+          <Grid item>
             <Avatar alt="" src={this.props.foto} />
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item>
             {this.props.nome}
           </Grid>
-          <Grid item xs={12} sm={2}>
+          <Grid item>
             {this.props.partido}/{this.props.uf}
           </Grid>
-          <Grid item xs={12} sm={2}>
+          <Grid item>
             {this.props.score}
           </Grid>
         </Grid>
