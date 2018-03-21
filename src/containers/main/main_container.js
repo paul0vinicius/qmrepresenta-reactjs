@@ -3,6 +3,11 @@ import VotacoesContainer from '../votacoes/votacoes_container.js';
 import DeputadosContainer from '../deputados/deputados_container.js';
 import Grid from 'material-ui/Grid';
 
+const votacoesGridStyle = {
+  textAlign: 'left',
+  margin: '3vh'
+}
+
 class MainContainer extends Component {
   constructor(props){
     super(props);
@@ -12,9 +17,10 @@ class MainContainer extends Component {
 
   render() {
     return(
-      <div>
-        <Grid container spacing={24}>
-          <Grid item xs>
+      <div className="MainContainer">
+        <Grid container spacing={12}>
+          <Grid item xs style={votacoesGridStyle}>
+            <h3>Você é a favor de ...</h3>
             <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
           </Grid>
           <Grid item xs>
