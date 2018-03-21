@@ -3,6 +3,11 @@ import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import PropTypes from 'prop-types';
 
+const voto = {
+  SIM: 1,
+  NAO: -1,
+  NAO_SEI: 0
+};
 /**
 * Componente que armazena as informações referentes à uma votação, tais como seu nome, detalhes sobre a ementa e a
 * opinião do usuário do site. O usuário vota *sim*, *não* ou *não sei* para cada votação a fim de saber a compatibilidade
@@ -45,15 +50,15 @@ class Votacao extends Component {
 
 // Declarar constantes e eliminar números mágicos (ler sobre a melhor forma de fazer isso)
     votaSim(){
-      this.vota(1);
+      this.vota(voto.SIM);
     }
 
     votaNao(){
-      this.vota(-1);
+      this.vota(voto.NAO);
     }
 
     votaNaoSei(){
-      this.vota(0)
+      this.vota(voto.NAO_SEI);
     }
 }
 
