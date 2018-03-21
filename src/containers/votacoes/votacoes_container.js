@@ -5,6 +5,15 @@ import 'rc-collapse/assets/index.css';
 import Collapse, { Panel } from 'rc-collapse';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 
+const cardStyle = {
+  overflowY: 'scroll',
+  height: '85vh'
+};
+
+const divStyle = {
+  //overflowY: 'scroll'
+};
+
 class VotacoesContainer extends Component {
   constructor(props){
     super(props);
@@ -16,12 +25,16 @@ class VotacoesContainer extends Component {
       var votacoes = [];
       // Acho que dá pra substituir por um map
       for(var i = 0; i < nomesVotacoes.length; i++){
+
+        let pergunta = nomesVotacoes[i].pergunta;
+        let voto = this.state.votacoes;
+        console.log(voto);
         votacoes.push(
-          <Panel header={nomesVotacoes[i].nome_votacao} key={i}>
+          <Panel header={pergunta} key={i}>
             <Collapse defaultActiveKey="1">
               <Votacao key = {nomesVotacoes[i].id_votacao}
                                    idVotacao = {nomesVotacoes[i].id_votacao}
-                                   nomeVotacao = {nomesVotacoes[i].nome_votacao}
+                                   nomeVotacao = {nomesVotacoes[i].descricao}
                                    callbackParent = { (newState) => this.onChildChange(newState) }
                                     />
             </Collapse>
@@ -30,8 +43,8 @@ class VotacoesContainer extends Component {
       }
 
       return (
-        <div className="VotacoesContainer">
-          <Card>
+        <div className="VotacoesContainer" style={divStyle}>
+          <Card style={cardStyle}>
             <Collapse accordion={true}>
               {votacoes}
             </Collapse>
