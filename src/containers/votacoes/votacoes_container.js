@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Votacao from '../../components/votacao/votacao.js';
+import VotacaoMobile from '../../components/votacao/votacao_mobile.js';
 import nomesVotacoes from '../../data/nomes_votacoes.json';
 import 'rc-collapse/assets/index.css';
 import Collapse, { Panel } from 'rc-collapse';
@@ -7,7 +8,7 @@ import Card, { CardActions, CardContent } from 'material-ui/Card';
 
 const cardStyle = {
   overflowY: 'scroll',
-  height: '85vh'
+  height: '82vh'
 };
 
 const divStyle = {
