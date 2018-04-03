@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import VotacoesContainer from '../votacoes/votacoes_container.js';
 import DeputadosContainer from '../deputados/deputados_container.js';
+import VotacoesMobileContainer from '../votacoes/votacoes_mobile_container.js';
 import Grid from 'material-ui/Grid';
 
 const votacoesGridStyle = {
+  textAlign: 'left',
+  margin: '3vh'
+}
+
+const deputadosGridStyle = {
   textAlign: 'left',
   margin: '3vh'
 }
@@ -21,9 +27,10 @@ class MainContainer extends Component {
         <Grid container spacing={12}>
           <Grid item xs style={votacoesGridStyle}>
             <h3>Você é a favor de ...</h3>
-            <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
+            <VotacoesMobileContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
           </Grid>
-          <Grid item xs>
+          <Grid item xs style={deputadosGridStyle}>
+            <h3>Deputados</h3>
             <DeputadosContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
                                 scoreDeputados = {this.state.scoreDeputados}
                                 />
