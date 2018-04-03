@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import Deputado from '../../components/deputado/deputado.js';
 import infoDeputados from '../../data/deputados.json';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
-import ReactPaginate from 'react-paginate';
-import Divider from 'material-ui/Divider';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const cardStyle = {
   margin: '3vh',
   overflowY: 'scroll',
   overflowX: 'hidden',
-  height: '90vh',
+  height: '82vh',
   width: '50vh'
 };
 
@@ -43,11 +42,12 @@ class DeputadosContainer extends Component {
       else return 0;
     });
 
-    return <div className="DeputadosContainer">
-            <Card style={cardStyle}>
-              {deputados}
-            </Card>
-          </div>;
+    return (
+            <div className="DeputadosContainer">
+              <Card style={cardStyle}>
+                {deputados.slice(0,10)}
+              </Card>
+            </div>);
   }
 
   // Modificar script para gerar JSON no formato id_dep:{id_votacao: value}. Esse for é para fazer essa transformação,
