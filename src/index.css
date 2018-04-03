@@ -3,3 +3,12 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.anim-appear {
+  opacity: 0.01;
+}
+
+.anim-appear.anim-appear-active{
+  opacity: 2;
+  transition: opacity 2s ease-in;
+}
