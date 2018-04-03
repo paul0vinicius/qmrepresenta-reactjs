@@ -7,9 +7,12 @@
     "material-ui-icons": "^1.0.0-beta.17",
     "rc-collapse": "^1.8.0",
     "react": "^16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
     "react-materialize": "^1.1.0",
     "react-paginate": "^5.0.0",
+    "react-progressbar": "^15.4.1",
+    "react-progressbar.js": "^0.2.0",
     "react-scripts": "1.0.17",
     "react-slick": "^0.20.0",
     "slick-carousel": "^1.8.1"
