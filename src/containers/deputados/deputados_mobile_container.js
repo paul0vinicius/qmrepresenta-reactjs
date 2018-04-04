@@ -30,7 +30,7 @@ class DeputadosMobileContainer extends DeputadosContainer {
       <div className="DeputadosMobileContainer">
         <Card style={cardStyle}>
           <Slider {...settings}>
-            {deputados.slice(0,10)}
+            {deputados.slice(0,200)}
           </Slider>
         </Card>
       </div>
