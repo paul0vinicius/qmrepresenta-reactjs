@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Deputado from '../../components/deputado/deputado.js';
 import infoDeputados from '../../data/deputados.json';
-import Card, { CardActions, CardContent } from 'material-ui/Card';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import Card from 'material-ui/Card';
 
 const cardStyle = {
   margin: '3vh',
@@ -13,10 +12,6 @@ const cardStyle = {
 };
 
 class DeputadosContainer extends Component {
-
-  constructor(props){
-    super(props);
-  }
 
   render(){
 
@@ -70,7 +65,7 @@ class DeputadosContainer extends Component {
       }
       todasVotacoes[infoDeputados[i].id_deputado] = votacoes;
     }
-    console.log(todasVotacoes);
+    //console.log(todasVotacoes);
     return todasVotacoes;
   }
 

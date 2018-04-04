@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import DeputadosMobileContainer from '../deputados/deputados_mobile_container.js';
 import VotacoesMobileContainer from '../votacoes/votacoes_mobile_container.js';
 import MainContainer from './main_container.js';

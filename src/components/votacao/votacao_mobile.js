@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Votacao from './votacao.js';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';

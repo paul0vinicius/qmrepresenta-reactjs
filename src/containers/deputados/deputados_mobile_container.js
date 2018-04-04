@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import Deputado from '../../components/deputado/deputado.js';
+import React from 'react';
 import DeputadosContainer from './deputados_container.js';
-import Card, { CardActions, CardContent } from 'material-ui/Card';
+import Card from 'material-ui/Card';
 
 const cardStyle = {
   margin: '0vh',

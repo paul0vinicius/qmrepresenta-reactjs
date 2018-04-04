@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
 import Avatar from 'material-ui/Avatar';
 import PropTypes from 'prop-types';
-import Progress from 'react-progressbar';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { withStyles } from 'material-ui/styles';
 import { LinearProgress } from 'material-ui/Progress';
 
 const styles = {
@@ -18,18 +15,6 @@ const styles = {
 * cada deputado sabe o seu nível de compatibilidade com o visitante do site através de um atributo chamado *score*.
 */
 
-//var ProgressBar = require('react-progressbar.js');
-var options = {
-            strokeWidth: 2
-        };
-
-        // For demo purposes so the container has some dimensions.
-        // Otherwise progress bar won't be shown
-        var containerStyle = {
-            width: '200px',
-            height: '200px'
-        };
-
 class Deputado extends Component {
   constructor(props){
     super(props);
@@ -37,7 +22,7 @@ class Deputado extends Component {
   }
 
   render() {
-    console.log(this.props.score*100);
+    //console.log(this.props.score*100);
     //<Progress completed={this.props.score*100} /> {this.props.score*100}
     return(
       <div className="Deputado">

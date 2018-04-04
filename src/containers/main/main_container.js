@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import VotacoesContainer from '../votacoes/votacoes_container.js';
 import DeputadosContainer from '../deputados/deputados_container.js';
-import DeputadosMobileContainer from '../deputados/deputados_mobile_container.js';
-import VotacoesMobileContainer from '../votacoes/votacoes_mobile_container.js';
 import Grid from 'material-ui/Grid';
 
 const votacoesGridStyle = {
