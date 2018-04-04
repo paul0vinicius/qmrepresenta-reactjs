@@ -20,17 +20,17 @@ class DeputadosMobileContainer extends DeputadosContainer {
     var settings = {
       className: "center",
       infinite: false,
-      centerPadding: "60px",
+      //centerPadding: "60px",
       slidesToShow: 3,
-      //slidesToScroll: 3,
-      swipeToSlide: true,
+      slidesToScroll: 3
+      //swipeToSlide: true,
         };
 
     return(
       <div className="DeputadosMobileContainer">
         <Card style={cardStyle}>
           <Slider {...settings}>
-            {deputados}
+            {deputados.slice(0,10)}
           </Slider>
         </Card>
       </div>
