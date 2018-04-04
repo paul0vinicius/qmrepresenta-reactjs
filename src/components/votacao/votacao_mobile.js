@@ -4,6 +4,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+const divStyle = {
+  //height: '40vh',
+  //widht: '10vh'
+};
+
 class VotacaoMobile extends Votacao {
 
   render(){
@@ -18,7 +23,7 @@ class VotacaoMobile extends Votacao {
         };
 
     return(
-      <div>
+      <div style={divStyle}>
         <Slider {...settings}>
           <div><h3>NAO</h3></div>
           <div><h3>{this.props.pergunta}</h3></div>
