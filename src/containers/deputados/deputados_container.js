@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Deputado from '../../components/deputado/deputado.js';
+import DeputadoMobile from '../../components/deputado/deputado_mobile.js';
 import infoDeputados from '../../data/deputados.json';
 import Card from 'material-ui/Card';
 
@@ -25,31 +26,66 @@ class DeputadosContainer extends Component {
             </div>);
   }
 
-  inicializaComponentesDeputados(){
+  inicializaComponentesDeputados(tipoClasseDeputado){
     var deputados = [];
 
     for(var i = 0; i < infoDeputados.length; i++){
-      deputados.push(<Deputado key = {infoDeputados[i].id_deputado}
-                               idDeputado = {infoDeputados[i].id_deputado}
-                               nome = {infoDeputados[i].nome}
-                               uf = {infoDeputados[i].uf}
-                               foto = {infoDeputados[i].foto}
-                               partido = {infoDeputados[i].partido}
-                               votacoes = {infoDeputados[i].votacoes}
-                               score = {this.props.scoreDeputados[infoDeputados[i].id_deputado]}
-                               />);
+      deputados.push(DeputadosContainer.buildClass(tipoClasseDeputado, infoDeputados[i], this.props.scoreDeputados[infoDeputados[i].id_deputado]));
     }
+
 
     //console.log(deputados);
 
     // Ordena por compatibilidade
-    deputados.sort(function(a, b){
-      if (a.props.score > b.props.score) return -1;
-      else if (a.props.score < b.props.score) return 1;
-      else return 0;
-    });
+    deputados.sort(DeputadosContainer.buildSort(tipoClasseDeputado));
 
     return deputados;
+  }
+
+  static buildSort(tipoClasseDeputado){
+    switch (tipoClasseDeputado) {
+      case "mobile":
+        return function(a, b){
+          //console.log(a.props.children.props.score);
+          if (a.props.children.props.score > b.props.children.props.score) return -1;
+          else if (a.props.children.props.score < b.props.children.props.score) return 1;
+          else return 0;
+        }
+      default:
+        return function(a, b){
+          if (a.props.score > b.props.score) return -1;
+          else if (a.props.score < b.props.score) return 1;
+          else return 0;
+        }
+    }
+  }
+
+  static buildClass(tipoClasseDeputado, infoDeputado, scoreDeputado){
+    switch (tipoClasseDeputado) {
+      case "mobile":
+        return <div key={infoDeputado.id_deputado} >
+                            <DeputadoMobile key = {infoDeputado.id_deputado}
+                                 idDeputado = {infoDeputado.id_deputado}
+                                 nome = {infoDeputado.nome}
+                                 uf = {infoDeputado.uf}
+                                 foto = {infoDeputado.foto}
+                                 partido = {infoDeputado.partido}
+                                 votacoes = {infoDeputado.votacoes}
+                                 score = {scoreDeputado}
+                            />
+              </div>;
+      default:
+        return <Deputado key = {infoDeputado.id_deputado}
+                                 idDeputado = {infoDeputado.id_deputado}
+                                 nome = {infoDeputado.nome}
+                                 uf = {infoDeputado.uf}
+                                 foto = {infoDeputado.foto}
+                                 partido = {infoDeputado.partido}
+                                 votacoes = {infoDeputado.votacoes}
+                                 score = {scoreDeputado}
+                                 />;
+
+    }
   }
 
   // Modificar script para gerar JSON no formato id_dep:{id_votacao: value}. Esse for é para fazer essa transformação,
