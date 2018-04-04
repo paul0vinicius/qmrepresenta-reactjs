@@ -37,7 +37,6 @@ class MainMobileContainer extends MainContainer {
       </div>
     );
   }
-
 }
 
 export default MainMobileContainer;
