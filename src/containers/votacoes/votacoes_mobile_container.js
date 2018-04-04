@@ -11,8 +11,9 @@ import Card, { CardActions, CardContent } from 'material-ui/Card';
 
 const cardStyle = {
   overflowY: 'scroll',
-  height: '40vh',
-  //widht: '40vh'
+  overflowX: 'hidden',
+  height: '70vh',
+  //widht: '20vh'
 };
 
 const divStyle = {
@@ -40,11 +41,9 @@ class VotacoesMobileContainer extends VotacoesContainer {
     }
 
     return (
-      <div className="VotacoesContainer" style={divStyle}>
         <Card style={cardStyle}>
             {votacoes}
         </Card>
-      </div>
     );
   }
 
