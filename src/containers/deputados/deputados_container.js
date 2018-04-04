@@ -19,6 +19,18 @@ class DeputadosContainer extends Component {
   }
 
   render(){
+
+    var deputados = this.inicializaComponentesDeputados();
+
+    return (
+            <div className="DeputadosContainer">
+              <Card style={cardStyle}>
+                {deputados.slice(0,10)}
+              </Card>
+            </div>);
+  }
+
+  inicializaComponentesDeputados(){
     var deputados = [];
 
     for(var i = 0; i < infoDeputados.length; i++){
@@ -42,12 +54,7 @@ class DeputadosContainer extends Component {
       else return 0;
     });
 
-    return (
-            <div className="DeputadosContainer">
-              <Card style={cardStyle}>
-                {deputados.slice(0,10)}
-              </Card>
-            </div>);
+    return deputados;
   }
 
   // Modificar script para gerar JSON no formato id_dep:{id_votacao: value}. Esse for é para fazer essa transformação,
