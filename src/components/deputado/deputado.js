@@ -2,25 +2,18 @@ import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
 import Avatar from 'material-ui/Avatar';
 import PropTypes from 'prop-types';
-import Progress from 'react-progressbar';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import { LinearProgress } from 'material-ui/Progress';
+
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+};
 
 /**
 * Componente que armazena todas as informações pessoais do deputado, tais como id, nome, partido e estado. Além disso,
 * cada deputado sabe o seu nível de compatibilidade com o visitante do site através de um atributo chamado *score*.
 */
-
-//var ProgressBar = require('react-progressbar.js');
-var options = {
-            strokeWidth: 2
-        };
-
-        // For demo purposes so the container has some dimensions.
-        // Otherwise progress bar won't be shown
-        var containerStyle = {
-            width: '200px',
-            height: '200px'
-        };
 
 class Deputado extends Component {
   constructor(props){
@@ -29,10 +22,10 @@ class Deputado extends Component {
   }
 
   render() {
-    console.log(this.props.score*100);
+    //console.log(this.props.score*100);
+    //<Progress completed={this.props.score*100} /> {this.props.score*100}
     return(
       <div className="Deputado">
-      <ReactCSSTransitionGroup transitionName="anim" transitionAppear={true} transitionAppearTimeout={1000} transitionEnter={false} transitionLeave={false}>
         <Grid container>
           <Grid item>
             <Avatar alt="" src={this.props.foto} />
@@ -44,10 +37,11 @@ class Deputado extends Component {
             {this.props.partido}/{this.props.uf}
           </Grid>
           <Grid item sm={6}>
-            <Progress completed={this.props.score*100} /> {this.props.score*100}
+            <div className={styles.root}>
+              <LinearProgress variant="determinate" value={this.props.score*100} />
+            </div>
           </Grid>
         </Grid>
-        </ReactCSSTransitionGroup>
       </div>
     );
   }
