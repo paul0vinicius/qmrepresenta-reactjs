@@ -23,10 +23,10 @@ class Votacao extends Component {
     return(
       <div className="Votacao">
         <Grid container className="flexGrow:1">
-          <Grid item xs>
-            {this.props.nomeVotacao}
+          <Grid item md lg>
+            {this.props.descricao}
           </Grid>
-          <Grid item xs>
+          <Grid item md lg>
             <Button onClick={this.votaSim.bind(this)} raised>
               Sim
             </Button>
@@ -64,7 +64,11 @@ class Votacao extends Component {
 
 
 Votacao.propTypes = {
-  /** Título da votação em questão*/
+  /** Descrição da votação em questão*/
+  descricao: PropTypes.string,
+  /** Pergunta da votação em questão*/
+  pergunta: PropTypes.string,
+  /** Título da votação*/
   nomeVotacao: PropTypes.string,
   /** Voto do usuário do site*/
   value: PropTypes.number,
