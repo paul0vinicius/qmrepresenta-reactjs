@@ -3,27 +3,68 @@ import Deputado from '../../components/deputado/deputado.js';
 import DeputadoMobile from '../../components/deputado/deputado_mobile.js';
 import infoDeputados from '../../data/deputados.json';
 import Card from 'material-ui/Card';
+import Tabs, { Tab } from 'material-ui/Tabs';
+import PhoneIcon from 'material-ui-icons/Phone';
+import FavoriteIcon from 'material-ui-icons/Favorite';
+import PersonPinIcon from 'material-ui-icons/PersonPin';
+import Paper from 'material-ui/Paper';
+import Typography from 'material-ui/Typography';
+
+function TabContainer(props) {
+  return (
+    <Typography>
+      {props.children}
+    </Typography>
+  );
+}
 
 const cardStyle = {
-  margin: '1vh',
   overflowY: 'scroll',
   overflowX: 'hidden',
-  height: '82vh',
+  height: '73vh',
   width: '50vh'
 };
 
 class DeputadosContainer extends Component {
 
+  state = {
+    value: 0,
+  };
+
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
+
   render(){
 
     var deputados = this.inicializaComponentesDeputados();
 
-    return (
-            <div className="DeputadosContainer">
+
+      // <div className="DeputadosContainer">
+      //   <Card style={cardStyle}>
+      //     {deputados.slice(0,200)}
+      //   </Card>
+      // </div>
+    return (<div className="DeputadosContainer">
+            <Paper style={{ width: '50vh' }}>
+              <Tabs
+                value={this.state.value}
+                onChange={this.handleChange}
+                fullWidth
+                indicatorColor="primary"
+                textColor="primary"
+              >
+                <Tab icon={<PhoneIcon />} label="DEPUTADOS" />
+                <Tab icon={<FavoriteIcon />} label="PARTIDOS" />
+              </Tabs>
+            </Paper>
+            {this.state.value === 0 && <TabContainer>
               <Card style={cardStyle}>
-                {deputados.slice(0,200)}
-              </Card>
-            </div>);
+                 {deputados.slice(0,100)}
+              </Card></TabContainer>}
+            {this.state.value === 1 && <TabContainer>Item Two</TabContainer>}
+            </div>
+            );
   }
 
   inicializaComponentesDeputados(tipoClasseDeputado){
