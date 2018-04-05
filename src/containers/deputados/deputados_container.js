@@ -5,7 +5,7 @@ import infoDeputados from '../../data/deputados.json';
 import Card from 'material-ui/Card';
 
 const cardStyle = {
-  margin: '3vh',
+  margin: '1vh',
   overflowY: 'scroll',
   overflowX: 'hidden',
   height: '82vh',
@@ -21,7 +21,7 @@ class DeputadosContainer extends Component {
     return (
             <div className="DeputadosContainer">
               <Card style={cardStyle}>
-                {deputados.slice(0,10)}
+                {deputados.slice(0,200)}
               </Card>
             </div>);
   }
