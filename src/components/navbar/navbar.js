@@ -1,23 +1,48 @@
-import React, { Component } from 'react';
-import './navbar.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import AppBar from 'material-ui/AppBar';
+import Toolbar from 'material-ui/Toolbar';
+import Typography from 'material-ui/Typography';
+import Button from 'material-ui/Button';
+import IconButton from 'material-ui/IconButton';
+import TemporaryDrawer from '../../containers/menu_lateral/menu_lateral.js';
 
-class Navbar extends Component {
-  render(){
-    return(
-      <div id="navigation" className="Navigation">
-        <nav>
-          <ul>
-            <li>Deputados</li>
-            <li>Cálculo</li>
-            <li>QMR na mídia</li>
-            <li>House of Cunha</li>
-            <li>Sobre</li>
-            <li>Facebook</li>
-          </ul>
-        </nav>
-      </div>
-    );
-  }
+// é para ser um container
+
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  flex: {
+    flex: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+};
+
+function ButtonAppBar(props) {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+            <TemporaryDrawer />
+          </IconButton>
+          <Typography variant="title" color="inherit" className={classes.flex}>
+            Quem me Representa?
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
 
-export default Navbar;
+ButtonAppBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(ButtonAppBar);
