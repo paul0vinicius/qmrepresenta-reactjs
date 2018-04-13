@@ -10,7 +10,7 @@ class FacebookContainer extends Component {
 
   render(){
     return (
-      <div>Espaço reservado para o campo de Cálculo da compatibilidade.</div>
+      <div>Espaço reservado para o campo de divulgação no Facebook.</div>
     );
   }
 }
