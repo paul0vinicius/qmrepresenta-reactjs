@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import VotacoesContainer from '../votacoes/votacoes_container.js';
 import DeputadosContainer from '../deputados/deputados_container.js';
-import ButtonAppBar from '../../components/navbar/navbar.js';
 import Grid from 'material-ui/Grid';
+import MiniDrawer from '../../containers/menu_lateral/menu_lateral.js';
 
 const votacoesGridStyle = {
   textAlign: 'left',
@@ -25,9 +25,6 @@ class MainContainer extends Component {
     return(
       <div className="MainContainer">
         <Grid container spacing={0}>
-          <Grid item xs={12} sm={12} md={12} lg={12}>
-            <ButtonAppBar/>
-          </Grid>
           <Grid item xs={12} sm md lg style={votacoesGridStyle}>
             <h3>Você é a favor de ...</h3>
             <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
