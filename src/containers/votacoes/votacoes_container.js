@@ -17,7 +17,7 @@ import ThumbUp from 'material-ui-icons/ThumbUp';
 
 const cardStyle = {
   overflowY: 'scroll',
-  height: '82vh',
+  height: '80vh',
   //width: '50vh'
 };
 
@@ -49,15 +49,6 @@ class VotacoesContainer extends Component {
     var votacoesInicializadas = this.inicializaDicionarioVotacoes();
     this.state = { votacoes: votacoesInicializadas };
   }
-    state = {
-    expanded: null,
-  };
-
-  handleChange = panel => (event, expanded) => {
-    this.setState({
-      expanded: expanded ? panel : false,
-    });
-  };
 
   render() {
       const { classes } = this.props;
@@ -77,22 +68,7 @@ class VotacoesContainer extends Component {
                               />;
         //let voto = this.state.votacoes;
         //console.log(voto);
-        votacoes.push(
-          <ExpansionPanel key={i} expanded={expanded === 'panel'+i} onChange={this.handleChange('panel'+i)}>
-          <ExpansionPanelSummary style={styles.voting} expandIcon={<ExpandMoreIcon />}>
-          <Typography className={styles.heading}></Typography>
-          <Typography className={styles.secondaryHeading}>
-            {pergunta}
-          </Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Typography onClick={this.handleChange('panel'+i)}>
-              {votacao}
-            </Typography>
-          </ExpansionPanelDetails>
-          </ExpansionPanel>
-                     );
-         console.log({votacao});
+        votacoes.push(votacao);
       }
 
 

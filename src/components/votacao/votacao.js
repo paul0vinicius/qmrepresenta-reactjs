@@ -3,11 +3,22 @@ import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import PropTypes from 'prop-types';
 
+import { withStyles } from 'material-ui/styles';
+import ExpansionPanel, {
+  ExpansionPanelDetails,
+  ExpansionPanelSummary,
+} from 'material-ui/ExpansionPanel';
+import Typography from 'material-ui/Typography';
+import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
+import ThumbUp from 'material-ui-icons/ThumbUp';
+import ControlledExpansionPanels from './expansion_panel.js';
+
 const voto = {
   SIM: 1,
   NAO: -1,
   NAO_SEI: 0
 };
+
 /**
 * Componente que armazena as informações referentes à uma votação, tais como seu nome, detalhes sobre a ementa e a
 * opinião do usuário do site. O usuário vota *sim*, *não* ou *não sei* para cada votação a fim de saber a compatibilidade
@@ -20,25 +31,30 @@ class Votacao extends Component {
   }
 
   render(){
-    return(
-      <div className="Votacao">
-        <Grid container className="flexGrow:1">
-          <Grid item md lg>
-            {this.props.descricao}
-          </Grid>
-          <Grid item md lg>
-            <Button onClick={this.votaSim.bind(this)} raised>
-              Sim
-            </Button>
-            <Button onClick={this.votaNaoSei.bind(this)} raised>
-              Não sei
-            </Button>
-            <Button onClick={this.votaNao.bind(this)} raised>
-              Não
-            </Button>
-          </Grid>
+    let votacao = <div className="Votacao">
+      <Grid container className="flexGrow:1">
+        <Grid item md lg>
+          {this.props.descricao}
         </Grid>
-      </div>
+        <Grid item md lg>
+          <Button onClick={this.votaSim.bind(this)} raised>
+            Sim
+          </Button>
+          <Button onClick={this.votaNaoSei.bind(this)} raised>
+            Não sei
+          </Button>
+          <Button onClick={this.votaNao.bind(this)} raised>
+            Não
+          </Button>
+        </Grid>
+      </Grid>
+    </div>;
+
+    return(
+      <ControlledExpansionPanels votacao = {votacao}
+                                 pergunta = {this.props.pergunta}
+                                 valorVoto = {this.state.value}
+      />
     );
   }
 
