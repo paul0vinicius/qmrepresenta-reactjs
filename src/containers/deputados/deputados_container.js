@@ -21,8 +21,8 @@ function TabContainer(props) {
 const cardStyle = {
   overflowY: 'scroll',
   overflowX: 'hidden',
-  height: '73vh',
-  width: '50vh'
+  height: '71vh',
+  //width: '50vh'
 };
 
 class DeputadosContainer extends Component {
@@ -46,7 +46,7 @@ class DeputadosContainer extends Component {
       //   </Card>
       // </div>
     return (<div className="DeputadosContainer">
-            <Paper style={{ width: '50vh' }}>
+            <Paper>
               <Tabs
                 value={this.state.value}
                 onChange={this.handleChange}
