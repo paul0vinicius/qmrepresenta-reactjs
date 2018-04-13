@@ -28,8 +28,25 @@ function HomeIcon(props) {
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
       </SvgIcon>
     );
-  }
+}
 
+// Not functional yet
+function createSection(link, key, sectionTitle, icon){
+  return(
+    <Link to={link} style={{ textDecoration: 'none' }}>
+      <div key={key}>
+        <ListItem button>
+          <ListItemIcon>
+            {icon}
+          </ListItemIcon>
+          <ListItemText primary={sectionTitle} />
+        </ListItem>
+      </div>
+    </Link>
+  );
+}
+
+// Criar componente para renderizar cada babado
 export const sideList = (
   <div>
       <Link to='/' style={{ textDecoration: 'none' }}>
@@ -38,27 +55,67 @@ export const sideList = (
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary="Quem Me Representa?" />
+            <ListItemText primary="QMR" />
           </ListItem>
         </div>
       </Link>
-      <Divider />
-      <div key="visualizacoes">
+      <Link to='/analises' style={{ textDecoration: 'none' }}>
+        <div key="analises">
+          <ListItem button>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Análises" />
+          </ListItem>
+        </div>
+      </Link>
+    <Link to='/calculo' style={{ textDecoration: 'none' }}>
+      <div key="calculo">
         <ListItem button>
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <ListItemText primary="Visualizações" />
+          <ListItemText primary="Cálculo" />
         </ListItem>
       </div>
-    <Divider />
+    </Link>
+    <Link to='/qmr_na_midia' style={{ textDecoration: 'none' }}>
+      <div key="qmr_na_midia">
+        <ListItem button>
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText primary="QMR Na Mídia" />
+        </ListItem>
+      </div>
+    </Link>
+    <Link to='/house_of_cunha' style={{ textDecoration: 'none' }}>
+      <div key="house_of_cunha">
+        <ListItem button>
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText primary="House Of Cunha" />
+        </ListItem>
+      </div>
+    </Link>
     <Link to='/about' style={{ textDecoration: 'none' }}>
       <div key="about">
         <ListItem button>
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <ListItemText primary="About" />
+          <ListItemText primary="Sobre" />
+        </ListItem>
+      </div>
+    </Link>
+    <Link to='/facebook' style={{ textDecoration: 'none' }}>
+      <div key="facebook">
+        <ListItem button>
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <ListItemText primary="Facebook" />
         </ListItem>
       </div>
     </Link>
