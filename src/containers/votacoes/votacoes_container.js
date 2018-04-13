@@ -38,6 +38,9 @@ const styles = theme => ({
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
   },
+  voting: {
+    //backgroundColor: (${})
+  }
 });
 
 class VotacoesContainer extends Component {
@@ -75,8 +78,8 @@ class VotacoesContainer extends Component {
         //let voto = this.state.votacoes;
         //console.log(voto);
         votacoes.push(
-          <ExpansionPanel expanded={expanded === 'panel'+i} onChange={this.handleChange('panel'+i)}>
-          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <ExpansionPanel key={i} expanded={expanded === 'panel'+i} onChange={this.handleChange('panel'+i)}>
+          <ExpansionPanelSummary style={styles.voting} expandIcon={<ExpandMoreIcon />}>
           <Typography className={styles.heading}></Typography>
           <Typography className={styles.secondaryHeading}>
             {pergunta}
@@ -89,7 +92,10 @@ class VotacoesContainer extends Component {
           </ExpansionPanelDetails>
           </ExpansionPanel>
                      );
+         console.log({votacao});
       }
+
+
 
       return (
         <div className={styles.root}>
