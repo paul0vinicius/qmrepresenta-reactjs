@@ -10,7 +10,7 @@ class AboutContainer extends Component {
 
   render(){
     return (
-      <div>a</div>
+      <div>Espaço reservado para o campo Sobre.</div>
     );
   }
 }
