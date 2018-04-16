@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import VotacoesContainer from '../votacoes/votacoes_container.js';
-import DeputadosContainer from '../deputados/deputados_container.js';
+import VotacoesContainer from '../votacoes/VotacoesContainer.js';
+import DeputadosContainer from '../deputados/DeputadosContainer.js';
 import Grid from 'material-ui/Grid';
-import MiniDrawer from '../../containers/menu_lateral/menu_lateral.js';
+import MiniDrawer from '../../containers/menu_lateral/SideBar.js';
 
 const votacoesGridStyle = {
   textAlign: 'left',

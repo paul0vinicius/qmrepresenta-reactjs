@@ -12,8 +12,8 @@ import IconButton from 'material-ui/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import MainContainer from '../main/main_container.js';
-import { sideList } from './menu_sections.js';
+import MainContainer from '../main/MainContainer.js';
+import { sideList } from './MenuSections.js';
 
 const drawerWidth = 240;
 

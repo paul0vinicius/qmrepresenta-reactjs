@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import MainContainer from './main_container.js';
-import AnalisesContainer from '../analises/analises_container.js';
-import AboutContainer from '../about/about_container.js';
-import CalculoContainer from '../calculo/calculo_container.js';
-import QMRNaMidiaContainer from '../qmr_na_midia/qmr_na_midia_container.js';
-import HouseOfCunhaContainer from '../houseofcunha/houseofcunhacontainer.js';
-import FacebookContainer from '../facebook/facebook_container.js';
+import MainContainer from './MainContainer.js';
+import AnalisesContainer from '../analises/AnalisesContainer.js';
+import AboutContainer from '../about/AboutContainer.js';
+import CalculoContainer from '../calculo/CalculoContainer.js';
+import QMRNaMidiaContainer from '../qmr_na_midia/QMRNaMidiaContainer.js';
+import HouseOfCunhaContainer from '../houseofcunha/HouseOfCunhaContainer.js';
+import FacebookContainer from '../facebook/FacebookContainer.js';
 
-const Main = () => (
+const DesktopRouter = () => (
   <main>
     <Switch>
       <Route exact path='/' component={MainContainer}/>
@@ -22,4 +22,4 @@ const Main = () => (
   </main>
 )
 
-export default Main;
+export default DesktopRouter;

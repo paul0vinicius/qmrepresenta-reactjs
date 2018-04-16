@@ -11,7 +11,7 @@ import ExpansionPanel, {
 import Typography from 'material-ui/Typography';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import ThumbUp from 'material-ui-icons/ThumbUp';
-import ControlledExpansionPanels from './expansion_panel.js';
+import ControlledExpansionPanels from './ExpansionPanel.js';
 
 const voto = {
   SIM: 1,
