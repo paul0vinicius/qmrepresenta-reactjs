@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-//import logo from './images/logo.svg';
 import './App.css';
-import ButtonAppBar from './containers/app_bar/app_bar.js';
-import MainContainer from './containers/main/main_container.js';
-import Main from './containers/main/main.js';
-import MainMobileContainer from './containers/main/main_mobile_container.js';
-import MiniDrawer from './containers/menu_lateral/menu_lateral.js';
+import MainContainer from './desktop-view/containers/main/MainContainer.js';
+import DesktopRouter from './desktop-view/containers/main/DesktopRouter.js';
+import MiniDrawer from './desktop-view/containers/menu_lateral/SideBar.js';
 
 class App extends Component {
 
@@ -19,7 +16,7 @@ class App extends Component {
   componentWillMount() {
     window.addEventListener('resize', this.handleWindowSizeChange);
   }
-  
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowSizeChange);
   }
@@ -32,7 +29,8 @@ class App extends Component {
     const { width } = this.state;
     const isMobile = width <= 500;
 
-    var mainC = isMobile ? <MainMobileContainer /> : <Main />;
+    //var mainC = isMobile ? <MainMobileContainer /> : <Main />;
+    var mainC = <DesktopRouter />;
 
     return (
       <div className="App">
