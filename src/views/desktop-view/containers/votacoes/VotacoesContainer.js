@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Votacao from '../../components/votacao/Votacao.js';
 //import VotacaoMobile from '../../components/votacao/votacao_mobile.js';
-import nomesVotacoes from '../../../data/nomes_votacoes.json';
+import nomesVotacoes from '../../../../data/nomes_votacoes.json';
 import 'rc-collapse/assets/index.css';
 import Collapse, { Panel } from 'rc-collapse';
 import Card from 'material-ui/Card';

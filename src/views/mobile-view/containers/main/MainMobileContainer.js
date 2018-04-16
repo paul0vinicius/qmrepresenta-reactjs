@@ -1,8 +1,8 @@
-import React from 'react';
-import DeputadosMobileContainer from '../deputados/deputados_mobile_container.js';
-import VotacoesMobileContainer from '../votacoes/votacoes_mobile_container.js';
-import MainContainer from './main_container.js';
+import React, { Component } from 'react';
+import DeputadosMobileContainer from '../deputados/DeputadosMobileContainer.js';
+import VotacoesMobileContainer from '../votacoes/VotacoesMobileContainer.js';
 import Grid from 'material-ui/Grid';
+import MainContainer from '../../../desktop-view/containers/main/MainContainer.js';
 
 const votacoesGridStyle = {
   textAlign: 'center',

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Deputado from '../desktop-view/components/deputado/Deputado.js';
-import DeputadoMobile from '../mobile-view/components/deputado/DeputadoMobile.js';
+import Deputado from '../views/desktop-view/components/deputado/Deputado.js';
+import DeputadoMobile from '../views/mobile-view/components/deputado/DeputadoMobile.js';
 import infoDeputados from '../data/deputados.json';
 
 class DeputadoFactory extends Component {

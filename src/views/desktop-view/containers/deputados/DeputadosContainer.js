@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DeputadoFactory from '../../../factories/DeputadoFactory.js';
-import infoDeputados from '../../../data/deputados.json';
+import DeputadoFactory from '../../../../factories/DeputadoFactory.js';
+import infoDeputados from '../../../../data/deputados.json';
 import Card from 'material-ui/Card';
 import TabsContainer from './TabsContainer.js';
 

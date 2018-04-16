@@ -1,5 +1,5 @@
-import React from 'react';
-import Votacao from './votacao.js';
+import React, { Component } from 'react';
+import Votacao from '../../../desktop-view/components/votacao/Votacao.js';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
