@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import MainContainer from './desktop-view/containers/main/MainContainer.js';
-import DesktopRouter from './desktop-view/containers/main/DesktopRouter.js';
-import MiniDrawer from './desktop-view/containers/menu_lateral/SideBar.js';
+import MainContainer from './views/desktop-view/containers/main/MainContainer.js';
+import DesktopRouter from './views/desktop-view/containers/main/DesktopRouter.js';
+import MobileRouter from './views/mobile-view/containers/main/MobileRouter.js';
+import MiniDrawer from './views/desktop-view/containers/menu_lateral/SideBar.js';
+import SwipeableSideBar from './views/mobile-view/containers/menu_lateral/SwipeableSideBar.js';
 
 class App extends Component {
 
@@ -29,12 +31,14 @@ class App extends Component {
     const { width } = this.state;
     const isMobile = width <= 500;
 
-    //var mainC = isMobile ? <MainMobileContainer /> : <Main />;
-    var mainC = <DesktopRouter />;
+    var desktopView = <DesktopRouter />;
+    var mobileView = <MobileRouter />;
+    var view = isMobile ? <SwipeableSideBar /> : <MiniDrawer main={desktopView} />;
+    //var mainC = <DesktopRouter />;
 
     return (
       <div className="App">
-        <MiniDrawer main={mainC}/>
+        {view}
       </div>
       );
   }
