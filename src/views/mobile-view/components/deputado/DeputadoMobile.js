@@ -1,5 +1,4 @@
-import React from 'react';
-import Deputado from './deputado.js';
+import React, { Component } from 'react';
 import Avatar from 'material-ui/Avatar';
 import PropTypes from 'prop-types';
 import { CircularProgress } from 'material-ui/Progress';
@@ -24,7 +23,7 @@ const containerStyle = {
   marginLeft: '1vh'
 }
 
-class DeputadoMobile extends Deputado{
+class DeputadoMobile extends Component {
 
   render(){
 
@@ -44,7 +43,6 @@ class DeputadoMobile extends Deputado{
           </Grid>
           <Grid item xs={12}>
             <div className={styles.root}>
-
             </div>
           </Grid>
         </Grid>

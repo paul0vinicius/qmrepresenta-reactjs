@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import VotacoesContainer from '../votacoes/votacoes_container.js';
-import DeputadosContainer from '../deputados/deputados_container.js';
+import VotacoesContainer from '../votacoes/VotacoesContainer.js';
+import DeputadosContainer from '../deputados/DeputadosContainer.js';
 import Grid from 'material-ui/Grid';
+import MiniDrawer from '../../containers/menu_lateral/SideBar.js';
 
 const votacoesGridStyle = {
   textAlign: 'left',
-  margin: '3vh'
+  marginLeft: '0vh'
 }
 
 const deputadosGridStyle = {
   textAlign: 'left',
-  margin: '3vh',
+  marginLeft: '0vh',
 }
 
 class MainContainer extends Component {
@@ -23,13 +24,11 @@ class MainContainer extends Component {
   render() {
     return(
       <div className="MainContainer">
-        <Grid container spacing={12}>
-          <Grid item xs style={votacoesGridStyle}>
-            <h3>Você é a favor de ...</h3>
+        <Grid container spacing={24}>
+          <Grid item xs={12} sm={8} md={8} lg={8} style={votacoesGridStyle}>
             <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
           </Grid>
-          <Grid item xs style={deputadosGridStyle}>
-            <h3>Deputados</h3>
+          <Grid item xs={12} sm={4} md={4} lg={4} style={deputadosGridStyle}>
             <DeputadosContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
                                 scoreDeputados = {this.state.scoreDeputados}
                                 />
