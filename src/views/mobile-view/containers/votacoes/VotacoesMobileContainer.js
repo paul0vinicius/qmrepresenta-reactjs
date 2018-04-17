@@ -8,7 +8,7 @@ const cardStyle = {
   overflowY: 'scroll',
   overflowX: 'hidden',
   height: '70vh',
-  //widht: '20vh'
+  margin: '1vh',
 };
 
 // const divStyle = {
@@ -28,7 +28,8 @@ class VotacoesMobileContainer extends VotacoesContainer {
       votacoes.push(
             <VotacaoMobile key = {nomesVotacoes[i].id_votacao}
                                  idVotacao = {nomesVotacoes[i].id_votacao}
-                                 nomeVotacao = {nomesVotacoes[i].descricao}
+                                 descricao = {nomesVotacoes[i].descricao}
+                                 nomeVotacao = {nomesVotacoes[i].nome_votacao}
                                  pergunta = {nomesVotacoes[i].pergunta}
                                  callbackParent = { (newState) => this.onChildChange(newState) }
                                   />
