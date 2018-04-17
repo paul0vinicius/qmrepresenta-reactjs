@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import DeputadoFactory from '../../../../factories/DeputadoFactory.js';
+import DeputadosContainer from '../../../desktop-view/containers/deputados/DeputadosContainer.js';
 
 const cardStyle = {
   margin: '0vh',
@@ -13,7 +14,7 @@ const cardStyle = {
   //width: '60vh'
 };
 
-class DeputadosMobileContainer extends Component {
+class DeputadosMobileContainer extends DeputadosContainer {
 
   render(){
     var deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados);
