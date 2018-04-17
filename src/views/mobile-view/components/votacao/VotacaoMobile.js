@@ -1,31 +1,11 @@
 import React, { Component } from 'react';
 import Votacao from '../../../desktop-view/components/votacao/Votacao.js';
 import Slider from 'react-slick';
+import ControlledExpansionPanelsMobile from './ExpansionPanelMobile.js';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-const divStyle = {
-  //height: '40vh',
-  //widht: '10vh'
-};
-
-const divQuestionStyle = {
-  //height: '40vh',
-  //widht: '10vh'
-  //backgroundColor: "gray"
-};
-
-const divYesStyle = {
-  //height: '40vh',
-  //widht: '10vh'
-  backgroundColor: "rgba(152,251,152,0.4)"
-};
-
-const divNoStyle = {
-  //height: '40vh',
-  //widht: '10vh'
-  backgroundColor: "rgba(250,128,114,0.4)"
-};
+import Grid from 'material-ui/Grid';
+import Button from 'material-ui/Button';
 
 class VotacaoMobile extends Votacao {
 
@@ -43,12 +23,17 @@ class VotacaoMobile extends Votacao {
           beforeChange: (oldIndex, newIndex) => this.onChildChange(newIndex)
         };
 
+    var painel = <ControlledExpansionPanelsMobile pergunta = {this.props.pergunta}
+                                                  valorVoto = {this.state.value}
+                                                  descricao = {this.props.descricao}
+        />;
+
     return(
-      <div style={divStyle}>
+      <div>
         <Slider {...settings}>
-          <div style={divNoStyle}><h3>{this.props.pergunta}</h3></div>
-          <div style={divQuestionStyle}><h3>{this.props.pergunta}</h3></div>
-          <div style={divYesStyle}><h3>{this.props.pergunta}</h3></div>
+          <div>{painel}</div>
+          <div>{painel}</div>
+          <div>{painel}</div>
         </Slider>
       </div>
     );
