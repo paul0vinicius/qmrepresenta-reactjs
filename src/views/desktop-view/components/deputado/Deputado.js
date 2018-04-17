@@ -3,11 +3,14 @@ import Grid from 'material-ui/Grid';
 import Avatar from 'material-ui/Avatar';
 import PropTypes from 'prop-types';
 import { LinearProgress } from 'material-ui/Progress';
+import Card from 'material-ui/Card';
 
 const styles = {
-  root: {
-    flexGrow: 1,
-  },
+  height: '0.4vh'
+};
+
+const deputadoStyle = {
+  margin: '0.4vh'
 };
 
 /**
@@ -25,23 +28,25 @@ class Deputado extends Component {
     //console.log(this.props.score*100);
     //<Progress completed={this.props.score*100} /> {this.props.score*100}
     return(
-      <div className="Deputado">
+      <div className="Deputado" style={deputadoStyle}>
+        <Card>
         <Grid container>
-          <Grid item>
-            <Avatar alt="" src={this.props.foto} />
-          </Grid>
-          <Grid item>
-            {this.props.nome}
-          </Grid>
-          <Grid item>
-            {this.props.partido}/{this.props.uf}
-          </Grid>
-          <Grid item sm={6}>
-            <div className={styles.root}>
-              <LinearProgress variant="determinate" value={this.props.score*100} />
+          <Grid item xs sm md={12} lg={12}>
+            <div>
+              <LinearProgress variant="determinate" style={styles} value={this.props.score*100} />
             </div>
           </Grid>
+          <Grid item xs sm md lg>
+            <Avatar alt="" src={this.props.foto} />
+          </Grid>
+          <Grid item xs sm md lg>
+            {this.props.nome}
+          </Grid>
+          <Grid item xs sm md lg>
+            {this.props.partido}/{this.props.uf}
+          </Grid>
         </Grid>
+        </Card>
       </div>
     );
   }

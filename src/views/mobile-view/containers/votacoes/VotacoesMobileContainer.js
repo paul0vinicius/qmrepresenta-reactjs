@@ -1,8 +1,8 @@
-import React from 'react';
-import VotacoesContainer from './votacoes_container.js';
-import VotacaoMobile from '../../components/votacao/votacao_mobile.js';
-import nomesVotacoes from '../../data/nomes_votacoes.json';
+import React, { Component } from 'react';
+import VotacaoMobile from '../../components/votacao/VotacaoMobile.js';
+import nomesVotacoes from '../../../../data/nomes_votacoes.json';
 import Card from 'material-ui/Card';
+import VotacoesContainer from '../../../desktop-view/containers/votacoes/VotacoesContainer.js';
 
 const cardStyle = {
   overflowY: 'scroll',
