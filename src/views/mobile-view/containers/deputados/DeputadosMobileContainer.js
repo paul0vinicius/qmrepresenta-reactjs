@@ -8,9 +8,7 @@ import DeputadosContainer from '../../../desktop-view/containers/deputados/Deput
 
 const cardStyle = {
   margin: '0vh',
-  overflowY: 'scroll',
-  overflowX: 'hidden',
-  height: '22vh',
+  height: '28vh',
   //width: '60vh'
 };
 
@@ -22,8 +20,8 @@ class DeputadosMobileContainer extends DeputadosContainer {
       className: "center",
       infinite: false,
       //centerPadding: "60px",
-      slidesToShow: 3,
-      slidesToScroll: 3
+      slidesToShow: 1,
+      slidesToScroll: 1
       //swipeToSlide: true,
         };
 
@@ -31,7 +29,7 @@ class DeputadosMobileContainer extends DeputadosContainer {
       <div className="DeputadosMobileContainer">
         <Card style={cardStyle}>
           <Slider {...settings}>
-            {deputados.slice(0,50)}
+            {deputados.slice(0,20)}
           </Slider>
         </Card>
       </div>
