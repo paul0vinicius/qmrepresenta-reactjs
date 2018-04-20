@@ -17,7 +17,7 @@ const deputadosGridStyle = {
 class MainContainer extends Component {
   constructor(props){
     super(props);
-    this.state = { scoreDeputados: {} };
+    this.state = { scoreDeputados: {}};
     this.todasVotacoes = {};
   }
 
@@ -45,16 +45,25 @@ class MainContainer extends Component {
   // Fórmula de compatibilidade: score(u,d) = votacoes_iguais(u,d)/total_votacoes(u,d)
   calculaCompatibilidade(newState){
     var newScoreDeputados = {};
+    var newIsPoucoVoto = {};
     for (var deputado in this.todasVotacoes){
       var score = 0;
+      var antiScore = 0;
       var ambosVotaram = 0;
+      var nVotacoesDep = 0;
+      var nVotacoesUser = 0;
       for (var idVotacao in newState){
         if (newState[idVotacao] === this.todasVotacoes[deputado][idVotacao] &&
             newState[idVotacao] !== 0) score++;
+        else if(newState[idVotacao] !== this.todasVotacoes[deputado][idVotacao] &&
+            newState[idVotacao] !== 0) antiScore++;
         if ((newState[idVotacao] !== 0) && (this.todasVotacoes[deputado][idVotacao] !== 0)) ambosVotaram++;
+        if(newState[idVotacao] !== 0) nVotacoesUser++;
       }
       if (ambosVotaram === 0) ambosVotaram = 1;
       newScoreDeputados[deputado] = score/ambosVotaram;
+
+      //console.log(antiScore);
     }
 
     this.setState({
