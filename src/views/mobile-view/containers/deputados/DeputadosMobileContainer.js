@@ -14,8 +14,12 @@ const cardStyle = {
 
 class DeputadosMobileContainer extends DeputadosContainer {
 
+  constructor(props){
+    super(props);
+  }
+
   render(){
-    var deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados);
+    var deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
     var settings = {
       className: "center",
       infinite: false,
@@ -24,6 +28,8 @@ class DeputadosMobileContainer extends DeputadosContainer {
       slidesToScroll: 1
       //swipeToSlide: true,
         };
+
+    //console.log(deputados)
 
     return(
       <div className="DeputadosMobileContainer">
