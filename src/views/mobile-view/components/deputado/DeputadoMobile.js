@@ -58,6 +58,7 @@ class DeputadoMobile extends Component {
             {this.state.showProgressDiv && divProgressElement}
           </Grid>
           <Grid item xs={4}>
+            {this.props.nVotacoesDep}
           </Grid>
           <Grid item xs={4}>
 
