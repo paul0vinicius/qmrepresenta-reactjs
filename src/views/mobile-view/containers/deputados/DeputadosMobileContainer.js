@@ -37,9 +37,14 @@ class DeputadosMobileContainer extends DeputadosContainer {
           <Slider {...settings}>
             {deputados.slice(0,20)}
           </Slider>
+          <input type="text" placeholder="Nome do deputado" onChange={this.buscaDeputado}/>
         </Card>
       </div>
     );
+  }
+
+  buscaDeputado(evento){
+    console.log(evento.target.value)
   }
 
 }
