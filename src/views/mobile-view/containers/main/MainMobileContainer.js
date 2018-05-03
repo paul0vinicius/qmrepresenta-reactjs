@@ -10,7 +10,7 @@ const votacoesGridStyle = {
 }
 
 const deputadosGridStyle = {
-  position: 'fixed',
+  //position: 'fixed',
   textAlign: 'left',
   margin: '0vh',
   bottom: '0vh',
@@ -25,13 +25,22 @@ class MainMobileContainer extends MainContainer {
     return(
       <div className="MainMobileContainer">
         <Grid container>
-          <Grid item xs={12} style={votacoesGridStyle}>
-            <VotacoesMobileContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
+          <Grid item xs={12}>
+            <header>QMR Simbolo</header>
+          </Grid>
+          <Grid item xs={12}>
+            {/*Barrinha de pesquisa, filtros e tab alternado*/}
           </Grid>
           <Grid item xs={12} style={deputadosGridStyle}>
             <DeputadosMobileContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
                                 scoreDeputados = {this.state.scoreDeputados}
                                 />
+          </Grid>
+          <Grid item xs={12} style={deputadosGridStyle}>
+            {/*Barrinha para selecionar os botões: tela cheia para votações, deputados ou meio a meio (default meio a meio)*/}
+          </Grid>
+          <Grid item xs={12} style={votacoesGridStyle}>
+            <VotacoesMobileContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />
           </Grid>
         </Grid>
       </div>

@@ -8,7 +8,8 @@ import DeputadosContainer from '../../../desktop-view/containers/deputados/Deput
 
 const cardStyle = {
   margin: '0vh',
-  height: '28vh',
+  height: '22vh',
+  overflowY: 'scroll',
   //width: '60vh'
 };
 
@@ -16,10 +17,15 @@ class DeputadosMobileContainer extends DeputadosContainer {
 
   constructor(props){
     super(props);
+    this.state = { deputados: [], filterName: '', filterUf: '' };
+  }
+
+  componentDidMount(){
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
+    this.setState({deputados: deputados});
   }
 
   render(){
-    var deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
     var settings = {
       className: "center",
       infinite: false,
@@ -30,21 +36,37 @@ class DeputadosMobileContainer extends DeputadosContainer {
         };
 
     //console.log(deputados)
+    console.log(this.deputadoE);
 
     return(
       <div className="DeputadosMobileContainer">
+        <input type="text" placeholder="Nome do deputado" onChange={this.buscaNome.bind(this)}/>
+        <input type="text" placeholder="UF" onChange={this.buscaUF.bind(this)}/>
         <Card style={cardStyle}>
-          <Slider {...settings}>
-            {deputados.slice(0,20)}
-          </Slider>
-          <input type="text" placeholder="Nome do deputado" onChange={this.buscaDeputado}/>
+            {this.state.deputados.slice(0,20)}
         </Card>
       </div>
     );
   }
 
-  buscaDeputado(evento){
-    console.log(evento.target.value)
+  buscaNome(evento){
+    var nomeDeputado = evento.target.value;
+    this.setState({filterName: nomeDeputado})
+
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
+    deputados = deputados.filter(d => (d.props.children.props.nome.toLowerCase().indexOf(this.state.filterName.toLowerCase()) >= 0));
+    this.setState({deputados: deputados})
+  }
+
+  buscaUF(evento){
+    var UFDeputado = evento.target.value;
+    this.setState({filterUf: UFDeputado})
+
+    console.log(UFDeputado);
+    
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
+    deputados = deputados.filter(d => (d.props.children.props.uf.toLowerCase() === this.state.filterUf.toLowerCase()));
+    this.setState({deputados: deputados})
   }
 
 }

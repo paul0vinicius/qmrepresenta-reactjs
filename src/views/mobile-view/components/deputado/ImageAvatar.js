@@ -8,7 +8,8 @@ const styles = {
   row: {
     //display: 'flex',
     //float: 'left',
-    position: 'absolute',
+    //position: 'absolute',
+    //width: 60,
   },
   avatar: {
     marginTop: '1.8vh',

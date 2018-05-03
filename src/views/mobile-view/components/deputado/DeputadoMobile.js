@@ -8,21 +8,25 @@ import ImageAvatar from './ImageAvatar.js';
 import NomeEPartido from './NomeEPartido.js';
 
 const containerStyle = {
-  marginRight: '0vh',
-  marginLeft: '2vh'
+  //marginRight: '0vh',
+  //marginLeft: '2vh'
 }
 
 const progressBarStyle = {
-  marginTop: '0vh',
-  marginRight: '0vh',
-  position: 'absolute'
+  //marginTop: '0vh',
+  //marginRight: '0vh',
+  //position: 'absolute'
 }
 
 const divProgressStyle = {
-  marginTop: '5vh',
-  marginLeft: '3.5vh',
-  position: 'absolute',
+  //marginTop: '5vh',
+  //marginLeft: '3.5vh',
+  //position: 'absolute',
   //backgroundColor:'red',
+}
+
+const infoStyles = {
+  marginTop: '3vh',
 }
 
 const DivProgress = (props) => {
@@ -44,7 +48,7 @@ class DeputadoMobile extends Component {
 
   render(){
 
-    let circularProgress = <CircularProgress variant="determinate"
+    let linearProgress = <LinearProgress variant="determinate"
                             style={progressBarStyle} size={80} value={this.props.score*100} />;
 
     let divProgressElement = <DivProgress score={this.props.score}/>
@@ -52,18 +56,12 @@ class DeputadoMobile extends Component {
     return(
       <div className="DeputadoMobile">
         <Grid container>
-          <Grid item xs={8} onClick={this.showHideProgress}>
+          <Grid item xs={3} onClick={this.showHideProgress}>
             <ImageAvatar src={this.props.foto} alt="" />
-            {circularProgress}
             {this.state.showProgressDiv && divProgressElement}
           </Grid>
-          <Grid item xs={4}>
-            {this.props.nVotacoesDep}
-          </Grid>
-          <Grid item xs={4}>
-
-          </Grid>
-          <Grid item xs={2} style={containerStyle}>
+          <Grid item xs={7} style={infoStyles}>
+            {linearProgress}
             <NomeEPartido nome={this.props.nome} partido={this.props.partido} uf={this.props.uf}/>
           </Grid>
         </Grid>
