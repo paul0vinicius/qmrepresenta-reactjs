@@ -46,6 +46,12 @@ class MainMobileContainer extends MainContainer {
       </div>
     );
   }
+
+  calculaCompatibilidade(newState){
+    super.calculaCompatibilidade(newState);
+    console.log(this.state.scoreDeputados);
+  }
+
 }
 
 export default MainMobileContainer;
