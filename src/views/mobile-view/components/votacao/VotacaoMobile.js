@@ -40,9 +40,9 @@ class VotacaoMobile extends Votacao {
   }
 
   onChildChange(index){
-    if(index===2){
+    if(index===0){
       this.votaSim();
-    } else if(index===0){
+    } else if(index===2){
       this.votaNao();
     } else this.votaNaoSei();
   }
