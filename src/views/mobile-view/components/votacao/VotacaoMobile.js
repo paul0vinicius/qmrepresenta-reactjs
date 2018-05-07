@@ -19,8 +19,8 @@ class VotacaoMobile extends Votacao {
           initialSlide: 1,
           useCSS: true,
           useTransform: true,
-          fade: true,
-          beforeChange: (oldIndex, newIndex) => this.onChildChange(newIndex)
+          //fade: true,
+          beforeChange: (oldIndex, newIndex) => this.onChildChange(oldIndex, newIndex)
         };
 
     var painel = <ControlledExpansionPanelsMobile pergunta = {this.props.pergunta}
@@ -39,10 +39,11 @@ class VotacaoMobile extends Votacao {
     );
   }
 
-  onChildChange(index){
-    if(index===0){
+  onChildChange(oldIndex, newIndex){
+    console.log(newIndex);
+    if(newIndex===0){
       this.votaSim();
-    } else if(index===2){
+    } else if(newIndex===2){
       this.votaNao();
     } else this.votaNaoSei();
   }
