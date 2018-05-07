@@ -44,6 +44,7 @@ class DeputadoMobile extends Component {
     super(props);
     this.state = { showProgressDiv: false };
     this.showHideProgress= this.showHideProgress.bind(this);
+    console.log(this.props.score);
   }
 
   render(){
@@ -62,6 +63,7 @@ class DeputadoMobile extends Component {
           </Grid>
           <Grid item xs={7} style={infoStyles}>
             {linearProgress}
+            {this.props.score}
             <NomeEPartido nome={this.props.nome} partido={this.props.partido} uf={this.props.uf}/>
           </Grid>
         </Grid>
