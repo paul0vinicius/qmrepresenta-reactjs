@@ -25,8 +25,8 @@ class DeputadosMobileContainer extends DeputadosContainer {
     this.state = { deputados: [], filterName: '', filterUf: '', filterPartido: '' };
   }
 
-  componentWillReceiveProps(){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
+  componentWillReceiveProps(nextProps){
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", nextProps.scoreDeputados, this.nVotacoesDep);
     this.setState({deputados: deputados});
   }
 
