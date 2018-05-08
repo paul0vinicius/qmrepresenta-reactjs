@@ -7,8 +7,11 @@ import VotacoesContainer from '../../../desktop-view/containers/votacoes/Votacoe
 const cardStyle = {
   overflowY: 'scroll',
   overflowX: 'hidden',
-  height: '70vh',
-  margin: '1vh',
+  height: '42vh',
+  margin: '0vh',
+  position: 'fixed',
+  left: '0px',
+  bottom: '0px',
 };
 
 // const divStyle = {
