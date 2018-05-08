@@ -29,11 +29,16 @@ const infoStyles = {
   marginTop: '3vh',
 }
 
+const divProgressStyles = {
+  marginLeft: '1vh',
+  marginTop: '2vh',
+}
+
 const DivProgress = (props) => {
   //console.log(props.score);
   if(props.score !== undefined){
     return(
-      <div style={divProgressStyle}>{props.score*100}%</div>
+      <div style={divProgressStyle}>{(props.score*100).toFixed(2)}%</div>
     );
   } else return <div></div>;
 }
@@ -57,14 +62,18 @@ class DeputadoMobile extends Component {
     return(
       <div className="DeputadoMobile">
         <Grid container>
+          <Grid item xs={2}>
+          </Grid>
           <Grid item xs={3} onClick={this.showHideProgress}>
             <ImageAvatar src={this.props.foto} alt="" />
             {this.state.showProgressDiv && divProgressElement}
           </Grid>
-          <Grid item xs={7} style={infoStyles}>
+          <Grid item xs={3} style={infoStyles}>
             {linearProgress}
-            {this.props.score}
             <NomeEPartido nome={this.props.nome} partido={this.props.partido} uf={this.props.uf}/>
+          </Grid>
+          <Grid item xs={3} style={divProgressStyles}>
+            {divProgressElement}
           </Grid>
         </Grid>
       </div>
