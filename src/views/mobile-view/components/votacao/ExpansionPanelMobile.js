@@ -42,8 +42,6 @@ class ControlledExpansionPanelsMobile extends ControlledExpansionPanels{
   };
 
   colorPicker(){
-    console.log(this.props.pergunta);
-    console.log(this.props.valorVoto);
     switch (this.props.valorVoto) {
       case 1:
         return green[100];
