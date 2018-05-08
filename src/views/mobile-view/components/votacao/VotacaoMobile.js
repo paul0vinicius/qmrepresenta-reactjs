@@ -6,22 +6,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
+import Swipeable from 'react-swipeable';
 
 class VotacaoMobile extends Votacao {
 
   render(){
-
-    var settings = {
-          infinite: false,
-          speed: 800,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-          useCSS: true,
-          useTransform: true,
-          //fade: true,
-          beforeChange: (oldIndex, newIndex) => this.onChildChange(oldIndex, newIndex)
-        };
 
     var painel = <ControlledExpansionPanelsMobile pergunta = {this.props.pergunta}
                                                   valorVoto = {this.state.value}
@@ -30,24 +19,26 @@ class VotacaoMobile extends Votacao {
 
     return(
       <div>
-        <Slider {...settings}>
+        <Swipeable
+          onSwipingLeft={this.votaSim.bind(this)}
+          onSwipingRight={this.votaNao.bind(this)}
+        >
           <div>{painel}</div>
-          <div>{painel}</div>
-          <div>{painel}</div>
-        </Slider>
+        </Swipeable>
       </div>
     );
   }
 
-  onChildChange(oldIndex, newIndex){
-    console.log(newIndex);
-    if(newIndex===0){
-      this.votaSim();
-    } else if(newIndex===2){
-      this.votaNao();
-    } else this.votaNaoSei();
+  votaSim(){
+    console.log(this.state.value);
+    if(this.state.value === -1) super.votaNaoSei();
+    else super.votaSim();
   }
 
+  votaNao(){
+    if(this.state.value === 1) super.votaNaoSei();
+    else super.votaNao();
+  }
 }
 
 export default VotacaoMobile;
