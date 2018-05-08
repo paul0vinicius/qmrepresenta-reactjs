@@ -17,16 +17,21 @@ class DeputadosContainer extends Component {
     super(props);
     this.nVotacoesDep = this.calculaNVotacoesDep(this.getVotacoes());
     console.log(this.nVotacoesDep);
+    this.scoreDeputados = {}
+    this.state = { deputados: [] }
+  }
+
+  componentWillReceiveProps(nextProps){
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("",nextProps.scoreDeputados, this.nVotacoesDep);
+    this.setState({deputados: deputados});
   }
 
   render(){
 
     //console.log(this.props.scoreDeputados);
 
-    var deputados = DeputadoFactory.inicializaComponentesDeputados("default", this.props.scoreDeputados, this.props.nVotacoesDep);
-
     return (
-      <TabsContainer deputados={deputados.slice(0,100)}/>
+      <TabsContainer deputados={this.state.deputados.slice(0,100)}/>
     );
   }
 
