@@ -10,10 +10,11 @@ import { MenuItem } from 'material-ui/Menu';
 import { FormControl, FormHelperText } from 'material-ui/Form';
 import Select from 'material-ui/Select';
 import TextField from 'material-ui/TextField';
+import FlipMove from 'react-flip-move';
 
 const cardStyle = {
   margin: '0vh',
-  height: '22vh',
+  height: '45vh',
   overflowY: 'scroll',
   //width: '60vh'
 };
@@ -70,7 +71,9 @@ class DeputadosMobileContainer extends DeputadosContainer {
           </Select>
         </FormControl>
         <Card style={cardStyle}>
+        <FlipMove>
             {this.state.deputados.slice(0,20)}
+        </FlipMove>
         </Card>
       </div>
     );
