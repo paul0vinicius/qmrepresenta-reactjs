@@ -20,8 +20,10 @@ class VotacaoMobile extends Votacao {
     return(
       <div>
         <Swipeable
-          onSwipingLeft={this.votaSim.bind(this)}
-          onSwipingRight={this.votaNao.bind(this)}
+          onSwipingLeft={this.votaNao.bind(this)}
+          onSwipingRight={this.votaSim.bind(this)}
+          delta={80}
+          flickThreshold={1.2}
         >
           <div>{painel}</div>
         </Swipeable>
@@ -30,14 +32,31 @@ class VotacaoMobile extends Votacao {
   }
 
   votaSim(){
-    console.log(this.state.value);
-    if(this.state.value === -1) super.votaNaoSei();
-    else super.votaSim();
+    var state = this.state.value;
+
+    switch (state) {
+      case 0: super.votaSim();
+        break;
+      case 1: super.votaSim();
+        break;
+      case -1: super.votaNaoSei();
+        break;
+      default: break;
+    }
   }
 
   votaNao(){
-    if(this.state.value === 1) super.votaNaoSei();
-    else super.votaNao();
+    var state = this.state.value;
+
+    switch (state) {
+      case 0: super.votaNao();
+        break;
+      case 1: super.votaNaoSei();
+        break;
+      case -1: super.votaNao();
+        break;
+      default: break;
+    }
   }
 }
 
