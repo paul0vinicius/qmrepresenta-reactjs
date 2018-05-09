@@ -14,7 +14,7 @@ import FlipMove from 'react-flip-move';
 
 const cardStyle = {
   margin: '0vh',
-  height: '45vh',
+  height: '35vh',
   overflowY: 'scroll',
   //width: '60vh'
 };
