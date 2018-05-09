@@ -3,6 +3,8 @@ import DeputadosMobileContainer from '../deputados/DeputadosMobileContainer.js';
 import VotacoesMobileContainer from '../votacoes/VotacoesMobileContainer.js';
 import Grid from 'material-ui/Grid';
 import MainContainer from '../../../desktop-view/containers/main/MainContainer.js';
+import DeputadosEPartidosTabContainer from './TabContainer.js';
+import PartidosMobileContainer from '../partidos/PartidosMobileContainer.js';
 
 const votacoesGridStyle = {
   textAlign: 'center',
@@ -22,6 +24,10 @@ const deputadosGridStyle = {
 class MainMobileContainer extends MainContainer {
 
   render(){
+    var containerDeputados = <DeputadosMobileContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
+                        scoreDeputados = {this.state.scoreDeputados}
+                        />;
+    var containerPartidos = <PartidosMobileContainer />;
     return(
       <div className="MainMobileContainer">
         <Grid container>
@@ -32,9 +38,9 @@ class MainMobileContainer extends MainContainer {
             {/*Barrinha de pesquisa, filtros e tab alternado*/}
           </Grid>
           <Grid item xs={12} style={deputadosGridStyle}>
-            <DeputadosMobileContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
-                                scoreDeputados = {this.state.scoreDeputados}
-                                />
+            <DeputadosEPartidosTabContainer deputados={containerDeputados}
+                                            partidos={containerPartidos}
+            />
           </Grid>
           <Grid item xs={12} style={deputadosGridStyle}>
             {/*Barrinha para selecionar os botões: tela cheia para votações, deputados ou meio a meio (default meio a meio)*/}
