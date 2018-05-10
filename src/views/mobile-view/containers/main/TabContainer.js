@@ -41,8 +41,8 @@ class DeputadosEPartidosTabContainer extends Component {
                   indicatorColor="primary"
                   textColor="primary"
                 >
-                  <Tab icon={<PhoneIcon />} label="DEPUTADOS" />
-                  <Tab icon={<FavoriteIcon />} label="PARTIDOS" />
+                  <Tab label="DEPUTADOS" />
+                  <Tab label="PARTIDOS" />
                 </Tabs>
               </Paper>
               {this.state.value === 0 && <TabContainer>
