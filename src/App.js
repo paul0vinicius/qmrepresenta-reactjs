@@ -38,7 +38,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        {view}
+        {/*view*/}
+        <SwipeableSideBar main={mobileView} />
       </div>
       );
   }
