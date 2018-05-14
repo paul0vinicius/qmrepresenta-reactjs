@@ -38,7 +38,7 @@ const DivProgress = (props) => {
   //console.log(props.score);
   if(props.score !== undefined){
     return(
-      <div style={divProgressStyle}>{(props.score*100).toFixed(2)}%</div>
+      <div style={divProgressStyle}>{Math.round(props.score*100)}%</div>
     );
   } else return <div></div>;
 }
