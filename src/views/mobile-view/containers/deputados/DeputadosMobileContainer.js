@@ -31,6 +31,14 @@ class DeputadosMobileContainer extends DeputadosContainer {
     this.setState({deputados: deputados});
   }
 
+  shouldComponentUpdate(nextProps, nextState){
+    return((nextState.filterName !== this.state.filterName) ||
+           (nextState.filterUf !== this.state.filterUf) ||
+           (nextState.filterPartido !== this.state.filterPartido) ||
+            JSON.stringify(this.props.scoreDeputados) !== JSON.stringify(nextProps.scoreDeputados)
+            );
+  }
+
   render(){
     var settings = {
       className: "center",
