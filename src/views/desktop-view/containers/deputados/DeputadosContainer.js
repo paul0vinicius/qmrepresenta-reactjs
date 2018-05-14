@@ -3,6 +3,7 @@ import DeputadoFactory from '../../../../factories/DeputadoFactory.js';
 import infoDeputados from '../../../../data/deputados.json';
 import Card from 'material-ui/Card';
 import TabsContainer from './TabsContainer.js';
+import nomesVotacoes from '../../../../data/nomes_votacoes.json';
 
 const cardStyle = {
   overflowY: 'scroll',
@@ -12,14 +13,25 @@ const cardStyle = {
 
 class DeputadosContainer extends Component {
 
+  constructor(props){
+    super(props);
+    this.nVotacoesDep = this.calculaNVotacoesDep(this.getVotacoes());
+    console.log(this.nVotacoesDep);
+    this.scoreDeputados = {}
+    this.state = { deputados: [] }
+  }
+
+  componentWillReceiveProps(nextProps){
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("",nextProps.scoreDeputados, this.nVotacoesDep);
+    this.setState({deputados: deputados});
+  }
+
   render(){
 
-    console.log(this.props.scoreDeputados);
-
-    var deputados = DeputadoFactory.inicializaComponentesDeputados("default", this.props.scoreDeputados);
+    //console.log(this.props.scoreDeputados);
 
     return (
-      <TabsContainer deputados={deputados.slice(0,100)}/>
+      <TabsContainer deputados={this.state.deputados.slice(0,100)}/>
     );
   }
 
@@ -36,13 +48,24 @@ class DeputadosContainer extends Component {
       }
       todasVotacoes[infoDeputados[i].id_deputado] = votacoes;
     }
-    //console.log(todasVotacoes);
     return todasVotacoes;
   }
 
   componentDidMount() {
     this.props.pegaVotacoesDeputados(this.getVotacoes());
-    //console.log(this.getVotacoes());
+  }
+
+  calculaNVotacoesDep(votacoes){
+    var nVotacoesDepObject = {};
+    for (var deputado in votacoes){
+      var nVotacoesDep = 0;
+      for(var i = 0; i < nomesVotacoes.length; i++){
+        if(votacoes[deputado][nomesVotacoes[i].id_votacao] !== 0) nVotacoesDep++;
+      }
+      nVotacoesDepObject[deputado] = nVotacoesDep;
+    }
+
+    return nVotacoesDepObject;
   }
 }
 

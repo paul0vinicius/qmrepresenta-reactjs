@@ -9,10 +9,19 @@ class DeputadoFactory extends Component {
     switch (tipoClasseDeputado) {
       case "mobile":
         return function(a, b){
-          //console.log(a.props.children.props.score);
-          if (a.props.children.props.score > b.props.children.props.score) return -1;
-          else if (a.props.children.props.score < b.props.children.props.score) return 1;
-          else return 0;
+          //console.log(a.props.children.props);
+          // Cálculo considerando o score. Primeiro vemos qual o score maior
+          var scValue;
+          if (a.props.children.props.score > b.props.children.props.score) scValue = -1;
+          else if (a.props.children.props.score < b.props.children.props.score) scValue = 1;
+          else scValue = 0;
+
+          // Cálculo considerando se o deputado tem muitos votos ou poucos votos.
+          // A prioridade é sempre deputados que tenham muitos votos (mais da metade do que o usuário votou).
+          // Caso ele tenha mais da metade dos votos, a prioridade sobe, embora o score seja menor.
+          if (a.props.children.props.nVotacoesDep < 9) return 1;
+          return scValue;
+          //return ((scValue === -1) && (a.props.children.props.nVotacoesDep < 9)) ? 1 : -1;
         }
       default:
         return function(a, b){
@@ -23,7 +32,7 @@ class DeputadoFactory extends Component {
     }
   }
 
-  static buildClass(tipoClasseDeputado, infoDeputado, scoreDeputado){
+  static buildClass(tipoClasseDeputado, infoDeputado, scoreDeputado, nVotacoesPresente){
     switch (tipoClasseDeputado) {
       case "mobile":
         return <div key={infoDeputado.id_deputado} >
@@ -35,6 +44,7 @@ class DeputadoFactory extends Component {
                                  partido = {infoDeputado.partido}
                                  votacoes = {infoDeputado.votacoes}
                                  score = {scoreDeputado}
+                                 nVotacoesDep = {nVotacoesPresente}
                             />
               </div>;
       default:
@@ -46,16 +56,17 @@ class DeputadoFactory extends Component {
                                  partido = {infoDeputado.partido}
                                  votacoes = {infoDeputado.votacoes}
                                  score = {scoreDeputado}
+                                 nVotacoesDep = {nVotacoesPresente}
                                  />;
 
     }
   }
 
-  static inicializaComponentesDeputados(tipoClasseDeputado, scoreDeputados){
+  static inicializaComponentesDeputados(tipoClasseDeputado, scoreDeputados, nVotacoesDep){
     let deputados = [];
 
     for(let i = 0; i < infoDeputados.length; i++){
-      deputados.push(this.buildClass(tipoClasseDeputado, infoDeputados[i], scoreDeputados[infoDeputados[i].id_deputado]));
+      deputados.push(this.buildClass(tipoClasseDeputado, infoDeputados[i], scoreDeputados[infoDeputados[i].id_deputado], nVotacoesDep[infoDeputados[i].id_deputado]));
     }
 
     // Ordena por compatibilidade

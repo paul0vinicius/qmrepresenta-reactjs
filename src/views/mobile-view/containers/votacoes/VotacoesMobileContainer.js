@@ -7,8 +7,11 @@ import VotacoesContainer from '../../../desktop-view/containers/votacoes/Votacoe
 const cardStyle = {
   overflowY: 'scroll',
   overflowX: 'hidden',
-  height: '70vh',
-  //widht: '20vh'
+  height: '42vh',
+  margin: '0vh',
+  position: 'fixed',
+  left: '0px',
+  bottom: '0px',
 };
 
 // const divStyle = {
@@ -28,7 +31,8 @@ class VotacoesMobileContainer extends VotacoesContainer {
       votacoes.push(
             <VotacaoMobile key = {nomesVotacoes[i].id_votacao}
                                  idVotacao = {nomesVotacoes[i].id_votacao}
-                                 nomeVotacao = {nomesVotacoes[i].descricao}
+                                 descricao = {nomesVotacoes[i].descricao}
+                                 nomeVotacao = {nomesVotacoes[i].nome_votacao}
                                  pergunta = {nomesVotacoes[i].pergunta}
                                  callbackParent = { (newState) => this.onChildChange(newState) }
                                   />

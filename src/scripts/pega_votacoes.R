@@ -14,7 +14,10 @@ enumera <- function(votos) {
   votos %>%
     replace(. == "não", -1) %>%
     replace(. == "sim", 1) %>%
-    replace(. == "abstenção", 0) %>% # Para efeitos de comparação neste momento não faz diferença
+    replace(. == "abstenção", 0) %>%
+    replace(. == "obstrução", 0) %>%
+    replace(. == "null", 0) %>%
+    replace(. == NULL, 0) %>% # Para efeitos de comparação neste momento não faz diferença
     na_to_y(., 0)
 }
 
