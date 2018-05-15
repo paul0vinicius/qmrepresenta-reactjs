@@ -49,7 +49,6 @@ class DeputadoMobile extends Component {
     super(props);
     this.state = { showProgressDiv: false };
     this.showHideProgress= this.showHideProgress.bind(this);
-    console.log(this.props.score);
   }
 
   render(){
