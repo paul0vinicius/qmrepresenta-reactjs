@@ -22,7 +22,7 @@ const deputadosGridStyle = {
 }
 
 class MainMobileContainer extends MainContainer {
-
+  
   render(){
     var containerDeputados = <DeputadosMobileContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
                         scoreDeputados = {this.state.scoreDeputados}

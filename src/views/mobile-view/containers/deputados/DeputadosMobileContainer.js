@@ -23,11 +23,13 @@ class DeputadosMobileContainer extends DeputadosContainer {
 
   constructor(props){
     super(props);
-    this.state = { deputados: [], filterName: '', filterUf: '', filterPartido: '' };
+    this.state = { deputados: [], deputadosPorNome: [], deputadosPorUf: [], deputadosPorPartido: [],
+                   filterName: '', filterUf: 'TODOS', filterPartido: 'TODOS' };
   }
 
   componentWillReceiveProps(nextProps){
     let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", nextProps.scoreDeputados, this.nVotacoesDep);
+    console.log(nextProps.scoreDeputados);
     this.setState({deputados: deputados});
   }
 
@@ -35,7 +37,7 @@ class DeputadosMobileContainer extends DeputadosContainer {
     return((nextState.filterName !== this.state.filterName) ||
            (nextState.filterUf !== this.state.filterUf) ||
            (nextState.filterPartido !== this.state.filterPartido) ||
-            JSON.stringify(this.props.scoreDeputados) !== JSON.stringify(nextProps.scoreDeputados)
+           (JSON.stringify(this.props.scoreDeputados) !== JSON.stringify(nextProps.scoreDeputados))
             );
   }
 
@@ -48,6 +50,10 @@ class DeputadosMobileContainer extends DeputadosContainer {
       slidesToScroll: 1
       //swipeToSlide: true,
         };
+
+    let byName = this.state.filterName !== '' ? this.state.deputados.filter(d => this.state.deputadosPorNome.indexOf(d.key) !== -1) : this.state.deputados;
+    let byUf = this.state.filterUf !== 'TODOS' ? byName.filter(d => this.state.deputadosPorUf.indexOf(d.key) !== -1) : byName;
+    var deputadosAExibir = this.state.filterPartido !== 'TODOS' ? byUf.filter(d => this.state.deputadosPorPartido.indexOf(d.key) !== -1) : byUf;
 
     return(
       <div className="DeputadosMobileContainer">
@@ -80,7 +86,7 @@ class DeputadosMobileContainer extends DeputadosContainer {
         </FormControl>
         <Card style={cardStyle}>
         <FlipMove>
-            {this.state.deputados.slice(0,20)}
+            {deputadosAExibir.length !== 0 ? deputadosAExibir.slice(0,20) : <div>Vá votando</div>}
         </FlipMove>
         </Card>
       </div>
@@ -90,11 +96,8 @@ class DeputadosMobileContainer extends DeputadosContainer {
   buscaNome(evento){
     var nomeDeputado = evento.target.value;
     this.setState({filterName: nomeDeputado})
-
-    console.log(nomeDeputado);
-    var deputados = this.filtraPorNome(nomeDeputado);
-
-    this.setState({deputados: deputados})
+    var deputadosNome = this.filtraPorNome(nomeDeputado);
+    this.setState({deputadosPorNome: deputadosNome})
   }
 
   buscaUF(evento){
@@ -104,7 +107,7 @@ class DeputadosMobileContainer extends DeputadosContainer {
     console.log(UFDeputado);
     var deputados = this.filtraPorUf(UFDeputado);
 
-    this.setState({deputados: deputados})
+    this.setState({deputadosPorUf: deputados})
   }
 
   buscaPartido(evento){
@@ -114,29 +117,32 @@ class DeputadosMobileContainer extends DeputadosContainer {
     console.log(partidoDeputado);
     var deputados = this.filtraPorPartido(partidoDeputado);
 
-    this.setState({deputados: deputados})
+    this.setState({deputadosPorPartido: deputados})
   }
 
   filtraPorPartido(partidoDeputado){
     let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
-    return deputados.filter(d => ((d.props.children.props.partido.toLowerCase()) === partidoDeputado.toLowerCase()));
+    let deputadosFiltrados = deputados.filter(d => ((d.props.children.props.partido.toLowerCase()) === partidoDeputado.toLowerCase()));
+    return deputadosFiltrados.map(d => d.key);
   }
 
   filtraPorUf(UFDeputado){
     let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
-    return deputados.filter(d => ((d.props.children.props.uf.toLowerCase()) === UFDeputado.toLowerCase()));
+    let deputadosFiltrados = deputados.filter(d => ((d.props.children.props.uf.toLowerCase()) === UFDeputado.toLowerCase()));
+    return deputadosFiltrados.map(d => d.key);
     //this.setState({deputados: deputados})
     //console.log(deputados);
   }
 
   filtraPorNome(nomeDeputado){
     let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
-    return deputados.filter(d => (d.props.children.props.nome.toLowerCase().indexOf(nomeDeputado.toLowerCase()) >= 0));
+    let deputadosFiltrados = deputados.filter(d => (d.props.children.props.nome.toLowerCase().indexOf(nomeDeputado.toLowerCase()) >= 0));
+    return deputadosFiltrados.map(d => d.key);
     //this.setState({deputados: deputados})
   }
 
   estados(){
-    var estados = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
+    var estados = ["TODOS","AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
                    "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN",
                    "RO", "RS", "RR", "SC", "SE", "SP", "TO"];
 
@@ -146,6 +152,8 @@ class DeputadosMobileContainer extends DeputadosContainer {
   partidos(){
     let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
     let partidos = new Set();
+
+    partidos.add("TODOS");
 
     for(var i = 0; i < deputados.length; i++){
       partidos.add(deputados[i].props.children.props.partido);
