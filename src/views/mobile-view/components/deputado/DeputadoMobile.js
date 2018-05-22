@@ -63,7 +63,7 @@ class DeputadoMobile extends Component {
         <Grid container>
           <Grid item xs={2}>
           </Grid>
-          <Grid item xs={3} onClick={this.showHideProgress}>
+          <Grid item xs={3}>
             <ImageAvatar src={this.props.foto} alt="" />
             {this.state.showProgressDiv && divProgressElement}
           </Grid>
