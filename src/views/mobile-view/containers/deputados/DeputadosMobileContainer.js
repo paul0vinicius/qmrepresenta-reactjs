@@ -11,6 +11,7 @@ import { FormControl, FormHelperText } from 'material-ui/Form';
 import Select from 'material-ui/Select';
 import TextField from 'material-ui/TextField';
 import FlipMove from 'react-flip-move';
+import { painelInicial } from './PainelInicial.js';
 
 const cardStyle = {
   margin: '0vh',
@@ -57,7 +58,7 @@ class DeputadosMobileContainer extends DeputadosContainer {
 
     return(
       <div className="DeputadosMobileContainer">
-      <TextField label="Nome do Deputado" onChange={this.buscaNome.bind(this)}/>
+      <TextField label="Nome do Deputado" onChange={this.buscaNome.bind(this)} style={{width:'45%'}}/>
         <FormControl>
           <InputLabel htmlFor="uf-simple">UF</InputLabel>
           <Select
@@ -86,7 +87,7 @@ class DeputadosMobileContainer extends DeputadosContainer {
         </FormControl>
         <Card style={cardStyle}>
         <FlipMove>
-            {deputadosAExibir.length !== 0 ? deputadosAExibir.slice(0,20) : <div>Vá votando</div>}
+            {deputadosAExibir.length !== 0 ? deputadosAExibir.slice(0,20) : painelInicial}
         </FlipMove>
         </Card>
       </div>
