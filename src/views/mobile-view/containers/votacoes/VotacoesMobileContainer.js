@@ -7,7 +7,7 @@ import VotacoesContainer from '../../../desktop-view/containers/votacoes/Votacoe
 const cardStyle = {
   overflowY: 'scroll',
   overflowX: 'hidden',
-  height: '42vh',
+  height: '38vh',
   margin: '0vh',
   position: 'fixed',
   left: '0px',
