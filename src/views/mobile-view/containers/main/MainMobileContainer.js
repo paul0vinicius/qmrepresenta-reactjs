@@ -5,6 +5,8 @@ import Grid from 'material-ui/Grid';
 import MainContainer from '../../../desktop-view/containers/main/MainContainer.js';
 import DeputadosEPartidosTabContainer from './TabContainer.js';
 import PartidosMobileContainer from '../partidos/PartidosMobileContainer.js';
+import Typography from 'material-ui/Typography';
+import grey from 'material-ui/colors/grey';
 
 const votacoesGridStyle = {
   textAlign: 'center',
@@ -21,8 +23,10 @@ const deputadosGridStyle = {
   marginBottom: '1vh'
 }
 
+const logoPath = "";
+
 class MainMobileContainer extends MainContainer {
-  
+
   render(){
     var containerDeputados = <DeputadosMobileContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
                         scoreDeputados = {this.state.scoreDeputados}
@@ -32,7 +36,10 @@ class MainMobileContainer extends MainContainer {
       <div className="MainMobileContainer">
         <Grid container>
           <Grid item xs={12}>
-            <header>QMR Simbolo</header>
+            <header style={{backgroundColor: grey[300]}}>
+              <img src={require('../../../../images/logo.png')} style={{height: '50%', width:'40%'}}/>
+              {/*<div><Typography>Qual deputado federal mais se parece com você?</Typography></div>*/}
+            </header>
           </Grid>
           <Grid item xs={12}>
             {/*Barrinha de pesquisa, filtros e tab alternado*/}
