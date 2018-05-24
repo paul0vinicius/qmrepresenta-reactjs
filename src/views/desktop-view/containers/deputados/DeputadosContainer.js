@@ -6,9 +6,14 @@ import TabsContainer from './TabsContainer.js';
 import nomesVotacoes from '../../../../data/nomes_votacoes.json';
 
 const cardStyle = {
-  overflowY: 'scroll',
-  overflowX: 'hidden',
-  height: '71vh',
+  //overflowY: 'scroll',
+  //overflowX: 'hidden',
+  //height: '90vh',
+  position: 'fixed',
+  //backgroundColor: "#DBDBDB",
+  //width:'2000vh',
+  //marginLeft: '7vh',
+  //marginRight: '15vh'
 };
 
 class DeputadosContainer extends Component {
@@ -31,7 +36,9 @@ class DeputadosContainer extends Component {
     //console.log(this.props.scoreDeputados);
 
     return (
-      <TabsContainer deputados={this.state.deputados.slice(0,100)}/>
+      <div style={cardStyle}>
+        <TabsContainer deputados={this.state.deputados.slice(0,20)}/>
+      </div>
     );
   }
 
