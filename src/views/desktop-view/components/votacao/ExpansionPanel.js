@@ -8,10 +8,11 @@ import ExpansionPanel, {
 import Typography from 'material-ui/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import StarIcon from '@material-ui/icons/Star';
-
+import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
 import green from 'material-ui/colors/green';
 import red from 'material-ui/colors/red';
 import grey from 'material-ui/colors/grey';
+import Grid from 'material-ui/Grid';
 
 const styles = theme => ({
   root: {
@@ -25,6 +26,9 @@ const styles = theme => ({
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(16),
     color: theme.palette.text.primary,
+  },
+  description:{
+    backgroundColor: "#B5B5B5",
   },
 });
 
@@ -42,10 +46,10 @@ class ControlledExpansionPanels extends React.Component {
   colorPicker(){
     switch (this.props.valorVoto) {
       case 1:
-        return green[100];
+        return "#1D6B91";
       case -1:
-        return red[100];
-      default: return grey[50];
+        return "#51269C";
+      default: return "#DBDBDB";
     }
   }
 
@@ -58,13 +62,19 @@ class ControlledExpansionPanels extends React.Component {
     return (
       <div className={classes.root}>
         <ExpansionPanel key={this.props.key} expanded={expanded === this.props.key} onChange={this.handleChange(this.props.key)}>
-        <ExpansionPanelSummary style={{backgroundColor: this.colorPicker()}} expandIcon={<ExpandMoreIcon />}>
-        <Typography className={classes.heading}>
-          <StarIcon />
-        </Typography>
-        <Typography className={classes.secondaryHeading}>
-          {this.props.pergunta}
-        </Typography>
+        <ExpansionPanelSummary style={{backgroundColor: this.colorPicker()}}>
+        <Grid container>
+          <Grid item xs={12} sm={12} md={12} lg={12}>
+            <Typography className={classes.secondaryHeading}>
+              {this.props.pergunta}
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12} lg={12}>
+            <div>
+              <ArrowDropDown />
+            </div>
+          </Grid>
+        </Grid>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className={classes.description}>
           <Typography onClick={this.handleChange(this.props.key)}>
