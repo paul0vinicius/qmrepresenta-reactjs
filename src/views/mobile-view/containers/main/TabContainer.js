@@ -10,7 +10,7 @@ import Card from 'material-ui/Card';
 const cardStyle = {
   overflowY: 'scroll',
   overflowX: 'hidden',
-  height: '71vh',
+  //height: '73vh',
 };
 
 function TabContainer(props) {
