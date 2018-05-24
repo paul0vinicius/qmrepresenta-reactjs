@@ -10,7 +10,12 @@ import Card from 'material-ui/Card';
 const cardStyle = {
   overflowY: 'scroll',
   overflowX: 'hidden',
-  height: '71vh',
+  height: '73.9vh',
+  backgroundColor: "#DBDBDB",
+};
+
+const containerStyle = {
+  width: '64.5vh',
 };
 
 function TabContainer(props) {
@@ -32,8 +37,8 @@ class TabsContainer extends Component {
 
   render(){
     return(
-      <div className="DeputadosContainer">
-              <Paper>
+      <div className="DeputadosContainer" style={containerStyle}>
+              <Paper style={{backgroundColor: "#DBDBDB",}}>
                 <Tabs
                   value={this.state.value}
                   onChange={this.handleChange}
@@ -42,7 +47,7 @@ class TabsContainer extends Component {
                   textColor="primary"
                 >
                   <Tab label="DEPUTADOS" />
-                  <Tab label="PARTIDOS" />
+                  <Tab label="PARTIDOS" disabled/>
                 </Tabs>
               </Paper>
               {this.state.value === 0 && <TabContainer>
