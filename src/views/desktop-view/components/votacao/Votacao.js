@@ -19,6 +19,22 @@ const voto = {
   NAO_SEI: 0
 };
 
+const votoStyle = {
+  width: '40vh',
+  margin:'0 auto'
+}
+
+const botaoSimStyle = {
+  //position: 'absolute',
+  top:'10vh',
+  left:'2vh'
+}
+const botaoNaoStyle = {
+  //position: 'absolute',
+  top:'10vh',
+  left:'57vh'
+}
+
 /**
 * Componente que armazena as informações referentes à uma votação, tais como seu nome, detalhes sobre a ementa e a
 * opinião do usuário do site. O usuário vota *sim*, *não* ou *não sei* para cada votação a fim de saber a compatibilidade
@@ -51,10 +67,20 @@ class Votacao extends Component {
     </div>;
 
     return(
-      <ControlledExpansionPanels votacao = {votacao}
-                                 pergunta = {this.props.pergunta}
-                                 valorVoto = {this.state.value}
-      />
+      <div style={votoStyle}>
+        <Grid container>
+          <Grid item xs={12} lg={12} md={12} sm={12}>
+            <ControlledExpansionPanels votacao = {votacao}
+                                       pergunta = {this.props.pergunta}
+                                       valorVoto = {this.state.value}
+            />
+          </Grid>
+          <Grid item style={botaoSimStyle} xs={12} lg={12} md={12} sm={12}>
+          </Grid>
+          <Grid item xs={8} lg={8} md={8} sm={8}>
+          </Grid>
+          </Grid>
+      </div>
     );
   }
 
