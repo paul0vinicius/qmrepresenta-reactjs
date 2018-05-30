@@ -35,10 +35,10 @@ const a = {
 }
 
 const appBarStyle = {
-  marginTop: '4vh',
+  marginTop: '10px',
   marginLeft: '25vh',
   marginRight: '15vh',
-  marginBottom: '-7vh'
+  marginBottom: '-6vh'
 }
 
 const b = {

@@ -10,7 +10,7 @@ import Card from 'material-ui/Card';
 const cardStyle = {
   overflowY: 'scroll',
   overflowX: 'hidden',
-  height: '73.9vh',
+  height: '72.6vh',
   backgroundColor: "#DBDBDB",
 };
 
