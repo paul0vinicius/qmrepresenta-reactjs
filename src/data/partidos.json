@@ -1,0 +1,4161 @@
+[
+  {
+    "id_partido": 36761,
+    "nome": "Partido Ecológico Nacional",
+    "partido": "PEN",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Liberado",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Sim",
+        "tema": "Tempo mandato",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Liberado",
+        "tema": "Voto Facultativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "value": 0
+      },
+      {
+        "id_votacao": 7492,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36763,
+    "nome": "Partido Republicano da Ordem Social",
+    "partido": "PROS",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Sim",
+        "tema": "Coincidência reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Liberado",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 1",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 2",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Liberado",
+        "tema": "Tempo mandato",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Liberado",
+        "tema": "Tributação serviços de internet",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36769,
+    "nome": "Democratas",
+    "partido": "DEM",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Não",
+        "tema": "Pensão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Não",
+        "tema": "Seguro Desemprego",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Sim",
+        "tema": "Tempo mandato",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Sim",
+        "tema": "Voto Facultativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36779,
+    "nome": "Partido Comunista do Brasil",
+    "partido": "PCDOB",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Não",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Sim",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Não",
+        "tema": "Distritão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Não",
+        "tema": "Infanticídio indígena",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Não",
+        "tema": "Lei Trabalhista",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 1",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 2",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Sim",
+        "tema": "Tempo mandato",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Não",
+        "tema": "Terceirização",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Não",
+        "tema": "Terceirização total 2017",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Não",
+        "tema": "Transgênico",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Não",
+        "tema": "Tributação serviços de internet",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36786,
+    "nome": "Partido Democrático Trabalhista",
+    "partido": "PDT",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Sim",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Não",
+        "tema": "Distritão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Não",
+        "tema": "Lei Trabalhista",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 1",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 2",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Não",
+        "tema": "Pensão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Não",
+        "tema": "Seguro Desemprego",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Não",
+        "tema": "Terceirização total 2017",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Liberado",
+        "tema": "Transgênico",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Não",
+        "tema": "Tributação serviços de internet",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36793,
+    "nome": "Partido Humanista da Solidariedade",
+    "partido": "PHS",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Liberado",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Liberado",
+        "tema": "Lei Trabalhista",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Sim",
+        "tema": "Tempo mandato",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Liberado",
+        "tema": "Voto Facultativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36800,
+    "nome": "Partido do Movimento Democrático Brasileiro",
+    "partido": "PMDB",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Liberado",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Sim",
+        "tema": "Tempo mandato",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Liberado",
+        "tema": "Voto Facultativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36801,
+    "nome": "Partido da Mobilização Nacional",
+    "partido": "PMN",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "value": 0
+      },
+      {
+        "id_votacao": 7492,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36809,
+    "nome": "Partido Progressista",
+    "partido": "PP",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Liberado",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Sim",
+        "tema": "Tempo mandato",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Liberado",
+        "tema": "Voto Facultativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36813,
+    "nome": "Partido Popular Socialista",
+    "partido": "PPS",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Sim",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Não",
+        "tema": "Distritão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 1",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 2",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Não",
+        "tema": "Pensão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Não",
+        "tema": "Seguro Desemprego",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização total 2017",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Liberado",
+        "tema": "Tributação serviços de internet",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Sim",
+        "tema": "Voto Facultativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36814,
+    "nome": "Partido da República",
+    "partido": "PR",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Liberado",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Sim",
+        "tema": "Coincidência reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Sim",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36815,
+    "nome": "Partido Republicano Brasileiro",
+    "partido": "PRB",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36824,
+    "nome": "Partido Republicano Progressista",
+    "partido": "PRP",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "value": 0
+      },
+      {
+        "id_votacao": 7492,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36832,
+    "nome": "Partido Socialista Brasileiro",
+    "partido": "PSB",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Liberado",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Sim",
+        "tema": "Coincidência reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Liberado",
+        "tema": "Distritão",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Liberado",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Não",
+        "tema": "Lei Trabalhista",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 1",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 2",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Não",
+        "tema": "Pensão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Não",
+        "tema": "Seguro Desemprego",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Liberado",
+        "tema": "Terrorismo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Não",
+        "tema": "Transgênico",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36833,
+    "nome": "Partido Social Cristão",
+    "partido": "PSC",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Liberado",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Sim",
+        "tema": "Tempo mandato",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Liberado",
+        "tema": "Voto Facultativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36834,
+    "nome": "Partido Social Democrático",
+    "partido": "PSD",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Sim",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Liberado",
+        "tema": "Tempo mandato",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Liberado",
+        "tema": "Terrorismo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36835,
+    "nome": "Partido da Social Democracia Brasileira",
+    "partido": "PSDB",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Não",
+        "tema": "Pensão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Não",
+        "tema": "Seguro Desemprego",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Liberado",
+        "tema": "Tempo mandato",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36836,
+    "nome": "Partido Social Democrata Cristão",
+    "partido": "PSDC",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "value": 0
+      },
+      {
+        "id_votacao": 7492,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36837,
+    "nome": "Partido Social Liberal",
+    "partido": "PSL",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36839,
+    "nome": "Partido Socialismo e Liberdade",
+    "partido": "PSOL",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Não",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Não",
+        "tema": "Lei Trabalhista",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Não",
+        "tema": "Pensão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Não",
+        "tema": "Seguro Desemprego",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Não",
+        "tema": "Terceirização",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Não",
+        "tema": "Terceirização total 2017",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Não",
+        "tema": "Transgênico",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6352,
+        "value": 0
+      },
+      {
+        "id_votacao": 6354,
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "value": 0
+      },
+      {
+        "id_votacao": 6359,
+        "value": 0
+      },
+      {
+        "id_votacao": 6369,
+        "value": 0
+      },
+      {
+        "id_votacao": 6370,
+        "value": 0
+      },
+      {
+        "id_votacao": 6371,
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "value": 0
+      },
+      {
+        "id_votacao": 6378,
+        "value": 0
+      },
+      {
+        "id_votacao": 6429,
+        "value": 0
+      },
+      {
+        "id_votacao": 6437,
+        "value": 0
+      },
+      {
+        "id_votacao": 6502,
+        "value": 0
+      },
+      {
+        "id_votacao": 6531,
+        "value": 0
+      },
+      {
+        "id_votacao": 6575,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36844,
+    "nome": "Partido dos Trabalhadores",
+    "partido": "PT",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Liberado",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Sim",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Não",
+        "tema": "Distritão",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Não",
+        "tema": "Infanticídio indígena",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Não",
+        "tema": "Lei Trabalhista",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 1",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 2",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Não",
+        "tema": "Terceirização",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Não",
+        "tema": "Terceirização total 2017",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Não",
+        "tema": "Transgênico",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36845,
+    "nome": "Partido Trabalhista Brasileiro",
+    "partido": "PTB",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Sim",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Liberado",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Sim",
+        "tema": "Tempo mandato",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Liberado",
+        "tema": "Voto Facultativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36846,
+    "nome": "Partido Trabalhista Cristão",
+    "partido": "PTC",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "value": 0
+      },
+      {
+        "id_votacao": 7492,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36847,
+    "nome": "Partido Trabalhista do Brasil",
+    "partido": "PTDOB",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "value": 0
+      },
+      {
+        "id_votacao": 7492,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36848,
+    "nome": "Partido Trabalhista Nacional",
+    "partido": "PTN",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7492,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36851,
+    "nome": "Partido Verde",
+    "partido": "PV",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Sim",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Liberado",
+        "tema": "Coincidência reeleição",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Sim",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Liberado",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Não",
+        "tema": "Infanticídio indígena",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 7492,
+        "orientacao_partido": "Sim",
+        "tema": "Lei Trabalhista",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 1",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Não",
+        "tema": "Maioridade 2",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Liberado",
+        "tema": "Pensão",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Liberado",
+        "tema": "Seguro Desemprego",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 7431,
+        "orientacao_partido": "Sim",
+        "tema": "Terceirização total 2017",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Não",
+        "tema": "Transgênico",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Sim",
+        "tema": "Voto Facultativo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id_partido": 36886,
+    "nome": "Rede Sustentabilidade",
+    "partido": "REDE",
+    "votacoes": [
+      {
+        "id_votacao": 6675,
+        "orientacao_partido": "Não",
+        "tema": "Cobrança de cursos em universidades públicas",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "value": 0
+      },
+      {
+        "id_votacao": 6259,
+        "value": 0
+      },
+      {
+        "id_votacao": 6286,
+        "value": 0
+      },
+      {
+        "id_votacao": 6310,
+        "value": 0
+      },
+      {
+        "id_votacao": 6352,
+        "value": 0
+      },
+      {
+        "id_votacao": 6354,
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "value": 0
+      },
+      {
+        "id_votacao": 6359,
+        "value": 0
+      },
+      {
+        "id_votacao": 6369,
+        "value": 0
+      },
+      {
+        "id_votacao": 6370,
+        "value": 0
+      },
+      {
+        "id_votacao": 6371,
+        "value": 0
+      },
+      {
+        "id_votacao": 6377,
+        "value": 0
+      },
+      {
+        "id_votacao": 6378,
+        "value": 0
+      },
+      {
+        "id_votacao": 6429,
+        "value": 0
+      },
+      {
+        "id_votacao": 6437,
+        "value": 0
+      },
+      {
+        "id_votacao": 6502,
+        "value": 0
+      },
+      {
+        "id_votacao": 6531,
+        "value": 0
+      },
+      {
+        "id_votacao": 6575,
+        "value": 0
+      },
+      {
+        "id_votacao": 7431,
+        "value": 0
+      },
+      {
+        "id_votacao": 7492,
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id_partido": 36829,
+    "nome": "Partido Renovador Trabalhista Brasileiro",
+    "partido": "PRTB",
+    "votacoes": [
+      {
+        "id_votacao": 6371,
+        "orientacao_partido": "Não",
+        "tema": "Coincidência reeleição",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6377,
+        "orientacao_partido": "Liberado",
+        "tema": "Cota para mulheres legislativo",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6358,
+        "orientacao_partido": "Sim",
+        "tema": "Distritão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6354,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6370,
+        "orientacao_partido": "Não",
+        "tema": "Financiamento privado para partidos e candidatos",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6531,
+        "orientacao_partido": "Sim",
+        "tema": "Infanticídio indígena",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6429,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 1",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6437,
+        "orientacao_partido": "Sim",
+        "tema": "Maioridade 2",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6310,
+        "orientacao_partido": "Sim",
+        "tema": "Pensão",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6359,
+        "orientacao_partido": "Sim",
+        "tema": "Reeleição",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6286,
+        "orientacao_partido": "Sim",
+        "tema": "Seguro Desemprego",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6352,
+        "orientacao_partido": "Não",
+        "tema": "Tempo mandato",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6204,
+        "orientacao_partido": "Liberado",
+        "tema": "Terceirização",
+        "value_name": "liberado",
+        "value": 0
+      },
+      {
+        "id_votacao": 6502,
+        "orientacao_partido": "Sim",
+        "tema": "Terrorismo",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6259,
+        "orientacao_partido": "Sim",
+        "tema": "Transgênico",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6575,
+        "orientacao_partido": "Sim",
+        "tema": "Tributação serviços de internet",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6369,
+        "orientacao_partido": "Não",
+        "tema": "Voto Facultativo",
+        "value_name": "não",
+        "value": -1
+      },
+      {
+        "id_votacao": 6378,
+        "orientacao_partido": "Sim",
+        "tema": "Voto impresso",
+        "value_name": "sim",
+        "value": 1
+      },
+      {
+        "id_votacao": 6675,
+        "value": 0
+      },
+      {
+        "id_votacao": 7431,
+        "value": 0
+      },
+      {
+        "id_votacao": 7492,
+        "value": 0
+      }
+    ]
+  }
+]
