@@ -6,6 +6,7 @@ import PersonPinIcon from 'material-ui-icons/PersonPin';
 import Paper from 'material-ui/Paper';
 import Typography from 'material-ui/Typography';
 import Card from 'material-ui/Card';
+import FlipMove from 'react-flip-move';
 
 const cardStyle = {
   overflowY: 'scroll',
@@ -47,14 +48,21 @@ class TabsContainer extends Component {
                   textColor="primary"
                 >
                   <Tab label="DEPUTADOS" />
-                  <Tab label="PARTIDOS" disabled/>
+                  <Tab label="PARTIDOS" />
                 </Tabs>
               </Paper>
               {this.state.value === 0 && <TabContainer>
                 <Card style={cardStyle}>
+                  <FlipMove>
                    {this.props.deputados}
+                   </FlipMove>
                 </Card></TabContainer>}
-              {this.state.value === 1 && <TabContainer>Item Two</TabContainer>}
+              {this.state.value === 1 && <TabContainer>
+                <Card style={cardStyle}>
+                  <FlipMove>
+                   {this.props.partidos}
+                  </FlipMove>
+                </Card></TabContainer>}
       </div>
     );
   }
