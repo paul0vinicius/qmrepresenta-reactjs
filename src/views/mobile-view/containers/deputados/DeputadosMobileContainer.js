@@ -42,6 +42,10 @@ class DeputadosMobileContainer extends DeputadosContainer {
             );
   }
 
+  componentDidMount(){
+    this.props.pegaVotacoesDeputados(this.getVotacoes());
+  }
+
   render(){
     var settings = {
       className: "center",
