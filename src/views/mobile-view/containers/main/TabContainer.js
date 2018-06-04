@@ -42,7 +42,7 @@ class DeputadosEPartidosTabContainer extends Component {
                   textColor="primary"
                 >
                   <Tab label="DEPUTADOS" />
-                  <Tab label="PARTIDOS" disabled/>
+                  <Tab label="PARTIDOS" />
                 </Tabs>
               </Paper>
               {this.state.value === 0 && <TabContainer>
