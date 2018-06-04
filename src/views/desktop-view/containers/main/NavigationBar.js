@@ -59,7 +59,7 @@ class NavigationBar extends Component {
                    {this.props.votacoes}
                   </Grid>
                   <Grid item xs={12} sm={6} md={6} lg={6}>
-                   {this.props.deputados}
+                   {this.props.deputadosEPartidos}
                   </Grid>
                 </Grid>
               </TabContainer>}
