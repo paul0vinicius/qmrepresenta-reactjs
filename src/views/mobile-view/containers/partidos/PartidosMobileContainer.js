@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from 'material-ui/Card';
-import DeputadoFactory from '../../../../factories/DeputadoFactory.js';
+import PartidoFactory from '../../../../factories/PartidoFactory.js';
 import DeputadosContainer from '../../../desktop-view/containers/deputados/DeputadosContainer.js';
 import Input, { InputLabel } from 'material-ui/Input';
 import { MenuItem } from 'material-ui/Menu';
@@ -24,15 +24,15 @@ class PartidosMobileContainer extends Component {
   }
 
   componentDidMount(){
-    //let partidos = PartidoFactory.inicializaComponentesDeputados("mobile", nextProps.scoreDeputados, this.nVotacoesDep);
-    //this.setState({partidos: partidos});
-    let partidos = [];
-    for(var i = 0; i < 100; i++){
-      partidos.push(
-        <PartidoMobile score={i}/>
-      );
-    }
-    this.setState({partidos : partidos});
+    let partidos = PartidoFactory.inicializaComponentesPartidos("mobile", this.scorePartidos, this.nVotacoesDep);
+    this.setState({partidos: partidos});
+    // let partidos = [];
+    // for(var i = 0; i < 100; i++){
+    //   partidos.push(
+    //     <PartidoMobile score={i}/>
+    //   );
+    // }
+    // this.setState({partidos : partidos});
   }
 
   render(){
