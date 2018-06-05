@@ -25,14 +25,18 @@ class DeputadoFactory extends Component {
         }
       default:
         return function(a, b){
-          if (a.props.score > b.props.score) return -1;
-          else if (a.props.score < b.props.score) return 1;
-          else return 0;
+          var scValue;
+          if (a.props.score > b.props.score) scValue = -1;
+          else if (a.props.score < b.props.score) scValue = 1;
+          else scValue = 0;
+
+          if (a.props.nVotacoesDep < 9) return 1;
+          return scValue;
         }
     }
   }
 
-  static buildClass(tipoClasseDeputado, infoDeputado, scoreDeputado, nVotacoesPresente){
+  static buildClass(tipoClasseDeputado, infoDeputado, scoreDeputado, nVotacoesPresente, votosSimilares, nVotosUsuario){
     switch (tipoClasseDeputado) {
       case "mobile":
         return <div key={infoDeputado.id_deputado} >
@@ -45,6 +49,8 @@ class DeputadoFactory extends Component {
                                  votacoes = {infoDeputado.votacoes}
                                  score = {scoreDeputado}
                                  nVotacoesDep = {nVotacoesPresente}
+                                 nVotosUsuario = {nVotosUsuario}
+                                 votosSimilares = {votosSimilares}
                             />
               </div>;
       default:
@@ -57,16 +63,19 @@ class DeputadoFactory extends Component {
                                  votacoes = {infoDeputado.votacoes}
                                  score = {scoreDeputado}
                                  nVotacoesDep = {nVotacoesPresente}
+                                 nVotosUsuario = {nVotosUsuario}
+                                 votosSimilares = {votosSimilares}
                                  />;
 
     }
   }
 
-  static inicializaComponentesDeputados(tipoClasseDeputado, scoreDeputados, nVotacoesDep){
+  static inicializaComponentesDeputados(tipoClasseDeputado, scoreDeputados, nVotacoesDep, votosSimilares, nVotosUsuario){
     let deputados = [];
 
     for(let i = 0; i < infoDeputados.length; i++){
-      deputados.push(this.buildClass(tipoClasseDeputado, infoDeputados[i], scoreDeputados[infoDeputados[i].id_deputado], nVotacoesDep[infoDeputados[i].id_deputado]));
+      deputados.push(this.buildClass(tipoClasseDeputado, infoDeputados[i], scoreDeputados[infoDeputados[i].id_deputado],
+        nVotacoesDep[infoDeputados[i].id_deputado], votosSimilares[infoDeputados[i].id_deputado], nVotosUsuario));
     }
 
     // Ordena por compatibilidade
