@@ -56,7 +56,7 @@ const b = {
 class MainContainer extends Component {
   constructor(props){
     super(props);
-    this.state = { scoreDeputados: {}, scorePartidos: {}};
+    this.state = { scoreDeputados: {}, scorePartidos: {}, votosSimilaresPartidos: {}, votosSimilaresDeputados: {}, nVotosUsuario: 0};
     this.todasVotacoesDeputados = {};
     this.todasVotacoesPartidos = {};
   }
@@ -66,9 +66,13 @@ class MainContainer extends Component {
     // Renomear deputadosContainer para DeputadosEPartidosContainer... Algo assim
     var deputadosContainer = <DeputadosContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
                         scoreDeputados = {this.state.scoreDeputados}
+                        votosSimilares = {this.state.votosSimilaresDeputados}
+                        nVotosUsuario = {this.state.nVotosUsuario}
                         />;
     var partidosContainer = <PartidosContainer pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes) }
                         scorePartidos = {this.state.scorePartidos}
+                        votosSimilares = {this.state.votosSimilaresPartidos}
+                        nVotosUsuario = {this.state.nVotosUsuario}
                         />;
     var deputadosEPartidosContainer = <TabsContainer deputados={deputadosContainer}
                         partidos={partidosContainer}
@@ -91,6 +95,34 @@ class MainContainer extends Component {
     );
   }
 
+  getVotacoesSimilaresDeputados(){
+    var votacoesSimilares = {};
+    for(var deputado in this.todasVotacoesDeputados){
+      votacoesSimilares[deputado] = [];
+    }
+
+    return votacoesSimilares;
+  }
+
+  getVotacoesSimilaresPartidos(){
+    var votacoesSimilares = {};
+    for(var partido in this.todasVotacoesPartidos){
+      votacoesSimilares[partido] = [];
+    }
+
+    return votacoesSimilares;
+  }
+
+  getNumVotosUsuario(mapaVotos){
+    let nVotos = 0;
+
+    for (let votacao in mapaVotos){
+      if (mapaVotos[votacao] !=0) nVotos++;
+    }
+
+    return nVotos;
+  }
+
   // Cria um dicionário com chave = deputado_id e o valor = dicionário de votações
   // Percorre cada deputado, pega suas votações e verifica a similaridade das votações
   // com as escolhidas no site. Em seguida atualiza o estado com os scores dos deputados.
@@ -99,7 +131,9 @@ class MainContainer extends Component {
   calculaCompatibilidade(newState){
     var newScoreDeputados = {};
     var newScorePartidos = {};
-    //var newIsPoucoVoto = {};
+    var votosSimilaresDeputados = this.getVotacoesSimilaresDeputados();
+    var votosSimilaresPartidos = this.getVotacoesSimilaresPartidos();
+    console.log(newState);
     for (var deputado in this.todasVotacoesDeputados){
       var score = 0;
       var antiScore = 0;
@@ -108,7 +142,10 @@ class MainContainer extends Component {
       var nVotacoesUser = 0;
       for (var idVotacao in newState){
         if (newState[idVotacao] === this.todasVotacoesDeputados[deputado][idVotacao] &&
-            newState[idVotacao] !== 0) score++;
+            newState[idVotacao] !== 0) {
+              score++;
+              votosSimilaresDeputados[deputado].push(idVotacao);
+            }
         else if(newState[idVotacao] !== this.todasVotacoesDeputados[deputado][idVotacao] &&
             newState[idVotacao] !== 0) antiScore++;
         if ((newState[idVotacao] !== 0) && (this.todasVotacoesDeputados[deputado][idVotacao] !== 0)) ambosVotaram++;
@@ -128,7 +165,10 @@ class MainContainer extends Component {
       var nVotacoesUser = 0;
       for (var idVotacao in newState){
         if (newState[idVotacao] === this.todasVotacoesPartidos[partido][idVotacao] &&
-            newState[idVotacao] !== 0) score++;
+            newState[idVotacao] !== 0){
+              score++;
+              votosSimilaresPartidos[partido].push(idVotacao);
+            }
         else if(newState[idVotacao] !== this.todasVotacoesPartidos[partido][idVotacao] &&
             newState[idVotacao] !== 0) antiScore++;
         if ((newState[idVotacao] !== 0) && (this.todasVotacoesPartidos[partido][idVotacao] !== 0)) ambosVotaram++;
@@ -138,9 +178,14 @@ class MainContainer extends Component {
       newScorePartidos[partido] = score/ambosVotaram;
     }
 
+    let nVotos = this.getNumVotosUsuario(newState);
+
     this.setState({
       scoreDeputados: newScoreDeputados,
-      scorePartidos: newScorePartidos
+      scorePartidos: newScorePartidos,
+      votosSimilaresDeputados: votosSimilaresDeputados,
+      votosSimilaresPartidos: votosSimilaresPartidos,
+      nVotosUsuario: nVotos
     })
   }
 
