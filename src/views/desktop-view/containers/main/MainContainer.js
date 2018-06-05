@@ -18,6 +18,7 @@ const votacoesGridStyle = {
 const deputadosGridStyle = {
   textAlign: 'left',
   marginLeft: '0vh',
+  WebKitScrollbar: '10px',
   //width: '10vh'
 }
 
