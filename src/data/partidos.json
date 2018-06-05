@@ -3,6 +3,7 @@
     "id_partido": 36761,
     "nome": "Partido Ecológico Nacional",
     "partido": "PEN",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PEN.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -151,6 +152,7 @@
     "id_partido": 36763,
     "nome": "Partido Republicano da Ordem Social",
     "partido": "PROS",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PROS.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -305,6 +307,7 @@
     "id_partido": 36769,
     "nome": "Democratas",
     "partido": "DEM",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/DEM.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -613,6 +616,7 @@
     "id_partido": 36786,
     "nome": "Partido Democrático Trabalhista",
     "partido": "PDT",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PDT.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -767,6 +771,7 @@
     "id_partido": 36793,
     "nome": "Partido Humanista da Solidariedade",
     "partido": "PHS",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PHS.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -918,6 +923,7 @@
     "id_partido": 36800,
     "nome": "Partido do Movimento Democrático Brasileiro",
     "partido": "PMDB",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PMDB.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -1072,6 +1078,7 @@
     "id_partido": 36801,
     "nome": "Partido da Mobilização Nacional",
     "partido": "PMN",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PMN.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -1220,6 +1227,7 @@
     "id_partido": 36809,
     "nome": "Partido Progressista",
     "partido": "PP",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PP.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -1374,6 +1382,7 @@
     "id_partido": 36813,
     "nome": "Partido Popular Socialista",
     "partido": "PPS",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PPS.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -1528,6 +1537,7 @@
     "id_partido": 36814,
     "nome": "Partido da República",
     "partido": "PR",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PR.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -1682,6 +1692,7 @@
     "id_partido": 36815,
     "nome": "Partido Republicano Brasileiro",
     "partido": "PRB",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PRB.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -1836,6 +1847,7 @@
     "id_partido": 36824,
     "nome": "Partido Republicano Progressista",
     "partido": "PRP",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PRP.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -1984,6 +1996,7 @@
     "id_partido": 36832,
     "nome": "Partido Socialista Brasileiro",
     "partido": "PSB",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PSB.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -2138,6 +2151,7 @@
     "id_partido": 36833,
     "nome": "Partido Social Cristão",
     "partido": "PSC",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PSC.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -2292,6 +2306,7 @@
     "id_partido": 36834,
     "nome": "Partido Social Democrático",
     "partido": "PSD",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PSD.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -2446,6 +2461,7 @@
     "id_partido": 36835,
     "nome": "Partido da Social Democracia Brasileira",
     "partido": "PSDB",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PSDB.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -2600,6 +2616,7 @@
     "id_partido": 36836,
     "nome": "Partido Social Democrata Cristão",
     "partido": "PSDC",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PSDC.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -2748,6 +2765,7 @@
     "id_partido": 36837,
     "nome": "Partido Social Liberal",
     "partido": "PSL",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PSL.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -2902,6 +2920,7 @@
     "id_partido": 36839,
     "nome": "Partido Socialismo e Liberdade",
     "partido": "PSOL",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PSOL.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -3014,6 +3033,7 @@
     "id_partido": 36844,
     "nome": "Partido dos Trabalhadores",
     "partido": "PT",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PT.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -3168,6 +3188,7 @@
     "id_partido": 36845,
     "nome": "Partido Trabalhista Brasileiro",
     "partido": "PTB",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PTB.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -3322,6 +3343,7 @@
     "id_partido": 36846,
     "nome": "Partido Trabalhista Cristão",
     "partido": "PTC",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PTC.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -3470,6 +3492,7 @@
     "id_partido": 36847,
     "nome": "Partido Trabalhista do Brasil",
     "partido": "PTDOB",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PTdoB.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -3618,6 +3641,7 @@
     "id_partido": 36848,
     "nome": "Partido Trabalhista Nacional",
     "partido": "PTN",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PTN.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -3769,6 +3793,7 @@
     "id_partido": 36851,
     "nome": "Partido Verde",
     "partido": "PV",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PV.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -3923,6 +3948,7 @@
     "id_partido": 36886,
     "nome": "Rede Sustentabilidade",
     "partido": "REDE",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/REDE.gif",
     "votacoes": [
       {
         "id_votacao": 6675,
@@ -4017,6 +4043,7 @@
     "id_partido": 36829,
     "nome": "Partido Renovador Trabalhista Brasileiro",
     "partido": "PRTB",
+    "urlLogo": "http://www.camara.leg.br/internet/Deputado/img/partidos/PRTB.gif",
     "votacoes": [
       {
         "id_votacao": 6371,

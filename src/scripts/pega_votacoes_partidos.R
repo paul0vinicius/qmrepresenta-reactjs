@@ -60,11 +60,11 @@ ids_partidos <- fetch_id_partido(unique(votos_partidos$partido))
 ids_bancadas <- fetch_id_partido(unique(votos_partidos$bancada_associada))
 
 partidos <<- fetch_partido(ids_partidos) %>%
-  select(id, nome, sigla) %>%
+  select(id, nome, sigla, urlLogo) %>%
   mutate(sigla = toupper(sigla))
 
 bancadas <<- fetch_partido(ids_bancadas) %>%
-  select(id, nome, sigla) %>%
+  select(id, nome, sigla, urlLogo) %>%
   mutate(sigla = toupper(sigla))
 
 # Solidariedade não está aqui porque ele aparece na bancada como solidariedad e não dá match com o partido...
@@ -81,7 +81,7 @@ df_final <- left_join(votos_partidos, partidos, by=c("partido"="sigla")) %>%
   filter(!is.na(id) && partido != "P") %>%
   rowwise() %>%
   mutate(partido = ifelse(partido=="CDOB","PCDOB",partido)) %>%
-  complete(id_votacao, nesting(id, nome, partido)) %>%
+  complete(id_votacao, nesting(id, nome, partido, urlLogo)) %>%
   mutate(value_name = tolower(orientacao_partido),
          value = as.integer(enumera(tolower(orientacao_partido)))
          #value_name = na_to_y(orientacao_partido, "não votou")
@@ -89,7 +89,7 @@ df_final <- left_join(votos_partidos, partidos, by=c("partido"="sigla")) %>%
   unique() %>%
   ordena(.$tema) %>%
   select(-bancada_associada) %>%
-  group_by(id, nome, partido) %>%
+  group_by(id, nome, partido, urlLogo) %>%
   nest() %>%
   rename(votacoes = data, id_partido = id)
 

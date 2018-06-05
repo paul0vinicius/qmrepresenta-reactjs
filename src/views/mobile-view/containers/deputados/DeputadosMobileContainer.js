@@ -34,13 +34,21 @@ class DeputadosMobileContainer extends DeputadosContainer {
     this.setState({deputados: deputados});
   }
 
-  shouldComponentUpdate(nextProps, nextState){
-    return((nextState.filterName !== this.state.filterName) ||
-           (nextState.filterUf !== this.state.filterUf) ||
-           (nextState.filterPartido !== this.state.filterPartido) ||
-           (JSON.stringify(this.props.scoreDeputados) !== JSON.stringify(nextProps.scoreDeputados))
-            );
+  componentDidMount() {
+    this.props.pegaVotacoesDeputados(this.getVotacoes());
+    //this.props.pegaVotacoesPartidos(this.getVotacoesPartidos());
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep);
+    //let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido);
+    this.setState({deputados: deputados});
   }
+
+  // shouldComponentUpdate(nextProps, nextState){
+  //   return((nextState.filterName !== this.state.filterName) ||
+  //          (nextState.filterUf !== this.state.filterUf) ||
+  //          (nextState.filterPartido !== this.state.filterPartido) ||
+  //          (JSON.stringify(this.props.scoreDeputados) !== JSON.stringify(nextProps.scoreDeputados))
+  //           );
+  // }
 
   render(){
     var settings = {

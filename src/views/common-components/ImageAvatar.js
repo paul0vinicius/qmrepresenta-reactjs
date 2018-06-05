@@ -12,8 +12,9 @@ const styles = {
     //width: 60,
   },
   avatar: {
-    marginTop: '1.8vh',
-    marginLeft: '1.8vh',
+    //marginTop: '1.8vh',
+    //marginLeft: '1.8vh',
+    border: '2px solid blue',
   },
   bigAvatar: {
     width: 60,

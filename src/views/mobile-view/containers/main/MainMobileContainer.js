@@ -31,7 +31,9 @@ class MainMobileContainer extends MainContainer {
     var containerDeputados = <DeputadosMobileContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
                         scoreDeputados = {this.state.scoreDeputados}
                         />;
-    var containerPartidos = <PartidosMobileContainer />;
+    var containerPartidos = <PartidosMobileContainer pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes) }
+                        scorePartidos = {this.state.scorePartidos}
+                        />;
     return(
       <div className="MainMobileContainer">
         <Grid container>

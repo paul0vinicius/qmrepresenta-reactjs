@@ -23,7 +23,7 @@ const styles = theme => ({
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(12),
-    marginTop: '0.5vh'
+    marginTop: '5px'
   },
 });
 
@@ -34,10 +34,10 @@ class NomeEPartido extends Component {
 
     return(
       <div>
-      <Typography variant="subheading" align="center" className={classes.heading}>
+      <Typography variant="subheading" align="left" className={classes.heading}>
         {this.props.nome}
       </Typography>
-      <Typography variant="title" align="center" className={classes.secondaryHeading}>
+      <Typography variant="title" align="left" className={classes.secondaryHeading}>
         {this.props.partido}/{this.props.uf}
       </Typography>
       </div>
