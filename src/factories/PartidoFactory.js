@@ -9,6 +9,9 @@ class PartidoFactory extends Component {
     switch (tipoClassePartido) {
       case "mobile":
         return function(a, b){
+          if (a.props.score > b.props.score) return -1;
+          else if (a.props.score < b.props.score) return 1;
+          else return 0;
         }
       default:
         return function(a, b){
@@ -22,7 +25,14 @@ class PartidoFactory extends Component {
   static buildClass(tipoClassePartido, infoPartido, scorePartido, nVotacoesPresente){
     switch (tipoClassePartido) {
       case "mobile":
-        return;
+        return <PartidoMobile key = {infoPartido.id_partido}
+                        idPartido = {infoPartido.id_partido}
+                        nome = {infoPartido.nome}
+                        sigla = {infoPartido.partido}
+                        foto = {infoPartido.urlLogo}
+                        score = {scorePartido}
+                        nVotacoesPresente = {nVotacoesPresente}
+        />;;
       default:
         return <Partido key = {infoPartido.id_partido}
                         idPartido = {infoPartido.id_partido}
