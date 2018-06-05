@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { LinearProgress } from 'material-ui/Progress';
 import Grid from 'material-ui/Grid';
+import ImageAvatar from '../deputado/ImageAvatar.js';
+import NomeEPartido from '../deputado/NomeEPartido.js';
 
 const DivProgress = (props) => {
   //console.log(props.score);
@@ -9,6 +11,15 @@ const DivProgress = (props) => {
       <div>{(props.score*100).toFixed(2)}%</div>
     );
   } else return <div></div>;
+}
+
+const infoStyles = {
+  marginTop: '3vh',
+}
+
+const divProgressStyles = {
+  marginLeft: '1vh',
+  marginTop: '2vh',
 }
 
 class PartidoMobile extends Component {
@@ -26,11 +37,13 @@ class PartidoMobile extends Component {
           <Grid item xs={2}>
           </Grid>
           <Grid item xs={3}>
+            <ImageAvatar src={this.props.foto} alt="" />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} style={infoStyles}>
             {linearProgress}
+            <NomeEPartido nome={this.props.nome} partido={this.props.sigla} />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={3} style={divProgressStyles}>
             {divProgressElement}
           </Grid>
         </Grid>
