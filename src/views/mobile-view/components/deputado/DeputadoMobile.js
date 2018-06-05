@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { LinearProgress } from 'material-ui/Progress';
 import { CircularProgress } from 'material-ui/Progress';
 import Grid from 'material-ui/Grid';
-import ImageAvatar from './ImageAvatar.js';
-import NomeEPartido from './NomeEPartido.js';
+import ImageAvatar from '../../../common-components/ImageAvatar.js';
+import NomeEPartido from '../../../common-components/NomeEPartido.js';
 
 const containerStyle = {
   //marginRight: '0vh',

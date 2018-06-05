@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { LinearProgress } from 'material-ui/Progress';
 import Grid from 'material-ui/Grid';
-import ImageAvatar from '../deputado/ImageAvatar.js';
-import NomeEPartido from '../deputado/NomeEPartido.js';
+import ImageAvatar from '../../../common-components/ImageAvatar.js';
+import NomeEPartido from '../../../common-components/NomeEPartido.js';
 
 const DivProgress = (props) => {
   //console.log(props.score);
