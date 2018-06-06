@@ -22,7 +22,7 @@ class PartidoFactory extends Component {
     }
   }
 
-  static buildClass(tipoClassePartido, infoPartido, scorePartido, nVotacoesPresente){
+  static buildClass(tipoClassePartido, infoPartido, scorePartido, nVotacoesPresente, votosSimilares, nVotosUsuario){
     switch (tipoClassePartido) {
       case "mobile":
         return <PartidoMobile key = {infoPartido.id_partido}
@@ -32,7 +32,9 @@ class PartidoFactory extends Component {
                         foto = {infoPartido.urlLogo}
                         score = {scorePartido}
                         nVotacoesPresente = {nVotacoesPresente}
-        />;;
+                        nVotosUsuario = {nVotosUsuario}
+                        votosSimilares = {votosSimilares}
+        />;
       default:
         return <Partido key = {infoPartido.id_partido}
                         idPartido = {infoPartido.id_partido}
@@ -41,19 +43,22 @@ class PartidoFactory extends Component {
                         foto = {infoPartido.urlLogo}
                         score = {scorePartido}
                         nVotacoesPresente = {nVotacoesPresente}
+                        nVotosUsuario = {nVotosUsuario}
+                        votosSimilares = {votosSimilares}
         />;
     }
   }
 
-  static inicializaComponentesPartidos(tipoClassePartido, scorePartidos, nVotacoesPartido){
+  static inicializaComponentesPartidos(tipoClassePartido, scorePartidos, nVotacoesPartido, votosSimilares, nVotosUsuario){
     let partidos = [];
 
     console.log(tipoClassePartido);
-    console.log(scorePartidos);
-    console.log(nVotacoesPartido);
+    console.log(votosSimilares);
+    console.log(nVotosUsuario);
 
     for(let i = 0; i < infoPartidos.length; i++){
-      partidos.push(this.buildClass(tipoClassePartido, infoPartidos[i], scorePartidos[infoPartidos[i].id_partido], nVotacoesPartido[infoPartidos[i].id_partido]));
+      partidos.push(this.buildClass(tipoClassePartido, infoPartidos[i], scorePartidos[infoPartidos[i].id_partido],
+        nVotacoesPartido[infoPartidos[i].id_partido], votosSimilares[infoPartidos[i].id_partido], nVotosUsuario));
     }
 
     // Ordena por compatibilidade
