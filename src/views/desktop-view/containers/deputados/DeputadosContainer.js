@@ -68,10 +68,10 @@ class DeputadosContainer extends Component {
   // Transforma um array do tipo: [{id_votacao: x, value_name: sim/nao/abstencao, tema: z, value:0/1/-1/-2}] para um
   // dicionário do tipo: id_dep:{id_votacao: value}
   getVotacoes(){
-    var todasVotacoes = {};
-    for (var i = 0; i < infoDeputados.length; i++){
-      var votacoes = {};
-      for (var j = 0; j < Object.keys(infoDeputados[i].votacoes).length; j++){
+    let todasVotacoes = {};
+    for (let i = 0; i < infoDeputados.length; i++){
+      let votacoes = {};
+      for (let j = 0; j < Object.keys(infoDeputados[i].votacoes).length; j++){
         votacoes[infoDeputados[i].votacoes[j].id_votacao] = infoDeputados[i].votacoes[j].value;
       }
       todasVotacoes[infoDeputados[i].id_deputado] = votacoes;
