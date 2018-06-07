@@ -12,3 +12,30 @@ npm start
 ```
 
 Após a instalação e inicialização, o browser abrirá automaticamente. O endereço de acesso é o [localhost:3000](localhost:3000).
+
+### Screenshots
+
+#### Desktop
+
+Layout inicial
+![](./screenshots/qmr-init.png)
+
+Após algumas votações na seção de deputados
+![](./screenshots/qmr-votos-deputados.png)
+
+Após algumas votações na seção de partidos
+![](./screenshots/qmr-partidos.png)
+
+#### Mobile
+
+Layout inicial
+![](.screenshots/mobileboasvindas.jpeg)
+
+Após algumas votações na seção de deputados
+![](.screenshots/mobile1inicial.jpeg)
+
+Após algumas votações na seção de partidos
+![](.screenshots/mobile1.jpeg)
+
+Usando os filtros
+![](.screenshots/mobile2filtros.jpeg)
