@@ -41,7 +41,6 @@ class DeputadosContainer extends Component {
   }
 
   componentDidMount() {
-    this.props.pegaVotacoesDeputados(this.getVotacoes());
     //this.props.pegaVotacoesPartidos(this.getVotacoesPartidos());
     let deputados = DeputadoFactory.inicializaComponentesDeputados("",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.nVotosUsuario);
     //let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido);

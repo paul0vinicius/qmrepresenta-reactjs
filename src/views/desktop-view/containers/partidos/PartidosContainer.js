@@ -34,7 +34,6 @@ class PartidosContainer extends Component {
   }
 
   componentDidMount() {
-    this.props.pegaVotacoesPartidos(this.getVotacoesPartidos());
     let partidos = PartidoFactory.inicializaComponentesPartidos("", this.props.scorePartidos, this.nVotacoesPartido, this.props.votosSimilares, this.props.nVotosUsuario);
     this.setState({partidos: partidos});
   }
