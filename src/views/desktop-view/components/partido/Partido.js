@@ -58,9 +58,11 @@ class Partido extends Component {
             <ImageAvatar src={this.props.foto} alt="" />
           </Grid>
           <Grid item xs={4} sm={4} md={4} lg={4} style={infoStyles}>
-            <div style={{width:'15vh'}}>{linearProgress}</div>
-            <div align="left">{this.props.votosSimilares.length}/{this.props.nVotosUsuario}</div>
+            <div align="left" style={{width:'20vh'}}>{linearProgress}</div>
+            <div align="left">{Math.round(this.props.score*100)}% - {this.props.votosSimilares.length}/{this.props.nVotosUsuario}</div>
             <div><NomeEPartido nome={this.props.nome} partido={this.props.sigla} /></div>
+          </Grid>
+          <Grid item xs={1} sm={1} md={1} lg={1}>
           </Grid>
         </Grid>
       </div>
