@@ -28,14 +28,10 @@ Após algumas votações na seção de partidos
 
 #### Mobile
 
-Layout inicial
-![](./screenshots/mobileboasvindas.jpeg)
+<img src="./screenshots/mobileboasvindas.jpeg" width="30%" alt="Layout inicial">
 
-Após algumas votações na seção de deputados
-![](./screenshots/mobile1inicial.jpeg)
+<img src="./screenshots/mobile1inicial.jpeg" width="30%" alt="Após algumas votações na seção de deputados">
 
-Após algumas votações na seção de partidos
-![](./screenshots/mobile1.jpeg)
+<img src="./screenshots/mobile1.jpeg" width="30%" alt="Após algumas votações na seção de partidos">
 
-Usando os filtros
-![](./screenshots/mobile2filtros.jpeg)
+<img src="./screenshots/mobile2filtros.jpeg" width="30%" alt="Usando os filtros">
