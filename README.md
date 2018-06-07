@@ -29,7 +29,8 @@ Após algumas votações na seção de partidos
 #### Mobile
 
 Layout inicial
-![](./screenshots/mobileboasvindas.jpeg)
+
+<img src="./screenshots/mobileboasvindas.jpeg" width="40%">
 
 Após algumas votações na seção de deputados
 ![](./screenshots/mobile1inicial.jpeg)
