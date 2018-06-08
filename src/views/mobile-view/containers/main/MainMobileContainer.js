@@ -7,6 +7,7 @@ import DeputadosEPartidosTabContainer from './TabContainer.js';
 import PartidosMobileContainer from '../partidos/PartidosMobileContainer.js';
 import Typography from 'material-ui/Typography';
 import grey from 'material-ui/colors/grey';
+import TabsContainer from '../../../desktop-view/containers/main/TabsContainer.js';
 
 const votacoesGridStyle = {
   textAlign: 'center',
@@ -28,12 +29,22 @@ const logoPath = "";
 class MainMobileContainer extends MainContainer {
 
   render(){
-    var containerDeputados = <DeputadosMobileContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
+    var containerDeputados = <DeputadosMobileContainer
                         scoreDeputados = {this.state.scoreDeputados}
+                        votosSimilares = {this.state.votosSimilaresDeputados}
+                        nVotosUsuario = {this.state.nVotosUsuario}
                         />;
-    var containerPartidos = <PartidosMobileContainer pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes) }
+    var containerPartidos = <PartidosMobileContainer
                         scorePartidos = {this.state.scorePartidos}
+                        votosSimilares = {this.state.votosSimilaresPartidos}
+                        nVotosUsuario = {this.state.nVotosUsuario}
                         />;
+
+    var deputadosEPartidosContainer = <DeputadosEPartidosTabContainer deputados={containerDeputados}
+                   partidos={containerPartidos}
+                   pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
+                   pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes) }
+    />;
     return(
       <div className="MainMobileContainer">
         <Grid container>
@@ -47,9 +58,7 @@ class MainMobileContainer extends MainContainer {
             {/*Barrinha de pesquisa, filtros e tab alternado*/}
           </Grid>
           <Grid item xs={12} style={deputadosGridStyle}>
-            <DeputadosEPartidosTabContainer deputados={containerDeputados}
-                                            partidos={containerPartidos}
-            />
+            {deputadosEPartidosContainer}
           </Grid>
           <Grid item xs={12} style={deputadosGridStyle}>
             {/*Barrinha para selecionar os botões: tela cheia para votações, deputados ou meio a meio (default meio a meio)*/}
