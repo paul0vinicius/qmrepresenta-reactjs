@@ -8,6 +8,8 @@ import MiniDrawer from '../../containers/menu_lateral/SideBar.js';
 import NavigationBar from './NavigationBar.js';
 import grey from 'material-ui/colors/grey';
 import TabsContainer from './TabsContainer.js';
+import infoDeputados from '../../../../data/deputados.json';
+import infoPartidos from '../../../../data/partidos.json';
 
 const votacoesGridStyle = {
   textAlign: 'left',
@@ -64,18 +66,20 @@ class MainContainer extends Component {
   render() {
     var votacoesContainer = <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />;
     // Renomear deputadosContainer para DeputadosEPartidosContainer... Algo assim
-    var deputadosContainer = <DeputadosContainer pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
+    var deputadosContainer = <DeputadosContainer
                         scoreDeputados = {this.state.scoreDeputados}
                         votosSimilares = {this.state.votosSimilaresDeputados}
                         nVotosUsuario = {this.state.nVotosUsuario}
                         />;
-    var partidosContainer = <PartidosContainer pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes) }
+    var partidosContainer = <PartidosContainer
                         scorePartidos = {this.state.scorePartidos}
                         votosSimilares = {this.state.votosSimilaresPartidos}
                         nVotosUsuario = {this.state.nVotosUsuario}
                         />;
     var deputadosEPartidosContainer = <TabsContainer deputados={deputadosContainer}
                         partidos={partidosContainer}
+                        pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes) }
+                        pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
     />;
     return(
       <div className="MainContainer" style={mainGridStyle}>
@@ -96,8 +100,8 @@ class MainContainer extends Component {
   }
 
   getVotacoesSimilaresDeputados(){
-    var votacoesSimilares = {};
-    for(var deputado in this.todasVotacoesDeputados){
+    let votacoesSimilares = {};
+    for(let deputado in this.todasVotacoesDeputados){
       votacoesSimilares[deputado] = [];
     }
 
@@ -105,8 +109,8 @@ class MainContainer extends Component {
   }
 
   getVotacoesSimilaresPartidos(){
-    var votacoesSimilares = {};
-    for(var partido in this.todasVotacoesPartidos){
+    let votacoesSimilares = {};
+    for(let partido in this.todasVotacoesPartidos){
       votacoesSimilares[partido] = [];
     }
 
@@ -129,18 +133,16 @@ class MainContainer extends Component {
   // TODO: Corrigir JSON para casos onde aparece 'obstrução'.
   // Fórmula de compatibilidade: score(u,d) = votacoes_iguais(u,d)/total_votacoes(u,d)
   calculaCompatibilidade(newState){
-    var newScoreDeputados = {};
-    var newScorePartidos = {};
-    var votosSimilaresDeputados = this.getVotacoesSimilaresDeputados();
-    var votosSimilaresPartidos = this.getVotacoesSimilaresPartidos();
-    console.log(newState);
-    for (var deputado in this.todasVotacoesDeputados){
-      var score = 0;
-      var antiScore = 0;
-      var ambosVotaram = 0;
-      var nVotacoesDep = 0;
-      var nVotacoesUser = 0;
-      for (var idVotacao in newState){
+    let newScoreDeputados = {};
+    let nVotos = this.getNumVotosUsuario(newState);
+    let votosSimilaresDeputados = this.getVotacoesSimilaresDeputados();
+    for (let deputado in this.todasVotacoesDeputados){
+      let score = 0;
+      let antiScore = 0;
+      let ambosVotaram = 0;
+      let nVotacoesDep = 0;
+      let nVotacoesUser = 0;
+      for (let idVotacao in newState){
         if (newState[idVotacao] === this.todasVotacoesDeputados[deputado][idVotacao] &&
             newState[idVotacao] !== 0) {
               score++;
@@ -152,18 +154,19 @@ class MainContainer extends Component {
         if(newState[idVotacao] !== 0) nVotacoesUser++;
       }
       if (ambosVotaram === 0) ambosVotaram = 1;
-      newScoreDeputados[deputado] = score/ambosVotaram;
+      newScoreDeputados[deputado] = score/nVotos;
 
       //console.log(antiScore);
     }
-
-    for (var partido in this.todasVotacoesPartidos) {
-      var score = 0;
-      var antiScore = 0;
-      var ambosVotaram = 0;
-      var nVotacoesPart = 0;
-      var nVotacoesUser = 0;
-      for (var idVotacao in newState){
+    let newScorePartidos = {};
+    let votosSimilaresPartidos = this.getVotacoesSimilaresPartidos();
+    for (let partido in this.todasVotacoesPartidos) {
+      let score = 0;
+      let antiScore = 0;
+      let ambosVotaram = 0;
+      let nVotacoesPart = 0;
+      let nVotacoesUser = 0;
+      for (let idVotacao in newState){
         if (newState[idVotacao] === this.todasVotacoesPartidos[partido][idVotacao] &&
             newState[idVotacao] !== 0){
               score++;
@@ -175,16 +178,14 @@ class MainContainer extends Component {
         if(newState[idVotacao] !== 0) nVotacoesUser++;
       }
       if (ambosVotaram === 0) ambosVotaram = 1;
-      newScorePartidos[partido] = score/ambosVotaram;
+      newScorePartidos[partido] = score/nVotos;
     }
-
-    let nVotos = this.getNumVotosUsuario(newState);
 
     this.setState({
       scoreDeputados: newScoreDeputados,
       scorePartidos: newScorePartidos,
-      votosSimilaresDeputados: votosSimilaresDeputados,
       votosSimilaresPartidos: votosSimilaresPartidos,
+      votosSimilaresDeputados: votosSimilaresDeputados,
       nVotosUsuario: nVotos
     })
   }
@@ -196,7 +197,6 @@ class MainContainer extends Component {
   setVotacoesPartidos(votacoes){
     this.todasVotacoesPartidos = votacoes;
   }
-
 }
 
 export default MainContainer;

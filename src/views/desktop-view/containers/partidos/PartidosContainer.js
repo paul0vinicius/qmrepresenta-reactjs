@@ -29,13 +29,12 @@ class PartidosContainer extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido);
+    let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido, nextProps.votosSimilares, nextProps.nVotosUsuario);
     this.setState({partidos: partidos});
   }
 
   componentDidMount() {
-    this.props.pegaVotacoesPartidos(this.getVotacoesPartidos());
-    let partidos = PartidoFactory.inicializaComponentesPartidos("", this.props.scorePartidos, this.nVotacoesPartido);
+    let partidos = PartidoFactory.inicializaComponentesPartidos("", this.props.scorePartidos, this.nVotacoesPartido, this.props.votosSimilares, this.props.nVotosUsuario);
     this.setState({partidos: partidos});
   }
 
@@ -50,10 +49,10 @@ class PartidosContainer extends Component {
   }
 
   getVotacoesPartidos(){
-    var todasVotacoes = {};
-    for (var i = 0; i < infoPartidos.length; i++){
-      var votacoes = {};
-      for (var j = 0; j < Object.keys(infoPartidos[i].votacoes).length; j++){
+    let todasVotacoes = {};
+    for (let i = 0; i < infoPartidos.length; i++){
+      let votacoes = {};
+      for (let j = 0; j < Object.keys(infoPartidos[i].votacoes).length; j++){
         votacoes[infoPartidos[i].votacoes[j].id_votacao] = infoPartidos[i].votacoes[j].value;
       }
       todasVotacoes[infoPartidos[i].id_partido] = votacoes;
@@ -62,9 +61,6 @@ class PartidosContainer extends Component {
   }
 
   calculaNVotacoesPartidos(votacoes){
-
-    console.log(votacoes);
-
     var nVotacoesPartObject = {};
     for (var partido in votacoes){
       var nVotacoesPart = 0;

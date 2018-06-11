@@ -49,7 +49,6 @@ class Deputado extends Component {
   constructor(props){
     super(props);
     this.votacoes = props.votacoes;
-    console.log(props.votacoes);
   }
 
   render() {
@@ -69,7 +68,7 @@ class Deputado extends Component {
           </Grid>
           <Grid item style={infoStyles}>
             <div style={{width:'15vh'}}>{linearProgress}</div>
-            <div align="left">{this.props.votosSimilares.length}/{this.props.nVotosUsuario}</div>
+            <div align="left">{Math.round(this.props.score*100)}% - {this.props.votosSimilares.length}/{this.props.nVotosUsuario}</div>
             <div><NomeEPartido nome={this.props.nome} partido={this.props.partido} uf={this.props.uf}/></div>
           </Grid>
         </Grid>

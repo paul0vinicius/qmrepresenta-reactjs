@@ -24,13 +24,13 @@ class PartidosMobileContainer extends PartidosContainer {
   }
 
   componentWillReceiveProps(nextProps){
-    let partidos = PartidoFactory.inicializaComponentesPartidos("mobile", nextProps.scorePartidos, this.nVotacoesPartido);
+    let partidos = PartidoFactory.inicializaComponentesPartidos("mobile", nextProps.scorePartidos, this.nVotacoesPartido, nextProps.votosSimilares, nextProps.nVotosUsuario);
     this.setState({partidos: partidos});
   }
 
   componentDidMount() {
-    this.props.pegaVotacoesPartidos(this.getVotacoesPartidos());
-    let partidos = PartidoFactory.inicializaComponentesPartidos("mobile", this.props.scorePartidos, this.nVotacoesPartido);
+    //this.props.pegaVotacoesPartidos(this.getVotacoesPartidos());
+    let partidos = PartidoFactory.inicializaComponentesPartidos("mobile", this.props.scorePartidos, this.nVotacoesPartido, this.props.votosSimilares, this.props.nVotosUsuario);
     this.setState({partidos: partidos});
   }
 
