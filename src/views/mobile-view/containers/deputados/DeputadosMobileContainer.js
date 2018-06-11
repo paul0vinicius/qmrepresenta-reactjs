@@ -30,7 +30,6 @@ class DeputadosMobileContainer extends DeputadosContainer {
 
   componentWillReceiveProps(nextProps){
     let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", nextProps.scoreDeputados, this.nVotacoesDep, nextProps.votosSimilares, nextProps.nVotosUsuario);
-    console.log(nextProps.scoreDeputados);
     this.setState({deputados: deputados});
   }
 
@@ -41,14 +40,6 @@ class DeputadosMobileContainer extends DeputadosContainer {
     //let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido);
     this.setState({deputados: deputados});
   }
-
-  // shouldComponentUpdate(nextProps, nextState){
-  //   return((nextState.filterName !== this.state.filterName) ||
-  //          (nextState.filterUf !== this.state.filterUf) ||
-  //          (nextState.filterPartido !== this.state.filterPartido) ||
-  //          (JSON.stringify(this.props.scoreDeputados) !== JSON.stringify(nextProps.scoreDeputados))
-  //           );
-  // }
 
   render(){
     var settings = {
@@ -159,7 +150,7 @@ class DeputadosMobileContainer extends DeputadosContainer {
   }
 
   partidos(){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.nVotosUsuario);
     let partidos = new Set();
 
     partidos.add("TODOS");
