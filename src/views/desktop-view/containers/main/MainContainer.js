@@ -63,11 +63,6 @@ class MainContainer extends Component {
     this.todasVotacoesPartidos = {};
   }
 
-  componentDidMount(){
-    this.setVotacoesDeputados(this.getVotacoes());
-    this.setVotacoesPartidos(this.getVotacoesPartidos());
-  }
-
   render() {
     var votacoesContainer = <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />;
     // Renomear deputadosContainer para DeputadosEPartidosContainer... Algo assim
@@ -115,9 +110,7 @@ class MainContainer extends Component {
 
   getVotacoesSimilaresPartidos(){
     let votacoesSimilares = {};
-    console.log(this.todasVotacoesPartidos);
     for(let partido in this.todasVotacoesPartidos){
-      console.log(partido);
       votacoesSimilares[partido] = [];
     }
 
@@ -204,38 +197,6 @@ class MainContainer extends Component {
   setVotacoesPartidos(votacoes){
     this.todasVotacoesPartidos = votacoes;
   }
-
-  // Modificar script para gerar JSON no formato id_dep:{id_votacao: value}. Esse for é para fazer essa transformação,
-  // mas se conseguirmos modificar o script para gerar o json pronto, basta retornar as votações.
-  // Transforma um array do tipo: [{id_votacao: x, value_name: sim/nao/abstencao, tema: z, value:0/1/-1/-2}] para um
-  // dicionário do tipo: id_dep:{id_votacao: value}
-  getVotacoes(){
-    let todasVotacoes = {};
-    for (let i = 0; i < infoDeputados.length; i++){
-      let votacoes = {};
-      for (let j = 0; j < Object.keys(infoDeputados[i].votacoes).length; j++){
-        votacoes[infoDeputados[i].votacoes[j].id_votacao] = infoDeputados[i].votacoes[j].value;
-      }
-      todasVotacoes[infoDeputados[i].id_deputado] = votacoes;
-    }
-    console.log(todasVotacoes);
-    return todasVotacoes;
-  }
-
-  getVotacoesPartidos(){
-    let todasVotacoes = {};
-    for (let i = 0; i < infoPartidos.length; i++){
-      let votacoes = {};
-      for (let j = 0; j < Object.keys(infoPartidos[i].votacoes).length; j++){
-        votacoes[infoPartidos[i].votacoes[j].id_votacao] = infoPartidos[i].votacoes[j].value;
-      }
-      todasVotacoes[infoPartidos[i].id_partido] = votacoes;
-    }
-
-    console.log(todasVotacoes);
-    return todasVotacoes;
-  }
-
 }
 
 export default MainContainer;
