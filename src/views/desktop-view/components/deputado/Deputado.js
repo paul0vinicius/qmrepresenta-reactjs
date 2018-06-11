@@ -49,7 +49,6 @@ class Deputado extends Component {
   constructor(props){
     super(props);
     this.votacoes = props.votacoes;
-    console.log(props.votacoes);
   }
 
   render() {

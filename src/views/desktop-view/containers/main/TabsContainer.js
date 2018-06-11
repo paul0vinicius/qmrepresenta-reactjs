@@ -68,14 +68,10 @@ class TabsContainer extends Component {
       }
       todasVotacoes[infoPartidos[i].id_partido] = votacoes;
     }
-
-    console.log(todasVotacoes);
     return todasVotacoes;
   }
 
   render(){
-    console.log(this.props.partidos);
-    console.log(this.props.deputados);
     return(
       <div className="DeputadosContainer" style={containerStyle}>
               <Paper style={{backgroundColor: "#DBDBDB",}}>

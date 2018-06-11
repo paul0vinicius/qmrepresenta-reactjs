@@ -52,10 +52,6 @@ class PartidoFactory extends Component {
   static inicializaComponentesPartidos(tipoClassePartido, scorePartidos, nVotacoesPartido, votosSimilares, nVotosUsuario){
     let partidos = [];
 
-    console.log(tipoClassePartido);
-    console.log(votosSimilares);
-    console.log(nVotosUsuario);
-
     for(let i = 0; i < infoPartidos.length; i++){
       partidos.push(this.buildClass(tipoClassePartido, infoPartidos[i], scorePartidos[infoPartidos[i].id_partido],
         nVotacoesPartido[infoPartidos[i].id_partido], votosSimilares[infoPartidos[i].id_partido], nVotosUsuario));

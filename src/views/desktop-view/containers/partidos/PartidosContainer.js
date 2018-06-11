@@ -57,15 +57,10 @@ class PartidosContainer extends Component {
       }
       todasVotacoes[infoPartidos[i].id_partido] = votacoes;
     }
-
-    console.log(todasVotacoes);
     return todasVotacoes;
   }
 
   calculaNVotacoesPartidos(votacoes){
-
-    console.log(votacoes);
-
     var nVotacoesPartObject = {};
     for (var partido in votacoes){
       var nVotacoesPart = 0;

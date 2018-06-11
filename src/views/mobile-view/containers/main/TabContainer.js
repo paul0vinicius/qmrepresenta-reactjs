@@ -50,7 +50,6 @@ class DeputadosEPartidosTabContainer extends Component {
       }
       todasVotacoes[infoDeputados[i].id_deputado] = votacoes;
     }
-    console.log(todasVotacoes);
     return todasVotacoes;
   }
 
@@ -63,8 +62,6 @@ class DeputadosEPartidosTabContainer extends Component {
       }
       todasVotacoes[infoPartidos[i].id_partido] = votacoes;
     }
-
-    console.log(todasVotacoes);
     return todasVotacoes;
   }
 

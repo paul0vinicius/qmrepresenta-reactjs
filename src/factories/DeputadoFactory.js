@@ -73,8 +73,6 @@ class DeputadoFactory extends Component {
   static inicializaComponentesDeputados(tipoClasseDeputado, scoreDeputados, nVotacoesDep, votosSimilares, nVotosUsuario){
     let deputados = [];
 
-    console.log(votosSimilares);
-
     for(let i = 0; i < infoDeputados.length; i++){
       deputados.push(this.buildClass(tipoClasseDeputado, infoDeputados[i], scoreDeputados[infoDeputados[i].id_deputado],
         nVotacoesDep[infoDeputados[i].id_deputado], votosSimilares[infoDeputados[i].id_deputado], nVotosUsuario));
