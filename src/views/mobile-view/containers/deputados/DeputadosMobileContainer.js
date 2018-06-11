@@ -21,13 +21,6 @@ const cardStyle = {
 };
 
 class DeputadosMobileContainer extends DeputadosContainer {
-
-  constructor(props){
-    super(props);
-    this.state = { deputados: [], deputadosPorNome: [], deputadosPorUf: [], deputadosPorPartido: [],
-                   filterName: '', filterUf: 'TODOS', filterPartido: 'TODOS' };
-  }
-
   componentWillReceiveProps(nextProps){
     let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", nextProps.scoreDeputados, this.nVotacoesDep, nextProps.votosSimilares, nextProps.nVotosUsuario);
     this.setState({deputados: deputados});
@@ -91,75 +84,6 @@ class DeputadosMobileContainer extends DeputadosContainer {
         </Card>
       </div>
     );
-  }
-
-  buscaNome(evento){
-    var nomeDeputado = evento.target.value;
-    this.setState({filterName: nomeDeputado})
-    var deputadosNome = this.filtraPorNome(nomeDeputado);
-    this.setState({deputadosPorNome: deputadosNome})
-  }
-
-  buscaUF(evento){
-    var UFDeputado = evento.target.value;
-    this.setState({filterUf: UFDeputado})
-
-    console.log(UFDeputado);
-    var deputados = this.filtraPorUf(UFDeputado);
-
-    this.setState({deputadosPorUf: deputados})
-  }
-
-  buscaPartido(evento){
-    var partidoDeputado = evento.target.value;
-    this.setState({filterPartido: partidoDeputado})
-
-    console.log(partidoDeputado);
-    var deputados = this.filtraPorPartido(partidoDeputado);
-
-    this.setState({deputadosPorPartido: deputados})
-  }
-
-  filtraPorPartido(partidoDeputado){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
-    let deputadosFiltrados = deputados.filter(d => ((d.props.children.props.partido.toLowerCase()) === partidoDeputado.toLowerCase()));
-    return deputadosFiltrados.map(d => d.key);
-  }
-
-  filtraPorUf(UFDeputado){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
-    let deputadosFiltrados = deputados.filter(d => ((d.props.children.props.uf.toLowerCase()) === UFDeputado.toLowerCase()));
-    return deputadosFiltrados.map(d => d.key);
-    //this.setState({deputados: deputados})
-    //console.log(deputados);
-  }
-
-  filtraPorNome(nomeDeputado){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", this.props.scoreDeputados, this.nVotacoesDep);
-    let deputadosFiltrados = deputados.filter(d => (d.props.children.props.nome.toLowerCase().indexOf(nomeDeputado.toLowerCase()) >= 0));
-    return deputadosFiltrados.map(d => d.key);
-    //this.setState({deputados: deputados})
-  }
-
-  estados(){
-    var estados = ["TODOS","AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
-                   "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN",
-                   "RO", "RS", "RR", "SC", "SE", "SP", "TO"];
-
-    return estados.map(function(a){return <MenuItem key={a} value={a}>{a}</MenuItem>})
-  }
-
-  partidos(){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.nVotosUsuario);
-    let partidos = new Set();
-
-    partidos.add("TODOS");
-
-    for(var i = 0; i < deputados.length; i++){
-      partidos.add(deputados[i].props.children.props.partido);
-    }
-
-    return Array.from(partidos).map(function(a){return <MenuItem key={a} value={a}>{a}</MenuItem>})
   }
 }
 
