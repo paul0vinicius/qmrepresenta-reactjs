@@ -27,19 +27,18 @@ const deputadosGridStyle = {
 const logoPath = "";
 
 class MainMobileContainer extends MainContainer {
-
   render(){
-    var containerDeputados = <DeputadosMobileContainer
-                        scoreDeputados = {this.state.scoreDeputados}
-                        votosSimilares = {this.state.votosSimilaresDeputados}
-                        nVotosUsuario = {this.state.nVotosUsuario}
-                        />;
     var containerPartidos = <PartidosMobileContainer
                         scorePartidos = {this.state.scorePartidos}
                         votosSimilares = {this.state.votosSimilaresPartidos}
                         nVotosUsuario = {this.state.nVotosUsuario}
                         />;
 
+    var containerDeputados = <DeputadosMobileContainer
+                        scoreDeputados = {this.state.scoreDeputados}
+                        votosSimilares = {this.state.votosSimilaresDeputados}
+                        nVotosUsuario = {this.state.nVotosUsuario}
+                        />;
     var deputadosEPartidosContainer = <DeputadosEPartidosTabContainer deputados={containerDeputados}
                    partidos={containerPartidos}
                    pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
@@ -70,12 +69,6 @@ class MainMobileContainer extends MainContainer {
       </div>
     );
   }
-
-  calculaCompatibilidade(newState){
-    super.calculaCompatibilidade(newState);
-    console.log(this.state.scoreDeputados);
-  }
-
 }
 
 export default MainMobileContainer;
