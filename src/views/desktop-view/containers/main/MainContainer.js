@@ -10,6 +10,9 @@ import grey from 'material-ui/colors/grey';
 import TabsContainer from './TabsContainer.js';
 import infoDeputados from '../../../../data/deputados.json';
 import infoPartidos from '../../../../data/partidos.json';
+import AnalisesContainer from '../analises/AnalisesContainer.js';
+import AboutContainer from '../about/AboutContainer.js';
+import FacebookContainer from '../facebook/FacebookContainer.js';
 
 const votacoesGridStyle = {
   textAlign: 'left',
@@ -81,6 +84,11 @@ class MainContainer extends Component {
                         pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes) }
                         pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
     />;
+
+    var analisesContainer = <AnalisesContainer />;
+    var facebookContainer = <FacebookContainer />;
+    var aboutContainer = <AboutContainer />;
+
     return(
       <div className="MainContainer" style={mainGridStyle}>
         <Grid container spacing={24}>
@@ -92,6 +100,9 @@ class MainContainer extends Component {
           <Grid item xs={12} sm={12} md={12} lg={12} style={appBarStyle}>
             <NavigationBar votacoes={votacoesContainer}
                            deputadosEPartidos={deputadosEPartidosContainer}
+                           analises={analisesContainer}
+                           sobre={aboutContainer}
+                           contato={facebookContainer}
                             />
           </Grid>
         </Grid>

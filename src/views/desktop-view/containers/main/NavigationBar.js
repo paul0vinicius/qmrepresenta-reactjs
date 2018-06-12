@@ -9,9 +9,11 @@ import Card from 'material-ui/Card';
 import Grid from 'material-ui/Grid';
 
 const cardStyle = {
-  overflowY: 'hidden',
-  overflowX: 'hidden',
-  //height: '2vh',
+  overflowY: 'scroll',
+  height: '80vh',
+  //marginBottom: '15px',
+  //padding:'15px',
+  backgroundColor: "#DBDBDB",
 };
 
 const containerStyle = {
@@ -48,9 +50,9 @@ class NavigationBar extends Component {
                   textColor="#FFFFFF"
                 >
                   <Tab label="Home" />
-                  <Tab label="Análises" disabled/>
-                  <Tab label="Sobre" disabled/>
-                  <Tab label="Contato" disabled/>
+                  <Tab label="Análises" />
+                  <Tab label="Sobre" />
+                  <Tab label="Contato" />
                 </Tabs>
               </Paper>
               {this.state.value === 0 && <TabContainer>
@@ -63,7 +65,21 @@ class NavigationBar extends Component {
                   </Grid>
                 </Grid>
               </TabContainer>}
-              {this.state.value === 1 && <TabContainer>Item Two</TabContainer>}
+              {this.state.value === 1 && <TabContainer>
+                <Card style={cardStyle}>
+                  {this.props.analises}
+                </Card>
+              </TabContainer>}
+              {this.state.value === 2 && <TabContainer>
+                <Card style={cardStyle}>
+                {this.props.sobre}
+                </Card>
+              </TabContainer>}
+              {this.state.value === 3 && <TabContainer>
+                <Card style={cardStyle}>
+                {this.props.contato}
+                </Card>
+              </TabContainer>}
       </div>
     );
   }
