@@ -21,7 +21,7 @@ function SimpleAppBar(props) {
   return (
     <div className={classes.root}>
       <AppBar position="sticky" color="default">
-          <img src={require('../../../../images/logo.png')} style={{height: '15%', width:'15%', display:'block', margin:'0 auto'}}/>
+          <img src={require('../../../../images/logo.png')} style={{height: '15%', width:'15%'}}/>
       </AppBar>
     </div>
   );

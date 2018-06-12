@@ -20,8 +20,8 @@ const voto = {
 };
 
 const votoStyle = {
-  width: '40vh',
-  margin:'0 auto'
+  //width: '40vh',
+  //margin:'0 auto'
 }
 
 const botaoSimStyle = {
