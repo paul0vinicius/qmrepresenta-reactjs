@@ -18,6 +18,7 @@ import ThumbUp from 'material-ui-icons/ThumbUp';
 const cardStyle = {
   overflowY: 'scroll',
   height: '80vh',
+  backgroundColor: '#DBDBDB'
   //width: '50vh'
 };
 
@@ -47,12 +48,26 @@ class VotacoesContainer extends Component {
   constructor(props){
     super(props);
     var votacoesInicializadas = this.inicializaDicionarioVotacoes();
-    this.state = { votacoes: votacoesInicializadas };
+    this.state = { votacoes: this.props.votacoesUsuario };
+  }
+
+  componentDidMount(){
+    console.log(this.state.votacoes);
+    console.log(this.props.votacoesUsuario);
+    this.setState({
+      votacoes: this.props.votacoesUsuario
+    });
+  }
+
+  componentWillReceiveProps(nextProps){
+    console.log(this.state.votacoes);
+    //this.setState({votacoes: nextProps.votacoesUsuarios});
   }
 
   render() {
       const { classes } = this.props;
       const { expanded } = this.state;
+
       var votacoes = [];
       // Acho que dá pra substituir por um map
       for(var i = 0; i < nomesVotacoes.length; i++){
@@ -64,14 +79,13 @@ class VotacoesContainer extends Component {
                              descricao = {nomesVotacoes[i].descricao}
                              nomeVotacao = {nomesVotacoes[i].nome_votacao}
                              pergunta = {nomesVotacoes[i].pergunta}
+                             value = {this.state.votacoes[nomesVotacoes[i].id_votacao]}
                              callbackParent = { (newState) => this.onChildChange(newState) }
                               />;
         //let voto = this.state.votacoes;
         //console.log(voto);
         votacoes.push(votacao);
       }
-
-
 
       return (
         <div className={styles.root}>
@@ -94,7 +108,10 @@ class VotacoesContainer extends Component {
 // Mapear todas as votações pelo ID no estilo: <idVotacao>|<valorVoto>
 // Essa função deve se chamar algo como PessoaVotou ou votacaoOcorreu
   onChildChange(newState){
+    console.log('calcula pontuacao user');
+    console.log(newState);
     // Recupera o dicionário de votações ainda não atualizado
+    console.log(this.state.votacoes);
     var votacoesNewState = this.state.votacoes;
     // Atualiza dicionário
     votacoesNewState[newState.idVotacao] = newState.value;

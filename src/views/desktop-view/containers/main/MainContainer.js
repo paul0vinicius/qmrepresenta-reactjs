@@ -13,6 +13,7 @@ import infoPartidos from '../../../../data/partidos.json';
 import AnalisesContainer from '../analises/AnalisesContainer.js';
 import AboutContainer from '../about/AboutContainer.js';
 import FacebookContainer from '../facebook/FacebookContainer.js';
+import nomesVotacoes from '../../../../data/nomes_votacoes.json';
 
 const votacoesGridStyle = {
   textAlign: 'left',
@@ -61,13 +62,28 @@ const b = {
 class MainContainer extends Component {
   constructor(props){
     super(props);
-    this.state = { scoreDeputados: {}, scorePartidos: {}, votosSimilaresPartidos: {}, votosSimilaresDeputados: {}, nVotosUsuario: 0};
+    var votacoesUsuario = this.inicializaDicionarioVotacoes();
+    this.state = { scoreDeputados: {}, scorePartidos: {}, votosSimilaresPartidos: {},
+      votosSimilaresDeputados: {}, nVotosUsuario: 0, votosUsuario: votacoesUsuario};
     this.todasVotacoesDeputados = {};
     this.todasVotacoesPartidos = {};
   }
 
+  inicializaDicionarioVotacoes(){
+    var votacoes = {};
+    for(var i = 0; i < nomesVotacoes.length; i++){
+      votacoes[nomesVotacoes[i].id_votacao] = 0;
+    }
+
+    return votacoes;
+  }
+
   render() {
-    var votacoesContainer = <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } />;
+
+    console.log(this.state.votosUsuario);
+    var votacoesContainer = <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } 
+                                               votacoesUsuario = {this.state.votosUsuario}
+    />;
     // Renomear deputadosContainer para DeputadosEPartidosContainer... Algo assim
     var deputadosContainer = <DeputadosContainer
                         scoreDeputados = {this.state.scoreDeputados}
@@ -197,7 +213,8 @@ class MainContainer extends Component {
       scorePartidos: newScorePartidos,
       votosSimilaresPartidos: votosSimilaresPartidos,
       votosSimilaresDeputados: votosSimilaresDeputados,
-      nVotosUsuario: nVotos
+      nVotosUsuario: nVotos,
+      votosUsuario: newState
     })
   }
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import PropTypes from 'prop-types';
-
+import StarIcon from '@material-ui/icons/Star';
 import { withStyles } from 'material-ui/styles';
 import ExpansionPanel, {
   ExpansionPanelDetails,
@@ -11,7 +11,9 @@ import ExpansionPanel, {
 import Typography from 'material-ui/Typography';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import ThumbUp from 'material-ui-icons/ThumbUp';
+import ThumbDown from 'material-ui-icons/ThumbDown';
 import ControlledExpansionPanels from './ExpansionPanel.js';
+import Card from 'material-ui/Card';
 
 const voto = {
   SIM: 1,
@@ -21,18 +23,27 @@ const voto = {
 
 const votoStyle = {
   //width: '40vh',
-  //margin:'0 auto'
+  margin:'5px'
 }
 
 const botaoSimStyle = {
   //position: 'absolute',
-  top:'10vh',
-  left:'2vh'
+  //top:'10vh',
+  //left:'2vh',
+  backgroundColor: "#1D6B91",
+  display: 'flex',
+  justifyContent: 'center', 
+  alignItems: 'center'
+
 }
 const botaoNaoStyle = {
   //position: 'absolute',
-  top:'10vh',
-  left:'57vh'
+  //top:'10vh',
+  //left:'57vh',
+  backgroundColor: "#51269C",
+  display: 'flex',
+  justifyContent: 'center', 
+  alignItems: 'center'
 }
 
 /**
@@ -43,7 +54,24 @@ const botaoNaoStyle = {
 class Votacao extends Component {
   constructor(props) {
     super(props);
-    this.state = { value: 0 };
+    this.state = { value: props.value };
+    console.log(props.value);
+  }
+
+  componentDidMount(){
+    this.setState({
+      value: this.props.value
+    });
+  }
+
+  colorPicker(){
+    switch (this.state.value) {
+      case 1:
+        return "#1D6B91";
+      case -1:
+        return "#51269C";
+      default: return "#DBDBDB";
+    }
   }
 
   render(){
@@ -52,7 +80,7 @@ class Votacao extends Component {
         <Grid item md lg>
           {this.props.descricao}
         </Grid>
-        <Grid item md lg>
+        {/*<Grid item md lg>
           <Button onClick={this.votaSim.bind(this)} raised>
             Sim
           </Button>
@@ -62,22 +90,24 @@ class Votacao extends Component {
           <Button onClick={this.votaNao.bind(this)} raised>
             Não
           </Button>
-        </Grid>
+        </Grid>*/}
       </Grid>
     </div>;
 
     return(
       <div style={votoStyle}>
         <Grid container>
-          <Grid item xs={12} lg={12} md={12} sm={12}>
+        <Grid item xs={1} lg={1} md={1} sm={1} onClick={this.votaSim.bind(this)} style={botaoSimStyle}>
+          <ThumbUp />
+        </Grid>
+          <Grid item xs={10} lg={10} md={10} sm={10}>
             <ControlledExpansionPanels votacao = {votacao}
                                        pergunta = {this.props.pergunta}
                                        valorVoto = {this.state.value}
             />
           </Grid>
-          <Grid item style={botaoSimStyle} xs={12} lg={12} md={12} sm={12}>
-          </Grid>
-          <Grid item xs={8} lg={8} md={8} sm={8}>
+          <Grid item xs={1} lg={1} md={1} sm={1} onClick={this.votaNao.bind(this)} style={botaoNaoStyle}>
+            <ThumbDown />
           </Grid>
           </Grid>
       </div>

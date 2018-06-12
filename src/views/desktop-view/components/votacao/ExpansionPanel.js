@@ -38,6 +38,7 @@ class ControlledExpansionPanels extends React.Component {
   };
 
   handleChange = panel => (event, expanded) => {
+    console.log(event);
     this.setState({
       expanded: expanded ? panel : false,
     });
@@ -53,6 +54,16 @@ class ControlledExpansionPanels extends React.Component {
     }
   }
 
+  colorPickerDescription(){
+    switch (this.props.valorVoto) {
+      case 1:
+        return "#1D6B91";
+      case -1:
+        return "#51269C";
+      default: return "#B5B5B5";
+    }
+  }
+
   render() {
     const { classes } = this.props;
     const { expanded } = this.state;
@@ -62,21 +73,21 @@ class ControlledExpansionPanels extends React.Component {
     return (
       <div className={classes.root}>
         <ExpansionPanel key={this.props.key} expanded={expanded === this.props.key} onChange={this.handleChange(this.props.key)}>
-        <ExpansionPanelSummary style={{backgroundColor: this.colorPicker()}}>
+        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />} style={{backgroundColor: this.colorPicker()}}>
         <Grid container>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Typography className={classes.secondaryHeading}>
               {this.props.pergunta}
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={12}>
+          {/*<Grid item xs={12} sm={12} md={12} lg={12}>
             <div>
               <ArrowDropDown />
             </div>
-          </Grid>
+          </Grid>*/}
         </Grid>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails className={classes.description}>
+        <ExpansionPanelDetails className={classes.description} style={{backgroundColor: this.colorPickerDescription()}}>
           <Typography onClick={this.handleChange(this.props.key)}>
             {this.props.votacao}
           </Typography>
