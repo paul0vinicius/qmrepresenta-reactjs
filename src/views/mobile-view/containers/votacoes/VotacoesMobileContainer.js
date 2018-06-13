@@ -34,6 +34,7 @@ class VotacoesMobileContainer extends VotacoesContainer {
                                  descricao = {nomesVotacoes[i].descricao}
                                  nomeVotacao = {nomesVotacoes[i].nome_votacao}
                                  pergunta = {nomesVotacoes[i].pergunta}
+                                 value = {this.state.votacoes[nomesVotacoes[i].id_votacao]}
                                  callbackParent = { (newState) => this.onChildChange(newState) }
                                   />
                    );
