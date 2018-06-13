@@ -8,6 +8,7 @@ import PartidosMobileContainer from '../partidos/PartidosMobileContainer.js';
 import Typography from 'material-ui/Typography';
 import grey from 'material-ui/colors/grey';
 import TabsContainer from '../../../desktop-view/containers/main/TabsContainer.js';
+import SwipeableSideBar from '../menu_lateral/SwipeableSideBar.js';
 
 const votacoesGridStyle = {
   textAlign: 'center',
