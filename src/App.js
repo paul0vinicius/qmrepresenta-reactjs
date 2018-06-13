@@ -33,7 +33,7 @@ class App extends Component {
 
     var desktopView = <DesktopRouter />;
     var mobileView = <MobileRouter />;
-    var view = isMobile ? <SwipeableSideBar main={mobileView} /> : desktopView;
+    var view = isMobile ? mobileView : desktopView;
     //var mainC = <DesktopRouter />;
 
     return (
