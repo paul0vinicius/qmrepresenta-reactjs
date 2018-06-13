@@ -13,6 +13,11 @@ const styles = {
     //alignContent: 'center',
     width:'129vh',
   },
+  logo:{
+    height: '15%', 
+    width:'15%', 
+    margin:'0 auto'
+  }
 };
 
 function SimpleAppBar(props) {
@@ -21,7 +26,7 @@ function SimpleAppBar(props) {
   return (
     <div className={classes.root}>
       <AppBar position="sticky" color="default">
-          <img src={require('../../../../images/logo.png')} style={{height: '15%', width:'15%'}}/>
+          <img src={require('../../../../images/logo.png')} className={classes.logo}/>
       </AppBar>
     </div>
   );
