@@ -8,6 +8,10 @@ import PartidosMobileContainer from '../partidos/PartidosMobileContainer.js';
 import Typography from 'material-ui/Typography';
 import grey from 'material-ui/colors/grey';
 import TabsContainer from '../../../desktop-view/containers/main/TabsContainer.js';
+import TemporaryDrawer from '../menu_lateral/TemporaryDrawer.js';
+
+import Menu from 'material-ui-icons/Menu';
+import Button from '@material-ui/core/Button';
 
 const votacoesGridStyle = {
   textAlign: 'center',
@@ -27,6 +31,30 @@ const deputadosGridStyle = {
 const logoPath = "";
 
 class MainMobileContainer extends MainContainer {
+
+  constructor(props){
+    super(props);
+
+    // Retrieve the last state
+  this.state = localStorage.getItem("appState") ? JSON.parse(localStorage.getItem("appState")) : this.state;
+  }
+
+  onUnload(event) { // the method that will be used for both add and remove event
+    console.log("hellooww");
+    localStorage.clear();
+    //event.returnValue = "Hellooww"
+  }
+
+  componentDidMount() {
+    window.addEventListener("beforeunload", this.onUnload)
+ }
+
+  componentWillUnmount(){
+    console.log('desmontou e salvou no cache');
+    localStorage.setItem('appState', JSON.stringify(this.state));
+  window.removeEventListener("beforeunload", this.onUnload)
+  }
+
   render(){
     var containerPartidos = <PartidosMobileContainer
                         scorePartidos = {this.state.scorePartidos}
@@ -44,15 +72,14 @@ class MainMobileContainer extends MainContainer {
                    pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
                    pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes) }
     />;
+
+    var votacoesContainer = <VotacoesMobileContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } 
+    votacoesUsuario = {this.state.votosUsuario}
+    />;
+
     return(
       <div className="MainMobileContainer">
-        <Grid container>
-          <Grid item xs={12}>
-            <header style={{backgroundColor: grey[300]}}>
-              <img src={require('../../../../images/logo.png')} style={{height: '50%', width:'40%'}}/>
-              {/*<div><Typography>Qual deputado federal mais se parece com você?</Typography></div>*/}
-            </header>
-          </Grid>
+        <Grid container style={{backgroundColor: grey[300]}}>
           <Grid item xs={12}>
             {/*Barrinha de pesquisa, filtros e tab alternado*/}
           </Grid>
@@ -63,9 +90,7 @@ class MainMobileContainer extends MainContainer {
             {/*Barrinha para selecionar os botões: tela cheia para votações, deputados ou meio a meio (default meio a meio)*/}
           </Grid>
           <Grid item xs={12} style={votacoesGridStyle}>
-            <VotacoesMobileContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } 
-                                     votacoesUsuario = {this.state.votosUsuario}
-            />
+            {votacoesContainer}
           </Grid>
         </Grid>
       </div>

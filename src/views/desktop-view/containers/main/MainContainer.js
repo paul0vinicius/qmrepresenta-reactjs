@@ -44,10 +44,13 @@ const a = {
 }
 
 const appBarStyle = {
-  marginTop: '10px',
-  marginLeft: '25vh',
-  marginRight: '15vh',
-  marginBottom: '-6vh'
+  // marginTop: '10px',
+  // marginLeft: '25vh',
+  // marginRight: '15vh',
+  // marginBottom: '-6vh',
+  display: 'block',
+  margin: 'auto',
+  textAlign: 'center'
 }
 
 const b = {
@@ -111,7 +114,7 @@ class MainContainer extends Component {
           <div style={a}></div>
           <div style={b}></div>
           <Grid item xs={12} sm={12} md={12} lg={12} style={appBarStyle}>
-            <SimpleAppBar />
+              <SimpleAppBar />
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={12} style={appBarStyle}>
             <NavigationBar votacoes={votacoesContainer}

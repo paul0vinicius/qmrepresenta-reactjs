@@ -46,6 +46,15 @@ function createSection(link, key, sectionTitle, icon){
   );
 }
 
+export const mobileList = (
+  <div>
+    <div onClick={console.log('is')}>Home</div>
+    <div>Análises</div>
+    <div>Sobre</div>
+    <div>Contato</div>
+  </div>
+);
+
 // Criar componente para renderizar cada babado
 export const sideList = (
   <div>
