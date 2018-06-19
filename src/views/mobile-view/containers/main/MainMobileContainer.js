@@ -66,13 +66,13 @@ class MainMobileContainer extends MainContainer {
             {/*Barrinha de pesquisa, filtros e tab alternado*/}
           </Grid>
           <Grid item xs={12} style={deputadosGridStyle}>
-            {menuDrawer}
+            {deputadosEPartidosContainer}
           </Grid>
           <Grid item xs={12} style={deputadosGridStyle}>
             {/*Barrinha para selecionar os botões: tela cheia para votações, deputados ou meio a meio (default meio a meio)*/}
           </Grid>
           <Grid item xs={12} style={votacoesGridStyle}>
-            {/**/}
+            {votacoesContainer}
           </Grid>
         </Grid>
       </div>
