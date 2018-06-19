@@ -4,7 +4,7 @@ import MainContainer from './views/desktop-view/containers/main/MainContainer.js
 import DesktopRouter from './views/desktop-view/containers/main/DesktopRouter.js';
 import MobileRouter from './views/mobile-view/containers/main/MobileRouter.js';
 import MiniDrawer from './views/desktop-view/containers/menu_lateral/SideBar.js';
-import SwipeableSideBar from './views/mobile-view/containers/menu_lateral/SwipeableSideBar.js';
+import TemporaryDrawer from './views/mobile-view/containers/menu_lateral/TemporaryDrawer.js';
 
 class App extends Component {
 
@@ -38,7 +38,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div><SwipeableSideBar /></div>
+        <TemporaryDrawer />
         {view}
       </div>
       );
