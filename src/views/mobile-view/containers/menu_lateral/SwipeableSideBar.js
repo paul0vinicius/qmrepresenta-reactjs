@@ -6,6 +6,8 @@ import Button from 'material-ui/Button';
 import List from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import { sideList } from '../../../desktop-view/containers/menu_lateral/MenuSections.js';
+import { mobileList } from '../../../desktop-view/containers/menu_lateral/MenuSections.js';
+import MenuSection from './MenuSection.js';
 
 const styles = {
   list: {
@@ -22,6 +24,7 @@ class SwipeableSideBar extends React.Component {
     left: false,
     bottom: false,
     right: false,
+    value: 0
   };
 
   toggleDrawer = (side, open) => () => {
@@ -32,10 +35,12 @@ class SwipeableSideBar extends React.Component {
 
   render() {
     const { classes } = this.props;
-
+    var secondSection = <div>Segunda seção</div>;
+    var value = 0;
     return (
       <div>
-        {this.props.main}
+        {value == 0 && this.props.deputadosEPartidos}
+        {value == 0 && this.props.votacoes}
         <SwipeableDrawer
           open={this.state.left}
           onClose={this.toggleDrawer('left', false)}
@@ -47,11 +52,17 @@ class SwipeableSideBar extends React.Component {
             onClick={this.toggleDrawer('left', false)}
             onKeyDown={this.toggleDrawer('left', false)}
           >
-            {sideList}
+            <MenuSection selecionaSecao={(value) => this.selecionaSecao(value)}/>
           </div>
         </SwipeableDrawer>
       </div>
     );
+  }
+
+  selecionaSecao(newState){
+    this.setState({
+      value: newState
+    });
   }
 }
 

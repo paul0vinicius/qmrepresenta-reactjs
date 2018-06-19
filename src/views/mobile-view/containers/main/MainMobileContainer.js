@@ -45,6 +45,14 @@ class MainMobileContainer extends MainContainer {
                    pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
                    pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes) }
     />;
+
+    var votacoesContainer = <VotacoesMobileContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } 
+    votacoesUsuario = {this.state.votosUsuario}
+    />;
+
+    var menuDrawer = <SwipeableSideBar deputadosEPartidos={deputadosEPartidosContainer}
+                                       votacoes={votacoesContainer}
+    />;
     return(
       <div className="MainMobileContainer">
         <Grid container>
@@ -58,15 +66,13 @@ class MainMobileContainer extends MainContainer {
             {/*Barrinha de pesquisa, filtros e tab alternado*/}
           </Grid>
           <Grid item xs={12} style={deputadosGridStyle}>
-            {deputadosEPartidosContainer}
+            {menuDrawer}
           </Grid>
           <Grid item xs={12} style={deputadosGridStyle}>
             {/*Barrinha para selecionar os botões: tela cheia para votações, deputados ou meio a meio (default meio a meio)*/}
           </Grid>
           <Grid item xs={12} style={votacoesGridStyle}>
-            <VotacoesMobileContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } 
-                                     votacoesUsuario = {this.state.votosUsuario}
-            />
+            {/**/}
           </Grid>
         </Grid>
       </div>
