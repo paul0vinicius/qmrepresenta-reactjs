@@ -27,6 +27,8 @@ class App extends Component {
     this.setState({ width: window.innerWidth });
   };
 
+  
+
   render() {
     const { width } = this.state;
     const isMobile = width <= 500;
@@ -38,7 +40,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <TemporaryDrawer />
+        {isMobile &&<TemporaryDrawer />}
         {view}
       </div>
       );
