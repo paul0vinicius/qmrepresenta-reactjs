@@ -31,6 +31,30 @@ const deputadosGridStyle = {
 const logoPath = "";
 
 class MainMobileContainer extends MainContainer {
+
+  constructor(props){
+    super(props);
+
+    // Retrieve the last state
+  this.state = localStorage.getItem("appState") ? JSON.parse(localStorage.getItem("appState")) : this.state;
+  }
+
+  onUnload(event) { // the method that will be used for both add and remove event
+    console.log("hellooww");
+    localStorage.clear();
+    //event.returnValue = "Hellooww"
+  }
+
+  componentDidMount() {
+    window.addEventListener("beforeunload", this.onUnload)
+ }
+
+  componentWillUnmount(){
+    console.log('desmontou e salvou no cache');
+    localStorage.setItem('appState', JSON.stringify(this.state));
+  window.removeEventListener("beforeunload", this.onUnload)
+  }
+
   render(){
     var containerPartidos = <PartidosMobileContainer
                         scorePartidos = {this.state.scorePartidos}
