@@ -38,6 +38,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <div><SwipeableSideBar /></div>
         {view}
       </div>
       );
