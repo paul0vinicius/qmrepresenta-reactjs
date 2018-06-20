@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Grid from 'material-ui/Grid';
-import Button from 'material-ui/Button';
-import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
+import Calculo from './Calculo';
+import QMRNaMidia from './QMRNaMidia';
+import Equipe from './Equipe';
 
 class AboutContainer extends Component {
   constructor(props) {
@@ -10,7 +11,17 @@ class AboutContainer extends Component {
 
   render(){
     return (
-      <div>Espaço reservado para o campo Sobre.</div>
+      <div>
+        <section>
+          <Calculo />
+        </section>
+        <section>
+          <QMRNaMidia />
+        </section>
+        <section>
+          <Equipe />
+        </section>
+      </div>
     );
   }
 }
