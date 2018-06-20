@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
-import Button from 'material-ui/Button';
 import PropTypes from 'prop-types';
 import StarIcon from '@material-ui/icons/Star';
 import { withStyles } from 'material-ui/styles';
@@ -14,6 +13,7 @@ import ThumbUp from 'material-ui-icons/ThumbUp';
 import ThumbDown from 'material-ui-icons/ThumbDown';
 import ControlledExpansionPanels from './ExpansionPanel.js';
 import Card from 'material-ui/Card';
+import Button from '@material-ui/core/Button';
 
 const voto = {
   SIM: 1,
@@ -97,8 +97,10 @@ class Votacao extends Component {
     return(
       <div style={votoStyle}>
         <Grid container>
-        <Grid item xs={1} lg={1} md={1} sm={1} onClick={this.votaSim.bind(this)} style={botaoSimStyle}>
-          <ThumbUp />
+        <Grid item xs={1} lg={1} md={1} sm={1} style={botaoSimStyle}>
+          <Button onClick={this.votaSim.bind(this)}>
+            <ThumbUp />
+          </Button>
         </Grid>
           <Grid item xs={10} lg={10} md={10} sm={10}>
             <ControlledExpansionPanels votacao = {votacao}
@@ -106,8 +108,10 @@ class Votacao extends Component {
                                        valorVoto = {this.state.value}
             />
           </Grid>
-          <Grid item xs={1} lg={1} md={1} sm={1} onClick={this.votaNao.bind(this)} style={botaoNaoStyle}>
-            <ThumbDown />
+          <Grid item xs={1} lg={1} md={1} sm={1} style={botaoNaoStyle}>
+            <Button onClick={this.votaNao.bind(this)} style={{width:'1vh'}}>
+              <ThumbDown />
+            </Button>
           </Grid>
           </Grid>
       </div>
