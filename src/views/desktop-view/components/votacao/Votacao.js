@@ -55,7 +55,7 @@ class Votacao extends Component {
   constructor(props) {
     super(props);
     this.state = { value: props.value };
-    console.log(props.value);
+    //console.log(props.value);
   }
 
   componentDidMount(){

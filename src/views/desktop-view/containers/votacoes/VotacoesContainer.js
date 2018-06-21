@@ -52,15 +52,15 @@ class VotacoesContainer extends Component {
   }
 
   componentDidMount(){
-    console.log(this.state.votacoes);
-    console.log(this.props.votacoesUsuario);
+    //console.log(this.state.votacoes);
+    //console.log(this.props.votacoesUsuario);
     this.setState({
       votacoes: this.props.votacoesUsuario
     });
   }
 
   componentWillReceiveProps(nextProps){
-    console.log(this.state.votacoes);
+    //console.log(this.state.votacoes);
     //this.setState({votacoes: nextProps.votacoesUsuarios});
   }
 
@@ -108,10 +108,10 @@ class VotacoesContainer extends Component {
 // Mapear todas as votações pelo ID no estilo: <idVotacao>|<valorVoto>
 // Essa função deve se chamar algo como PessoaVotou ou votacaoOcorreu
   onChildChange(newState){
-    console.log('calcula pontuacao user');
-    console.log(newState);
+    //console.log('calcula pontuacao user');
+    //console.log(newState);
     // Recupera o dicionário de votações ainda não atualizado
-    console.log(this.state.votacoes);
+    //console.log(this.state.votacoes);
     var votacoesNewState = this.state.votacoes;
     // Atualiza dicionário
     votacoesNewState[newState.idVotacao] = newState.value;
