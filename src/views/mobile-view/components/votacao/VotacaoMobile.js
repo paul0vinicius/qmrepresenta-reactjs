@@ -7,6 +7,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import Swipeable from 'react-swipeable';
+import { Collapse } from 'antd';
+const Panel = Collapse.Panel;
 
 class VotacaoMobile extends Votacao {
 
@@ -17,6 +19,13 @@ class VotacaoMobile extends Votacao {
                                                   descricao = {this.props.descricao}
         />;
 
+    var newPainel = <Collapse accordion>
+                      <Panel header={this.props.pergunta} key={this.props.key} showArrow={false}>
+                        <p>{this.props.descricao}</p>
+                      </Panel>
+                    </Collapse>;
+        
+
     return(
       <div>
         <Swipeable
@@ -25,7 +34,7 @@ class VotacaoMobile extends Votacao {
           delta={80}
           flickThreshold={1.2}
         >
-          <div>{painel}</div>
+          <div>{newPainel}</div>
         </Swipeable>
       </div>
     );
