@@ -9,9 +9,12 @@ import FlipMove from 'react-flip-move';
 import { MenuItem } from 'material-ui/Menu';
 import Input, { InputLabel } from 'material-ui/Input';
 import { FormControl, FormHelperText } from 'material-ui/Form';
-import Select from 'material-ui/Select';
+//import Select from 'material-ui/Select';
 import TextField from 'material-ui/TextField';
 import nomesVotacoes from '../../../../data/nomes_votacoes.json';
+
+import { Select } from 'antd';
+const Option = Select.Option;
 
 const cardStyle = {
   //overflowY: 'scroll',
@@ -136,7 +139,7 @@ class DeputadosContainer extends Component {
   }
 
   buscaUF(evento){
-    var UFDeputado = evento.target.value;
+    var UFDeputado = evento;
     this.setState({filterUf: UFDeputado})
 
     console.log(UFDeputado);
@@ -146,7 +149,8 @@ class DeputadosContainer extends Component {
   }
 
   buscaPartido(evento){
-    var partidoDeputado = evento.target.value;
+    console.log(evento);
+    var partidoDeputado = evento;
     this.setState({filterPartido: partidoDeputado})
 
     console.log(partidoDeputado);
@@ -181,7 +185,7 @@ class DeputadosContainer extends Component {
                    "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN",
                    "RO", "RS", "RR", "SC", "SE", "SP", "TO"];
 
-    return estados.map(function(a){return <MenuItem key={a} value={a}>{a}</MenuItem>})
+    return estados.map(function(a){return <Option key={a} value={a}>{a}</Option>})
   }
 
   partidos(){
@@ -194,7 +198,7 @@ class DeputadosContainer extends Component {
       partidos.add(deputados[i].props.children.props.partido);
     }
 
-    return Array.from(partidos).map(function(a){return <MenuItem key={a} value={a}>{a}</MenuItem>})
+    return Array.from(partidos).map(function(a){return <Option key={a} value={a}>{a}</Option>})
   }
 
 }
