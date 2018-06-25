@@ -13,12 +13,12 @@ const Panel = Collapse.Panel;
 class VotacaoMobile extends Votacao {
   
   colorPicker(){
-    switch (this.props.valorVoto) {
+    switch (this.props.value) {
       case 1:
         return "#1D6B91";
       case -1:
         return "#51269C";
-      default: return 'grey';
+      default: return "#DBDBDB";
     }
   }
 
