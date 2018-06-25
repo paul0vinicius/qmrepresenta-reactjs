@@ -5,6 +5,10 @@ import DesktopRouter from './views/desktop-view/containers/main/DesktopRouter.js
 import MobileRouter from './views/mobile-view/containers/main/MobileRouter.js';
 import MiniDrawer from './views/desktop-view/containers/menu_lateral/SideBar.js';
 import TemporaryDrawer from './views/mobile-view/containers/menu_lateral/TemporaryDrawer.js';
+import MobileDrawer from './views/mobile-view/containers/menu_lateral/MobileDrawer';
+import { Layout } from 'antd';
+
+const { Header, Footer, Sider, Content } = Layout;
 
 class App extends Component {
 
@@ -37,11 +41,23 @@ class App extends Component {
     var mobileView = <MobileRouter />;
     var view = isMobile ? mobileView : desktopView;
     //var mainC = <DesktopRouter />;
+    var drawer = <div>
+                  <Header>
+                    <img src={require('./images/logo.png')} style={{height: '70%', width:'60%'}}/>
+                    <MobileDrawer />
+                  </Header>
+                 </div>
 
     return (
       <div className="App">
-        {isMobile &&<TemporaryDrawer />}
-        {view}
+        <Layout>
+          {isMobile && drawer}
+          <Content >
+            {view}
+          </Content>
+          <Footer>
+          </Footer>
+        </Layout>
       </div>
       );
   }
