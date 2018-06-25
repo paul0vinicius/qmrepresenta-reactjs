@@ -41,23 +41,15 @@ class App extends Component {
     var mobileView = <MobileRouter />;
     var view = isMobile ? mobileView : desktopView;
     //var mainC = <DesktopRouter />;
-    var drawer = <div>
-                  <Header>
-                    <img src={require('./images/logo.png')} style={{height: '70%', width:'60%'}}/>
+    var drawer = <div className="Header">
+                    <img src={require('./images/logo.png')} style={{width:'33%'}}/>
                     <MobileDrawer />
-                  </Header>
                  </div>
 
     return (
       <div className="App">
-        <Layout>
-          {isMobile && drawer}
-          <Content >
-            {view}
-          </Content>
-          <Footer>
-          </Footer>
-        </Layout>
+        {isMobile && drawer}
+        {view}
       </div>
       );
   }
