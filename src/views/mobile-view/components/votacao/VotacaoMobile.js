@@ -11,6 +11,16 @@ import { Collapse } from 'antd';
 const Panel = Collapse.Panel;
 
 class VotacaoMobile extends Votacao {
+  
+  colorPicker(){
+    switch (this.props.valorVoto) {
+      case 1:
+        return "#1D6B91";
+      case -1:
+        return "#51269C";
+      default: return 'grey';
+    }
+  }
 
   render(){
 
@@ -20,7 +30,7 @@ class VotacaoMobile extends Votacao {
         />;
 
     var newPainel = <Collapse accordion>
-                      <Panel header={this.props.pergunta} key={this.props.key} showArrow={false}>
+                      <Panel header={this.props.pergunta} key={this.props.key} showArrow={false} style={{backgroundColor:this.colorPicker()}}>
                         <p>{this.props.descricao}</p>
                       </Panel>
                     </Collapse>;
@@ -41,6 +51,7 @@ class VotacaoMobile extends Votacao {
   }
 
   votaSim(){
+    console.log('votou');
     var state = this.state.value;
 
     switch (state) {
