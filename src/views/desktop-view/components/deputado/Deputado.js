@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
-import Avatar from 'material-ui/Avatar';
+//import Avatar from 'material-ui/Avatar';
 import PropTypes from 'prop-types';
 import { LinearProgress } from 'material-ui/Progress';
 import Card from 'material-ui/Card';
 import ImageAvatar from '../../../common-components/ImageAvatar.js';
 import NomeEPartido from '../../../common-components/NomeEPartido.js';
+
+import { Row, Col } from 'antd';
+import { Avatar } from 'antd';
+import { Progress } from 'antd';
 
 const styles = {
   height: '0.4vh'
@@ -59,19 +63,18 @@ class Deputado extends Component {
     //console.log(this.props.score*100);
     //<Progress completed={this.props.score*100} /> {this.props.score*100}
     return(
-      <div className="Deputado" style={deputadoStyle}>
-        <Grid container>
-          <Grid item xs={3} sm={3} md={3} lg={3}>
-          </Grid>
-          <Grid item style={{margin:'10px'}}>
-            <ImageAvatar src={this.props.foto} alt="" />
-          </Grid>
-          <Grid item style={infoStyles}>
-            <div style={{width:'15vh'}}>{linearProgress}</div>
-            <div align="left">{Math.round(this.props.score*100)}% - {this.props.votosSimilares.length}/{this.props.nVotosUsuario}</div>
-            <div><NomeEPartido nome={this.props.nome} partido={this.props.partido} uf={this.props.uf}/></div>
-          </Grid>
-        </Grid>
+      <div className="DeputadoMobile">
+        <Row>
+          <Col offset={5} span={4} style={{top:'10px'}}>
+            <ImageAvatar src={this.props.foto} />
+          </Col>
+          <Col offset={1} span={8}><Progress percent={Math.round(this.props.score*100)} size="small"/> </Col>
+        </Row>
+        <Row>
+          <Col offset={10} span={2}>{this.props.votosSimilares.length}/{this.props.nVotosUsuario}</Col>
+          <Col offset={10} span={14}>{this.props.nome}</Col>
+          <Col offset={10} span={2}>{this.props.partido}/{this.props.uf}</Col>
+        </Row>
       </div>
     );
   }
