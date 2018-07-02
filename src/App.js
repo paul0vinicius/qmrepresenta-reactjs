@@ -37,7 +37,7 @@ class App extends Component {
     const { width } = this.state;
     const isMobile = width <= 500;
 
-    var desktopView = <DesktopRouter />;
+    var desktopView = <MainContainer />;
     var mobileView = <MobileRouter />;
     var view = isMobile ? mobileView : desktopView;
     //var mainC = <DesktopRouter />;
