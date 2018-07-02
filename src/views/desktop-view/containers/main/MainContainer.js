@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import VotacoesContainer from '../votacoes/VotacoesContainer.js';
 import DeputadosContainer from '../deputados/DeputadosContainer.js';
 import PartidosContainer from '../partidos/PartidosContainer.js';
+import HomeContainer from '../home/HomeContainer.js';
 import Grid from 'material-ui/Grid';
 import SimpleAppBar from './AppBar.js';
 import MiniDrawer from '../../containers/menu_lateral/SideBar.js';
@@ -14,6 +15,12 @@ import AnalisesContainer from '../analises/AnalisesContainer.js';
 import AboutContainer from '../about/AboutContainer.js';
 import FacebookContainer from '../facebook/FacebookContainer.js';
 import nomesVotacoes from '../../../../data/nomes_votacoes.json';
+import { Tabs } from 'antd';
+
+import { Row, Col } from 'antd';
+import { Card } from 'antd';
+
+const TabPane = Tabs.TabPane;
 
 const votacoesGridStyle = {
   textAlign: 'left',
@@ -87,6 +94,7 @@ class MainContainer extends Component {
     var votacoesContainer = <VotacoesContainer onVotacoesChange = { (newState) => this.calculaCompatibilidade(newState) } 
                                                votacoesUsuario = {this.state.votosUsuario}
     />;
+
     // Renomear deputadosContainer para DeputadosEPartidosContainer... Algo assim
     var deputadosContainer = <DeputadosContainer
                         scoreDeputados = {this.state.scoreDeputados}
@@ -104,27 +112,39 @@ class MainContainer extends Component {
                         pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes) }
     />;
 
-    var analisesContainer = <AnalisesContainer />;
+    var depAndPartContainer = <Tabs defaultActiveKey="1">
+                                <TabPane tab="Deputados" key="1">{deputadosContainer}</TabPane>
+                                <TabPane tab="Partidos" key="2">{partidosContainer}</TabPane>
+                              </Tabs>;
+
+    //var homeContainer = <HomeContainer />;
+    var homeContainer = <Row>
+                          <Col offset={4} span={6}>{votacoesContainer}</Col>
+                          <Col span={10}>{deputadosEPartidosContainer}</Col>
+                        </Row>;
+
+    var analisesContainer = <Card><AnalisesContainer /></Card>;
     var facebookContainer = <FacebookContainer />;
     var aboutContainer = <AboutContainer />;
 
+    var navigationBar = <Tabs defaultActiveKey="1">
+                          <TabPane tab="Home" key="1">{homeContainer}</TabPane>
+                          <TabPane tab="Análises" key="2">{analisesContainer}</TabPane>
+                          <TabPane tab="Contato" key="3">{facebookContainer}</TabPane>
+                          <TabPane tab="Sobre" key="4">{aboutContainer}</TabPane>
+                        </Tabs>;
+
     return(
       <div className="MainContainer" style={mainGridStyle}>
-        <Grid container spacing={24}>
-          <div style={a}></div>
-          <div style={b}></div>
-          <Grid item xs={12} sm={12} md={12} lg={12} style={appBarStyle}>
-              <SimpleAppBar />
-          </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={12} style={appBarStyle}>
-            <NavigationBar votacoes={votacoesContainer}
-                           deputadosEPartidos={deputadosEPartidosContainer}
-                           analises={analisesContainer}
-                           sobre={aboutContainer}
-                           contato={facebookContainer}
-                            />
-          </Grid>
-        </Grid>
+        <Row>
+          <Col>
+            <div style={a}></div>
+            <div style={b}></div>
+          </Col>
+          <Col>
+            {navigationBar}
+          </Col>
+        </Row>
       </div>
     );
   }
