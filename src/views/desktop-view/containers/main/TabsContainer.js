@@ -18,7 +18,7 @@ const cardStyle = {
 };
 
 const containerStyle = {
-  width: '64.5vh',
+  flexGrow:1,
 };
 
 function TabContainer(props) {
