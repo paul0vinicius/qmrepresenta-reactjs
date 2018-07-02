@@ -13,7 +13,12 @@ import ThumbUp from 'material-ui-icons/ThumbUp';
 import ThumbDown from 'material-ui-icons/ThumbDown';
 import ControlledExpansionPanels from './ExpansionPanel.js';
 import Card from 'material-ui/Card';
-import Button from '@material-ui/core/Button';
+//import Button from '@material-ui/core/Button';
+
+import { Row, Col } from 'antd';
+import { Button, Radio, Icon } from 'antd';
+import { Collapse } from 'antd';
+const Panel = Collapse.Panel;
 
 const voto = {
   SIM: 1,
@@ -94,29 +99,49 @@ class Votacao extends Component {
       </Grid>
     </div>;
 
+var newPainel = <Collapse accordion>
+                  <Panel header={this.props.pergunta} key={this.props.key} showArrow={false} style={{backgroundColor:this.colorPicker()}}>
+                    <p>{this.props.descricao}</p>
+                  </Panel>
+                </Collapse>;
+
     return(
       <div style={votoStyle}>
-        <Grid container>
-        <Grid item xs={1} lg={1} md={1} sm={1} style={botaoSimStyle}>
-          <Button onClick={this.votaSim.bind(this)}>
-            <ThumbUp />
-          </Button>
-        </Grid>
-          <Grid item xs={10} lg={10} md={10} sm={10}>
-            <ControlledExpansionPanels votacao = {votacao}
-                                       pergunta = {this.props.pergunta}
-                                       valorVoto = {this.state.value}
-            />
-          </Grid>
-          <Grid item xs={1} lg={1} md={1} sm={1} style={botaoNaoStyle}>
-            <Button onClick={this.votaNao.bind(this)} style={{width:'1vh'}}>
-              <ThumbDown />
-            </Button>
-          </Grid>
-          </Grid>
+        <Row>
+          <Col offset={1} span={1} style={botaoSimStyle}>
+            <Button icon="like-o" onClick={this.votaSim.bind(this)} />
+          </Col>
+          <Col offset={1} span={18}>
+            {newPainel}
+          </Col>
+          <Col offset={1} span={1} style={botaoNaoStyle}>
+            <Button icon="dislike-o" onClick={this.votaNao.bind(this)} />
+          </Col>
+        </Row>
       </div>
     );
   }
+
+  // a(){
+  //   <Grid container>
+  //       <Grid item xs={1} lg={1} md={1} sm={1} style={botaoSimStyle}>
+  //         <Button onClick={this.votaSim.bind(this)}>
+  //           <ThumbUp />
+  //         </Button>
+  //       </Grid>
+  //         <Grid item xs={10} lg={10} md={10} sm={10}>
+  //           <ControlledExpansionPanels votacao = {votacao}
+  //                                      pergunta = {this.props.pergunta}
+  //                                      valorVoto = {this.state.value}
+  //           />
+  //         </Grid>
+  //         <Grid item xs={1} lg={1} md={1} sm={1} style={botaoNaoStyle}>
+  //           <Button onClick={this.votaNao.bind(this)} style={{width:'1vh'}}>
+  //             <ThumbDown />
+  //           </Button>
+  //         </Grid>
+  //         </Grid>
+  // }
 
     vota(newValue){
       const newState = {idVotacao: this.props.idVotacao, value: newValue};
