@@ -63,13 +63,13 @@ class DeputadoMobile extends Component {
     return(
       <div className="DeputadoMobile">
         <Row>
-          <Col offset={7} span={3}>
-            <Avatar size="large" src={this.props.foto} />
+          <Col offset={5} span={5} style={{top:'10px'}}>
+            <ImageAvatar src={this.props.foto} />
           </Col>
-          <Col span={6}><Progress percent={Math.round(this.props.score*100)} size="small"/> </Col>
-          <Col span={10}>{this.props.votosSimilares.length}/{this.props.nVotosUsuario}</Col>
-          <Col offset={10} span={12}>{this.props.nome}</Col>
-          <Col offset={10} span={12}>{this.props.partido}/{this.props.uf}</Col>
+          <Col offset={1} span={8}><Progress percent={Math.round(this.props.score*100)} size="small"/> </Col>
+          <Col offset={1} span={10}>{this.props.votosSimilares.length}/{this.props.nVotosUsuario}</Col>
+          <Col offset={11} span={12} style={{top:'-21px'}}>{this.props.nome}</Col>
+          <Col offset={11} span={12} style={{top:'-25px'}}>{this.props.partido}/{this.props.uf}</Col>
         </Row>
       </div>
     );
