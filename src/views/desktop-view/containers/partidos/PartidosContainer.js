@@ -29,12 +29,12 @@ class PartidosContainer extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido, nextProps.votosSimilares, nextProps.nVotosUsuario);
+    let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido, nextProps.votosSimilares, nextProps.votosUsuario);
     this.setState({partidos: partidos});
   }
 
   componentDidMount() {
-    let partidos = PartidoFactory.inicializaComponentesPartidos("", this.props.scorePartidos, this.nVotacoesPartido, this.props.votosSimilares, this.props.nVotosUsuario);
+    let partidos = PartidoFactory.inicializaComponentesPartidos("", this.props.scorePartidos, this.nVotacoesPartido, this.props.votosSimilares, this.props.votosUsuario);
     this.setState({partidos: partidos});
   }
 

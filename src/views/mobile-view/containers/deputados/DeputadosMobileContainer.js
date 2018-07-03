@@ -28,14 +28,14 @@ const cardStyle = {
 
 class DeputadosMobileContainer extends DeputadosContainer {
   componentWillReceiveProps(nextProps){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", nextProps.scoreDeputados, this.nVotacoesDep, nextProps.votosSimilares, nextProps.nVotosUsuario);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile", nextProps.scoreDeputados, this.nVotacoesDep, nextProps.votosSimilares, nextProps.votosUsuario);
     this.setState({deputados: deputados});
   }
 
   componentDidMount() {
     //this.props.pegaVotacoesDeputados(this.getVotacoes());
     //this.props.pegaVotacoesPartidos(this.getVotacoesPartidos());
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.nVotosUsuario);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
     //let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido);
     this.setState({deputados: deputados});
   }

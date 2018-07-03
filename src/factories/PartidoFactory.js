@@ -22,7 +22,7 @@ class PartidoFactory extends Component {
     }
   }
 
-  static buildClass(tipoClassePartido, infoPartido, scorePartido, nVotacoesPresente, votosSimilares, nVotosUsuario){
+  static buildClass(tipoClassePartido, infoPartido, scorePartido, nVotacoesPresente, votosSimilares, votosUsuario){
     switch (tipoClassePartido) {
       case "mobile":
         return <PartidoMobile key = {infoPartido.id_partido}
@@ -32,7 +32,7 @@ class PartidoFactory extends Component {
                         foto = {infoPartido.urlLogo}
                         score = {scorePartido}
                         nVotacoesPresente = {nVotacoesPresente}
-                        nVotosUsuario = {nVotosUsuario}
+                        votosUsuario = {votosUsuario}
                         votosSimilares = {votosSimilares}
         />;
       default:
@@ -43,18 +43,18 @@ class PartidoFactory extends Component {
                         foto = {infoPartido.urlLogo}
                         score = {scorePartido}
                         nVotacoesPresente = {nVotacoesPresente}
-                        nVotosUsuario = {nVotosUsuario}
+                        votosUsuario = {votosUsuario}
                         votosSimilares = {votosSimilares}
         />;
     }
   }
 
-  static inicializaComponentesPartidos(tipoClassePartido, scorePartidos, nVotacoesPartido, votosSimilares, nVotosUsuario){
+  static inicializaComponentesPartidos(tipoClassePartido, scorePartidos, nVotacoesPartido, votosSimilares, votosUsuario){
     let partidos = [];
 
     for(let i = 0; i < infoPartidos.length; i++){
       partidos.push(this.buildClass(tipoClassePartido, infoPartidos[i], scorePartidos[infoPartidos[i].id_partido],
-        nVotacoesPartido[infoPartidos[i].id_partido], votosSimilares[infoPartidos[i].id_partido], nVotosUsuario));
+        nVotacoesPartido[infoPartidos[i].id_partido], votosSimilares[infoPartidos[i].id_partido], votosUsuario));
     }
 
     // Ordena por compatibilidade

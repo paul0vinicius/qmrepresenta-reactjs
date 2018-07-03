@@ -43,7 +43,7 @@ class DeputadosContainer extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("",nextProps.scoreDeputados, this.nVotacoesDep, nextProps.votosSimilares,nextProps.nVotosUsuario);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("",nextProps.scoreDeputados, this.nVotacoesDep, nextProps.votosSimilares,nextProps.votosUsuario);
     //let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido);
     this.setState({deputados: deputados});
   }
@@ -54,7 +54,7 @@ class DeputadosContainer extends Component {
 
   componentDidMount() {
     //this.props.pegaVotacoesPartidos(this.getVotacoesPartidos());
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.nVotosUsuario);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
     //let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido);
     this.setState({deputados: deputados});
   }
@@ -73,12 +73,12 @@ class DeputadosContainer extends Component {
             <Search placeholder="Nome do deputado" onChange={this.buscaNome.bind(this)} />
           </Col>
           <Col span={6}>
-              <Select style={{ width: 90}} placeholder="Partidos" onChange={this.buscaPartido.bind(this)}>
+              <Select style={{ width: 100}} placeholder="Partidos" onChange={this.buscaPartido.bind(this)}>
               {this.partidos()}
               </Select>
           </Col>
           <Col span={6}>
-              <Select style={{ width: 90}} placeholder="Estados" onChange={this.buscaUF.bind(this)}>
+              <Select style={{ width: 100}} placeholder="Estados" onChange={this.buscaUF.bind(this)}>
               {this.estados()}
               </Select>
           </Col>
@@ -188,13 +188,13 @@ class DeputadosContainer extends Component {
   }
 
   filtraPorPartido(partidoDeputado){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.nVotosUsuario);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
     let deputadosFiltrados = deputados.filter(d => ((d.props.children.props.partido.toLowerCase()) === partidoDeputado.toLowerCase()));
     return deputadosFiltrados.map(d => d.key);
   }
 
   filtraPorUf(UFDeputado){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.nVotosUsuario);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
     let deputadosFiltrados = deputados.filter(d => ((d.props.children.props.uf.toLowerCase()) === UFDeputado.toLowerCase()));
     return deputadosFiltrados.map(d => d.key);
     //this.setState({deputados: deputados})
@@ -202,7 +202,7 @@ class DeputadosContainer extends Component {
   }
 
   filtraPorNome(nomeDeputado){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.nVotosUsuario);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
     let deputadosFiltrados = deputados.filter(d => (d.props.children.props.nome.toLowerCase().indexOf(nomeDeputado.toLowerCase()) >= 0));
     return deputadosFiltrados.map(d => d.key);
     //this.setState({deputados: deputados})
@@ -217,7 +217,7 @@ class DeputadosContainer extends Component {
   }
 
   partidos(){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.nVotosUsuario);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
     let partidos = new Set();
 
     partidos.add("TODOS");

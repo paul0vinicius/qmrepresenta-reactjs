@@ -68,14 +68,14 @@ class MainMobileContainer extends MainContainer {
     var containerPartidos = <PartidosMobileContainer
                         scorePartidos = {this.state.scorePartidos}
                         votosSimilares = {this.state.votosSimilaresPartidos}
-                        nVotosUsuario = {this.state.nVotosUsuario}
+                        votosUsuario = {this.state.votosUsuario}
                         pegaVotacoesPartidos = { (votacoes) => this.setVotacoesPartidos(votacoes)}
                         />;
 
     var containerDeputados = <DeputadosMobileContainer
                         scoreDeputados = {this.state.scoreDeputados}
                         votosSimilares = {this.state.votosSimilaresDeputados}
-                        nVotosUsuario = {this.state.nVotosUsuario}
+                        votosUsuario = {this.state.votosUsuario}
                         pegaVotacoesDeputados = { (votacoes) => this.setVotacoesDeputados(votacoes)}
                         />;
     var deputadosEPartidosContainer = <DeputadosEPartidosTabContainer deputados={containerDeputados}
