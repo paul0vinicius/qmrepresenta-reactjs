@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import VotacoesContainer from '../votacoes/VotacoesContainer.js';
 import DeputadosContainer from '../deputados/DeputadosContainer.js';
 import PartidosContainer from '../partidos/PartidosContainer.js';
-import HomeContainer from '../home/HomeContainer.js';
+//import HomeContainer from '../home/HomeContainer.js';
 import Grid from 'material-ui/Grid';
 import SimpleAppBar from './AppBar.js';
 import MiniDrawer from '../../containers/menu_lateral/SideBar.js';
@@ -99,12 +99,12 @@ class MainContainer extends Component {
     var deputadosContainer = <DeputadosContainer
                         scoreDeputados = {this.state.scoreDeputados}
                         votosSimilares = {this.state.votosSimilaresDeputados}
-                        nVotosUsuario = {this.state.nVotosUsuario}
+                        votosUsuario = {this.state.votosUsuario}
                         />;
     var partidosContainer = <PartidosContainer
                         scorePartidos = {this.state.scorePartidos}
                         votosSimilares = {this.state.votosSimilaresPartidos}
-                        nVotosUsuario = {this.state.nVotosUsuario}
+                        votosUsuario = {this.state.votosUsuario}
                         />;
     var deputadosEPartidosContainer = <TabsContainer deputados={deputadosContainer}
                         partidos={partidosContainer}
@@ -119,8 +119,8 @@ class MainContainer extends Component {
 
     //var homeContainer = <HomeContainer />;
     var homeContainer = <Row>
-                          <Col offset={4} span={6}>{votacoesContainer}</Col>
-                          <Col span={10}>{deputadosEPartidosContainer}</Col>
+                          <Col offset={4} span={8}>{votacoesContainer}</Col>
+                          <Col span={8}>{deputadosEPartidosContainer}</Col>
                         </Row>;
 
     var analisesContainer = <Card><AnalisesContainer /></Card>;
