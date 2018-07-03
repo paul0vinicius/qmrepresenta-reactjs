@@ -6,9 +6,11 @@ import { LinearProgress } from 'material-ui/Progress';
 import Card from 'material-ui/Card';
 import ImageAvatar from '../../../common-components/ImageAvatar.js';
 import NomeEPartido from '../../../common-components/NomeEPartido.js';
+import VotacoesSemelhantes from './VotacoesSemelhantes.js';
 
 import { Row, Col } from 'antd';
 import { Avatar } from 'antd';
+import { Button } from 'antd';
 import { Progress } from 'antd';
 
 const styles = {
@@ -53,6 +55,17 @@ class Deputado extends Component {
   constructor(props){
     super(props);
     this.votacoes = props.votacoes;
+    this.nVotosUsuario = 0;
+  }
+
+  mostraVotacoesSemelhantes(){
+    console.log(this.props.votosUsuario);
+    console.log(this.props.votosSimilares);
+    console.log(this.nVotosUsuario);
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.nVotosUsuario = Object.keys(nextProps.votosUsuario).filter((elem, index, arr) => nextProps.votosUsuario[elem] !== 0).length;
   }
 
   render() {
@@ -63,17 +76,18 @@ class Deputado extends Component {
     //console.log(this.props.score*100);
     //<Progress completed={this.props.score*100} /> {this.props.score*100}
     return(
-      <div className="DeputadoMobile">
+      <div className="Deputado">
         <Row>
-          <Col offset={5} span={4} style={{top:'10px'}}>
+          <Col offset={6} span={3} style={{top:'10px'}}>
             <ImageAvatar src={this.props.foto} />
           </Col>
           <Col offset={1} span={8}><Progress percent={Math.round(this.props.score*100)} size="small"/> </Col>
+          <Col offset={1} span={8} style={{textAlign: 'left'}}><Button onClick={this.mostraVotacoesSemelhantes.bind(this)}>{this.props.votosSimilares.length}/{this.nVotosUsuario}</Button></Col>
+          <Col offset={1} span={12} style={{textAlign: 'left'}}>{this.props.nome}</Col>
+          <VotacoesSemelhantes />
         </Row>
         <Row>
-          <Col offset={10} span={2}>{this.props.votosSimilares.length}/{this.props.nVotosUsuario}</Col>
-          <Col offset={10} span={14}>{this.props.nome}</Col>
-          <Col offset={10} span={2}>{this.props.partido}/{this.props.uf}</Col>
+          <Col offset={10} span={12} style={{textAlign: 'left'}}>{this.props.partido}/{this.props.uf}</Col>
         </Row>
       </div>
     );
