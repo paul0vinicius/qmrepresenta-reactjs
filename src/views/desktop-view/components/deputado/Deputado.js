@@ -12,6 +12,7 @@ import { Row, Col } from 'antd';
 import { Avatar } from 'antd';
 import { Button } from 'antd';
 import { Progress } from 'antd';
+import { Popover } from 'antd';
 
 const styles = {
   height: '0.4vh'
@@ -70,6 +71,9 @@ class Deputado extends Component {
 
   render() {
 
+    let buttonName = this.props.votosSimilares.length + "/" + this.nVotosUsuario;
+    let modalTitle = "Comparação entre os seus votos e o de " + this.props.nome;
+    let content = <div>votações galera</div>;
     let linearProgress = <LinearProgress variant="determinate" size={80} value={this.props.score*100} />;
 
     let divProgressElement = <DivProgress score={this.props.score}/>
@@ -82,9 +86,13 @@ class Deputado extends Component {
             <ImageAvatar src={this.props.foto} />
           </Col>
           <Col offset={1} span={8}><Progress percent={Math.round(this.props.score*100)} size="small"/> </Col>
-          <Col offset={1} span={8} style={{textAlign: 'left'}}><Button onClick={this.mostraVotacoesSemelhantes.bind(this)}>{this.props.votosSimilares.length}/{this.nVotosUsuario}</Button></Col>
+          <Col offset={1} span={8} style={{textAlign: 'left'}}>
+              <VotacoesSemelhantes buttonName={buttonName}
+                                   modalTitle={modalTitle}
+                                   content={content}
+              />
+          </Col>
           <Col offset={1} span={12} style={{textAlign: 'left'}}>{this.props.nome}</Col>
-          <VotacoesSemelhantes />
         </Row>
         <Row>
           <Col offset={10} span={12} style={{textAlign: 'left'}}>{this.props.partido}/{this.props.uf}</Col>

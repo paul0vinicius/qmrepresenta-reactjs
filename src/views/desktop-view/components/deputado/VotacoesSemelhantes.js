@@ -23,20 +23,19 @@ class VotacoesSemelhantes extends Component {
         visible: false,
         });
     }
-    
+
     render() {
         return (
           <div>
-            <Button type="primary" onClick={this.showModal}>Open</Button>
+            <Button onClick={this.showModal}>{this.props.buttonName}</Button>
             <Modal
-              title="Basic Modal"
+              title={this.props.modalTitle}
               visible={this.state.visible}
               onOk={this.handleOk}
               onCancel={this.handleCancel}
+              footer={[]}
             >
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
+              {this.props.content}
             </Modal>
           </div>
         );
