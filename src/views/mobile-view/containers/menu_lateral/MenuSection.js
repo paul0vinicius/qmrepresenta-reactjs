@@ -14,6 +14,9 @@ import SendIcon from '@material-ui/icons/Send';
 import MailIcon from '@material-ui/icons/Mail';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ReportIcon from '@material-ui/icons/Report';
+
+import { Menu, Icon } from 'antd';
+
 import {
   BrowserRouter as Router,
   Link,
@@ -86,3 +89,26 @@ export const mobileList = (
       </Link>
     </div>
 );
+
+// export const linksList = (
+//     <Menu.Item key="QMR">
+//      <Link to='/' style={{ textDecoration: 'none' }}>
+//       QMR
+//      </Link>
+//     </Menu.Item>
+//     <Menu.Item key="analises">
+//      <Link to='/analises' style={{ textDecoration: 'none' }}>
+//       Análises
+//      </Link>
+//     </Menu.Item>
+//     <Menu.Item key="sobre">
+//      <Link to='/sobre' style={{ textDecoration: 'none' }}>
+//       Sobre
+//      </Link>
+//     </Menu.Item>
+//     <Menu.Item key="contato">
+//      <Link to='/contato' style={{ textDecoration: 'none' }}>
+//       Contato
+//      </Link>
+//     </Menu.Item>
+// );

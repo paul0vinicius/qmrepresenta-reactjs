@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-import Grid from 'material-ui/Grid';
-import Button from 'material-ui/Button';
-import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
 
 class FacebookContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render(){
-    return (
-      <div>Espaço reservado para o campo de divulgação no Facebook.</div>
-    );
-  }
+    render(){
+        return(
+            <div style={{textAlign:'left'}}>
+                <Typography variant="headline">
+                  Facebook
+                </Typography>
+                <div>
+                  Para novidades e atualizações curta a página no <a href="https://www.facebook.com/quemmerepresenta">Facebook</a>.
+                </div>
+                <Typography variant="headline">
+                  Email
+                </Typography>
+                <div>
+                  Dúvidas, críticas e sugestões: qmrepresenta@gmail.com
+                </div>
+            </div>
+        );
+    }
 }
 
 export default FacebookContainer;

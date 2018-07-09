@@ -7,8 +7,20 @@ import 'slick-carousel/slick/slick-theme.css';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import Swipeable from 'react-swipeable';
+import { Collapse } from 'antd';
+const Panel = Collapse.Panel;
 
 class VotacaoMobile extends Votacao {
+  
+  colorPicker(){
+    switch (this.props.value) {
+      case 1:
+        return "#1D6B91";
+      case -1:
+        return "#51269C";
+      default: return "#DBDBDB";
+    }
+  }
 
   render(){
 
@@ -16,6 +28,13 @@ class VotacaoMobile extends Votacao {
                                                   valorVoto = {this.state.value}
                                                   descricao = {this.props.descricao}
         />;
+
+    var newPainel = <Collapse accordion>
+                      <Panel header={this.props.pergunta} key={this.props.key} showArrow={false} style={{backgroundColor:this.colorPicker()}}>
+                        <p>{this.props.descricao}</p>
+                      </Panel>
+                    </Collapse>;
+        
 
     return(
       <div>
@@ -25,13 +44,14 @@ class VotacaoMobile extends Votacao {
           delta={80}
           flickThreshold={1.2}
         >
-          <div>{painel}</div>
+          <div>{newPainel}</div>
         </Swipeable>
       </div>
     );
   }
 
   votaSim(){
+    console.log('votou');
     var state = this.state.value;
 
     switch (state) {

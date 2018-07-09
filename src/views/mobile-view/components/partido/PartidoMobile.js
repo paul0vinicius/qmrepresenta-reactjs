@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { LinearProgress } from 'material-ui/Progress';
+import { CircularProgress } from 'material-ui/Progress';
 import Grid from 'material-ui/Grid';
 import ImageAvatar from '../../../common-components/ImageAvatar.js';
 import NomeEPartido from '../../../common-components/NomeEPartido.js';
+import { Row, Col } from 'antd';
+import { Avatar } from 'antd';
+import { Progress } from 'antd';
 
 const DivProgress = (props) => {
   //console.log(props.score);
@@ -33,20 +38,15 @@ class PartidoMobile extends Component {
 
     return(
       <div className="PartidoMobile">
-        <Grid container>
-          <Grid item xs={2}>
-          </Grid>
-          <Grid item xs={3}>
-            <ImageAvatar src={this.props.foto} alt="" />
-          </Grid>
-          <Grid item xs={3} style={infoStyles}>
-            {linearProgress}
-            <NomeEPartido nome={this.props.nome} partido={this.props.sigla} />
-          </Grid>
-          <Grid item xs={3} style={divProgressStyles}>
-            {divProgressElement}
-          </Grid>
-        </Grid>
+        <Row>
+          <Col offset={5} span={5} style={{top:'10px'}}>
+            <ImageAvatar src={this.props.foto} />
+          </Col>
+          <Col offset={1} span={8}><Progress percent={Math.round(this.props.score*100)} size="small"/> </Col>
+          <Col offset={1} span={10}>{this.props.votosSimilares.length}/{this.props.nVotosUsuario}</Col>
+          <Col offset={11} span={12} style={{top:'-21px'}}>{this.props.nome}</Col>
+          <Col offset={11} span={12} style={{top:'-25px'}}>{this.props.sigla}</Col>
+        </Row>
       </div>
     );
   }

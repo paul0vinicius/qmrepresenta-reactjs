@@ -36,7 +36,7 @@ class DeputadoFactory extends Component {
     }
   }
 
-  static buildClass(tipoClasseDeputado, infoDeputado, scoreDeputado, nVotacoesPresente, votosSimilares, nVotosUsuario){
+  static buildClass(tipoClasseDeputado, infoDeputado, scoreDeputado, nVotacoesPresente, votosSimilares, votosUsuario){
     switch (tipoClasseDeputado) {
       case "mobile":
         return <div key={infoDeputado.id_deputado} >
@@ -49,7 +49,7 @@ class DeputadoFactory extends Component {
                                  votacoes = {infoDeputado.votacoes}
                                  score = {scoreDeputado}
                                  nVotacoesDep = {nVotacoesPresente}
-                                 nVotosUsuario = {nVotosUsuario}
+                                 votosUsuario = {votosUsuario}
                                  votosSimilares = {votosSimilares}
                             />
               </div>;
@@ -63,19 +63,19 @@ class DeputadoFactory extends Component {
                                  votacoes = {infoDeputado.votacoes}
                                  score = {scoreDeputado}
                                  nVotacoesDep = {nVotacoesPresente}
-                                 nVotosUsuario = {nVotosUsuario}
+                                 votosUsuario = {votosUsuario}
                                  votosSimilares = {votosSimilares}
                                  />;
 
     }
   }
 
-  static inicializaComponentesDeputados(tipoClasseDeputado, scoreDeputados, nVotacoesDep, votosSimilares, nVotosUsuario){
+  static inicializaComponentesDeputados(tipoClasseDeputado, scoreDeputados, nVotacoesDep, votosSimilares, votosUsuario){
     let deputados = [];
 
     for(let i = 0; i < infoDeputados.length; i++){
       deputados.push(this.buildClass(tipoClasseDeputado, infoDeputados[i], scoreDeputados[infoDeputados[i].id_deputado],
-        nVotacoesDep[infoDeputados[i].id_deputado], votosSimilares[infoDeputados[i].id_deputado], nVotosUsuario));
+        nVotacoesDep[infoDeputados[i].id_deputado], votosSimilares[infoDeputados[i].id_deputado], votosUsuario));
     }
 
     // Ordena por compatibilidade
