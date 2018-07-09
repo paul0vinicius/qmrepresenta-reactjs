@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/paul0vinicius/qmrepresenta-reactjs.svg?branch=master)](https://travis-ci.org/paul0vinicius/qmrepresenta-reactjs)
 
 Disponível no [Heroku](https://qmrepresenta-2.herokuapp.com/).
+Caso o site acima esteja fora do ar, tente o [GitHub Pages](https://paul0vinicius.github.io/qmrepresenta-reactjs/).
 
 Esse projeto idealiza uma versão repaginada para o site [Quem me Representa?](http://qmrepresenta.com.br/), criado no terceiro hackfest do Laboratório Analytics (UFCG). O site calcula a compatibilidade entre o usuário e os deputados do câmara de acordo com determinadas votações.
 
