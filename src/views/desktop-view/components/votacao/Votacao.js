@@ -71,10 +71,10 @@ class Votacao extends Component {
   colorPicker() {
     switch (this.state.value) {
       case 1:
-        return "#1D6B91";
+        //return "#1D6B91";
         break;
       case -1:
-        return "#51269C";
+        //return "#51269C";
         break;
       default:
         return "#DBDBDB";
