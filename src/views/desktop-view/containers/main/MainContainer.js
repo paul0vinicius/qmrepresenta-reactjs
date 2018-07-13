@@ -49,8 +49,8 @@ const a = {
   top: "0",
   left: "0",
   width: "100%",
-  height: "50%",
-  backgroundColor: "#51269C"
+  height: "50%"
+  //backgroundColor: "#51269C"
 };
 
 const appBarStyle = {
@@ -68,8 +68,8 @@ const b = {
   top: "50%",
   left: "0",
   width: "100%",
-  height: "50%",
-  backgroundColor: "#1D6B91"
+  height: "50%"
+  //backgroundColor: "#1D6B91"
 };
 
 class MainContainer extends Component {
