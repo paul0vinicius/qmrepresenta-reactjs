@@ -1,68 +1,105 @@
-import React, { Component } from 'react';
-import DeputadoFactory from '../../../../factories/DeputadoFactory.js';
-import PartidoFactory from '../../../../factories/PartidoFactory.js';
-import infoDeputados from '../../../../data/deputados.json';
-import infoPartidos from '../../../../data/partidos.json';
+import React, { Component } from "react";
+import DeputadoFactory from "../../../../factories/DeputadoFactory.js";
+import PartidoFactory from "../../../../factories/PartidoFactory.js";
+import infoDeputados from "../../../../data/deputados.json";
+import infoPartidos from "../../../../data/partidos.json";
 //import Card from 'material-ui/Card';
 //import TabsContainer from './TabsContainer.js';
-import FlipMove from 'react-flip-move';
-import { MenuItem } from 'material-ui/Menu';
-import { InputLabel } from 'material-ui/Input';
-import { FormControl, FormHelperText } from 'material-ui/Form';
+import FlipMove from "react-flip-move";
+import { MenuItem } from "material-ui/Menu";
+import { InputLabel } from "material-ui/Input";
+import { FormControl, FormHelperText } from "material-ui/Form";
+
+import PainelInicial from "./PainelInicial.js";
+
 //import Select from 'material-ui/Select';
-import TextField from 'material-ui/TextField';
-import nomesVotacoes from '../../../../data/nomes_votacoes.json';
-import { Card } from 'antd';
-import { Input, Select, Icon } from 'antd';
-import { Row, Col } from 'antd';
+import TextField from "material-ui/TextField";
+import nomesVotacoes from "../../../../data/nomes_votacoes.json";
+import { Card } from "antd";
+import { Input, Select, Icon } from "antd";
+import { Row, Col } from "antd";
 
 const Search = Input.Search;
 const Option = Select.Option;
 
 const cardStyle = {
-  //overflowY: 'scroll',
+  flexGrow: 1,
+  overflowY: "scroll",
+  height: "68vh",
   //overflowX: 'hidden',
   //height: '90vh',
-  //position: 'fixed',
-  backgroundColor: "#DBDBDB",
+  position: "relative",
+  backgroundColor: "#DBDBDB"
   //width:'2000vh',
   //marginLeft: '7vh',
   //marginRight: '15vh'
 };
 
 class DeputadosContainer extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.nVotacoesDep = this.calculaNVotacoesDep(this.getVotacoes());
     //this.nVotacoesPartido = this.calculaNVotacoesPartidos(this.getVotacoesPartidos());
     this.scoreDeputados = {};
     //this.scorePartidos = {};
-    this.state = { deputados: [], deputadosPorNome: [], deputadosPorUf: [], deputadosPorPartido: [],
-      filterName: '', filterUf: 'TODOS', filterPartido: 'TODOS' };
+    this.state = {
+      deputados: [],
+      deputadosPorNome: [],
+      deputadosPorUf: [],
+      deputadosPorPartido: [],
+      filterName: "",
+      filterUf: "TODOS",
+      filterPartido: "TODOS"
+    };
   }
 
-  componentWillReceiveProps(nextProps){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("",nextProps.scoreDeputados, this.nVotacoesDep, nextProps.votosSimilares,nextProps.votosUsuario);
+  componentWillReceiveProps(nextProps) {
+    let deputados = DeputadoFactory.inicializaComponentesDeputados(
+      "",
+      nextProps.scoreDeputados,
+      this.nVotacoesDep,
+      nextProps.votosSimilares,
+      nextProps.votosUsuario
+    );
     //let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido);
-    this.setState({deputados: deputados});
+    this.setState({ deputados: deputados });
   }
 
-  shouldComponentUpdate(nextProps, nextState){
-    return((JSON.stringify(this.scoreDeputados) !== JSON.stringify(nextProps.scoreDeputados)));
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      JSON.stringify(this.scoreDeputados) !==
+      JSON.stringify(nextProps.scoreDeputados)
+    );
   }
 
   componentDidMount() {
     //this.props.pegaVotacoesPartidos(this.getVotacoesPartidos());
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
+    let deputados = DeputadoFactory.inicializaComponentesDeputados(
+      "",
+      this.props.scoreDeputados,
+      this.nVotacoesDep,
+      this.props.votosSimilares,
+      this.props.votosUsuario
+    );
     //let partidos = PartidoFactory.inicializaComponentesPartidos("", nextProps.scorePartidos, this.nVotacoesPartido);
-    this.setState({deputados: deputados});
+    this.setState({ deputados: deputados });
   }
 
-  render(){
-    let byName = this.state.filterName !== '' ? this.state.deputados.filter(d => this.state.deputadosPorNome.indexOf(d.key) !== -1) : this.state.deputados;
-    let byUf = this.state.filterUf !== 'TODOS' ? byName.filter(d => this.state.deputadosPorUf.indexOf(d.key) !== -1) : byName;
-    var deputadosAExibir = this.state.filterPartido !== 'TODOS' ? byUf.filter(d => this.state.deputadosPorPartido.indexOf(d.key) !== -1) : byUf;
+  render() {
+    let byName =
+      this.state.filterName !== ""
+        ? this.state.deputados.filter(
+            d => this.state.deputadosPorNome.indexOf(d.key) !== -1
+          )
+        : this.state.deputados;
+    let byUf =
+      this.state.filterUf !== "TODOS"
+        ? byName.filter(d => this.state.deputadosPorUf.indexOf(d.key) !== -1)
+        : byName;
+    var deputadosAExibir =
+      this.state.filterPartido !== "TODOS"
+        ? byUf.filter(d => this.state.deputadosPorPartido.indexOf(d.key) !== -1)
+        : byUf;
 
     //console.log(this.props.scoreDeputados);
 
@@ -70,22 +107,37 @@ class DeputadosContainer extends Component {
       <div className="DeputadosContainer">
         <Row>
           <Col span={12}>
-            <Search placeholder="Nome do deputado" onChange={this.buscaNome.bind(this)} />
+            <Search
+              placeholder="Nome do deputado"
+              onChange={this.buscaNome.bind(this)}
+            />
           </Col>
           <Col span={6}>
-              <Select style={{ width: 100}} placeholder="Partidos" onChange={this.buscaPartido.bind(this)}>
+            <Select
+              style={{ width: 100 }}
+              placeholder="Partidos"
+              onChange={this.buscaPartido.bind(this)}
+            >
               {this.partidos()}
-              </Select>
+            </Select>
           </Col>
           <Col span={6}>
-              <Select style={{ width: 100}} placeholder="Estados" onChange={this.buscaUF.bind(this)}>
+            <Select
+              style={{ width: 100 }}
+              placeholder="Estados"
+              onChange={this.buscaUF.bind(this)}
+            >
               {this.estados()}
-              </Select>
+            </Select>
           </Col>
           <Col span={24}>
             <Card style={cardStyle}>
               <FlipMove>
-                {deputadosAExibir.slice(0,20)}
+                {deputadosAExibir.length !== 0 ? (
+                  deputadosAExibir.slice(0, 20)
+                ) : (
+                  <PainelInicial />
+                )}
               </FlipMove>
             </Card>
           </Col>
@@ -133,24 +185,26 @@ class DeputadosContainer extends Component {
   // mas se conseguirmos modificar o script para gerar o json pronto, basta retornar as votações.
   // Transforma um array do tipo: [{id_votacao: x, value_name: sim/nao/abstencao, tema: z, value:0/1/-1/-2}] para um
   // dicionário do tipo: id_dep:{id_votacao: value}
-  getVotacoes(){
+  getVotacoes() {
     let todasVotacoes = {};
-    for (let i = 0; i < infoDeputados.length; i++){
+    for (let i = 0; i < infoDeputados.length; i++) {
       let votacoes = {};
-      for (let j = 0; j < Object.keys(infoDeputados[i].votacoes).length; j++){
-        votacoes[infoDeputados[i].votacoes[j].id_votacao] = infoDeputados[i].votacoes[j].value;
+      for (let j = 0; j < Object.keys(infoDeputados[i].votacoes).length; j++) {
+        votacoes[infoDeputados[i].votacoes[j].id_votacao] =
+          infoDeputados[i].votacoes[j].value;
       }
       todasVotacoes[infoDeputados[i].id_deputado] = votacoes;
     }
     return todasVotacoes;
   }
 
-  calculaNVotacoesDep(votacoes){
+  calculaNVotacoesDep(votacoes) {
     var nVotacoesDepObject = {};
-    for (var deputado in votacoes){
+    for (var deputado in votacoes) {
       var nVotacoesDep = 0;
-      for(var i = 0; i < nomesVotacoes.length; i++){
-        if(votacoes[deputado][nomesVotacoes[i].id_votacao] !== 0) nVotacoesDep++;
+      for (var i = 0; i < nomesVotacoes.length; i++) {
+        if (votacoes[deputado][nomesVotacoes[i].id_votacao] !== 0)
+          nVotacoesDep++;
       }
       nVotacoesDepObject[deputado] = nVotacoesDep;
       //console.log(nVotacoesDep);
@@ -159,76 +213,149 @@ class DeputadosContainer extends Component {
     return nVotacoesDepObject;
   }
 
-  buscaNome(evento){
+  buscaNome(evento) {
     var nomeDeputado = evento.target.value;
-    this.setState({filterName: nomeDeputado})
+    this.setState({ filterName: nomeDeputado });
     var deputadosNome = this.filtraPorNome(nomeDeputado);
-    this.setState({deputadosPorNome: deputadosNome})
+    this.setState({ deputadosPorNome: deputadosNome });
   }
 
-  buscaUF(evento){
+  buscaUF(evento) {
     var UFDeputado = evento;
-    this.setState({filterUf: UFDeputado})
+    this.setState({ filterUf: UFDeputado });
 
     console.log(UFDeputado);
     var deputados = this.filtraPorUf(UFDeputado);
 
-    this.setState({deputadosPorUf: deputados})
+    this.setState({ deputadosPorUf: deputados });
   }
 
-  buscaPartido(evento){
+  buscaPartido(evento) {
     console.log(evento);
     var partidoDeputado = evento;
-    this.setState({filterPartido: partidoDeputado})
+    this.setState({ filterPartido: partidoDeputado });
 
     console.log(partidoDeputado);
     var deputados = this.filtraPorPartido(partidoDeputado);
 
-    this.setState({deputadosPorPartido: deputados})
+    this.setState({ deputadosPorPartido: deputados });
   }
 
-  filtraPorPartido(partidoDeputado){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
-    let deputadosFiltrados = deputados.filter(d => ((d.props.children.props.partido.toLowerCase()) === partidoDeputado.toLowerCase()));
+  filtraPorPartido(partidoDeputado) {
+    let deputados = DeputadoFactory.inicializaComponentesDeputados(
+      "mobile",
+      this.props.scoreDeputados,
+      this.nVotacoesDep,
+      this.props.votosSimilares,
+      this.props.votosUsuario
+    );
+    let deputadosFiltrados = deputados.filter(
+      d =>
+        d.props.children.props.partido.toLowerCase() ===
+        partidoDeputado.toLowerCase()
+    );
     return deputadosFiltrados.map(d => d.key);
   }
 
-  filtraPorUf(UFDeputado){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
-    let deputadosFiltrados = deputados.filter(d => ((d.props.children.props.uf.toLowerCase()) === UFDeputado.toLowerCase()));
+  filtraPorUf(UFDeputado) {
+    let deputados = DeputadoFactory.inicializaComponentesDeputados(
+      "mobile",
+      this.props.scoreDeputados,
+      this.nVotacoesDep,
+      this.props.votosSimilares,
+      this.props.votosUsuario
+    );
+    let deputadosFiltrados = deputados.filter(
+      d => d.props.children.props.uf.toLowerCase() === UFDeputado.toLowerCase()
+    );
     return deputadosFiltrados.map(d => d.key);
     //this.setState({deputados: deputados})
     //console.log(deputados);
   }
 
-  filtraPorNome(nomeDeputado){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
-    let deputadosFiltrados = deputados.filter(d => (d.props.children.props.nome.toLowerCase().indexOf(nomeDeputado.toLowerCase()) >= 0));
+  filtraPorNome(nomeDeputado) {
+    let deputados = DeputadoFactory.inicializaComponentesDeputados(
+      "mobile",
+      this.props.scoreDeputados,
+      this.nVotacoesDep,
+      this.props.votosSimilares,
+      this.props.votosUsuario
+    );
+    let deputadosFiltrados = deputados.filter(
+      d =>
+        d.props.children.props.nome
+          .toLowerCase()
+          .indexOf(nomeDeputado.toLowerCase()) >= 0
+    );
     return deputadosFiltrados.map(d => d.key);
     //this.setState({deputados: deputados})
   }
 
-  estados(){
-    var estados = ["TODOS","AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
-                   "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN",
-                   "RO", "RS", "RR", "SC", "SE", "SP", "TO"];
+  estados() {
+    var estados = [
+      "TODOS",
+      "AC",
+      "AL",
+      "AM",
+      "AP",
+      "BA",
+      "CE",
+      "DF",
+      "ES",
+      "GO",
+      "MA",
+      "MT",
+      "MS",
+      "MG",
+      "PA",
+      "PB",
+      "PR",
+      "PE",
+      "PI",
+      "RJ",
+      "RN",
+      "RO",
+      "RS",
+      "RR",
+      "SC",
+      "SE",
+      "SP",
+      "TO"
+    ];
 
-    return estados.map(function(a){return <Option key={a} value={a}>{a}</Option>})
+    return estados.map(function(a) {
+      return (
+        <Option key={a} value={a}>
+          {a}
+        </Option>
+      );
+    });
   }
 
-  partidos(){
-    let deputados = DeputadoFactory.inicializaComponentesDeputados("mobile",this.props.scoreDeputados, this.nVotacoesDep, this.props.votosSimilares, this.props.votosUsuario);
+  partidos() {
+    let deputados = DeputadoFactory.inicializaComponentesDeputados(
+      "mobile",
+      this.props.scoreDeputados,
+      this.nVotacoesDep,
+      this.props.votosSimilares,
+      this.props.votosUsuario
+    );
     let partidos = new Set();
 
     partidos.add("TODOS");
 
-    for(var i = 0; i < deputados.length; i++){
+    for (var i = 0; i < deputados.length; i++) {
       partidos.add(deputados[i].props.children.props.partido);
     }
 
-    return Array.from(partidos).map(function(a){return <Option key={a} value={a}>{a}</Option>})
+    return Array.from(partidos).map(function(a) {
+      return (
+        <Option key={a} value={a}>
+          {a}
+        </Option>
+      );
+    });
   }
-
 }
 
 export default DeputadosContainer;
