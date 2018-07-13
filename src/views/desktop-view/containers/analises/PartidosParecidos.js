@@ -22,7 +22,7 @@ class PartidosParecidos extends Component {
 
     let grafoPartidos = (
       <NetworkFrame
-        size={[600, 500]}
+        size={[500, 500]}
         edges={edgeList}
         nodes={nodeList}
         nodeStyle={d => ({ fill: d.color })}
