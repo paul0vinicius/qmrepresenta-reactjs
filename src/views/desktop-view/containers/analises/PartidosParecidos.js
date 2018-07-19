@@ -26,12 +26,11 @@ class PartidosParecidos extends Component {
         edges={edgeList}
         nodes={nodeList}
         nodeStyle={d => ({ fill: d.color })}
-        edgeStyle={{ stroke: "gray" }}
+        edgeStyle={{ stroke: "#D8D8D8" }}
         networkType={{ type: "force", iterations: 500, edgeStrength: 0.1 }}
         edgeType={"none"}
-        nodeSizeAccessor={d => d.degree + 2}
+        nodeSizeAccessor={d => 10}
         nodeLabels={true}
-        hoverAnnotation={true}
         annotationSettings={{
           pointSizeFunction: d => (d.subject && d.subject.radius) || 5,
           labelSizeFunction: noteData => {
