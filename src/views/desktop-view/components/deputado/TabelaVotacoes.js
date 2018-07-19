@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Table, Icon, Divider } from "antd";
 import nomeVotacoes from "../../../../data/nomes_votacoes.json";
-import "./tabelavotacoes.css";
+import "../../css/tabelavotacoes.css";
 
 const colunas = [
   {
