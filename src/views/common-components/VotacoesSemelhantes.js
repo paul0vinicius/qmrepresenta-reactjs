@@ -35,7 +35,7 @@ class VotacoesSemelhantes extends Component {
         <Tooltip
           title={
             "Votações semelhantes entre você e " +
-            this.props.nomeDeputado +
+            this.props.nomeDeputadoOuPartido +
             ". Clique para ver mais detalhes."
           }
         >
