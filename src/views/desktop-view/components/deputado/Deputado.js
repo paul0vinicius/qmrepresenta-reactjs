@@ -107,6 +107,7 @@ class Deputado extends Component {
             <VotacoesSemelhantes
               buttonName={buttonName}
               modalTitle={modalTitle}
+              nomeDeputadoOuPartido={this.props.nome}
               content={content}
             />
           </Col>

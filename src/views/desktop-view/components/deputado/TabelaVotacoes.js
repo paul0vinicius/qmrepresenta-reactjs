@@ -1,22 +1,20 @@
 import React, { Component } from "react";
 import { Table, Icon, Divider } from "antd";
 import nomeVotacoes from "../../../../data/nomes_votacoes.json";
+import "../../css/tabelavotacoes.css";
 
 const colunas = [
   {
     title: "Votações",
-    dataIndex: "pergunta",
-    key: "id_votacao"
+    dataIndex: "pergunta"
   },
   {
     title: "Seus votos",
-    dataIndex: "voto_usuario",
-    key: "voto_usuario"
+    dataIndex: "voto_usuario"
   },
   {
     title: "Votos do deputado",
-    dataIndex: "voto_deputado",
-    key: "voto_deputado"
+    dataIndex: "voto_deputado"
   }
 ];
 
@@ -60,6 +58,13 @@ class TabelaVotacoes extends Component {
     return (
       <div>
         <Table
+          rowKey={record => record.key}
+          rowClassName={function(rec, ind) {
+            if (rec.voto_usuario === "Não votou") return "nao-votou";
+            else if (rec.voto_deputado === "Não votou") return "dep-nao-votou";
+            else if (rec.voto_deputado === rec.voto_usuario) return "iguais";
+            else return "diferentes";
+          }}
           columns={colunas}
           dataSource={dadosVotacoes}
           size="small"

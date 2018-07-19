@@ -18,7 +18,8 @@ import ThumbUp from "material-ui-icons/ThumbUp";
 const cardStyle = {
   overflowY: "scroll",
   height: "78vh",
-  backgroundColor: "#DBDBDB"
+  padding: "2vw"
+  //backgroundColor: "#DBDBDB"
   //width: "50vw",
   //left: "10vw"
 };

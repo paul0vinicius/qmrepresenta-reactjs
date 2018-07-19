@@ -40,8 +40,8 @@ const deputadosGridStyle = {
 
 const mainGridStyle = {
   //height: "100vh",
-  overflowY: "hidden",
-  overflowX: "hidden"
+  //overflowY: "hidden"
+  // overflowX: "hidden"
 };
 
 const a = {
@@ -49,8 +49,8 @@ const a = {
   top: "0",
   left: "0",
   width: "100%",
-  height: "50%",
-  backgroundColor: "#51269C"
+  height: "50%"
+  //backgroundColor: "#5dff98"
 };
 
 const appBarStyle = {
@@ -68,8 +68,8 @@ const b = {
   top: "50%",
   left: "0",
   width: "100%",
-  height: "50%",
-  backgroundColor: "#1D6B91"
+  height: "50%"
+  //backgroundColor: "#ff5dc4"
 };
 
 class MainContainer extends Component {
@@ -196,8 +196,9 @@ class MainContainer extends Component {
                 style={{
                   position: "sticky",
                   width: "80vw",
-                  left: "10vw",
-                  marginTop: "15px"
+                  height: "9vh",
+                  left: "10vw"
+                  //marginTop: "15px"
                 }}
               >
                 <img
@@ -206,6 +207,7 @@ class MainContainer extends Component {
                 />
               </Header>
               <Content>{navigationBar}</Content>
+              <Footer />
             </Layout>
           </Col>
         </Row>

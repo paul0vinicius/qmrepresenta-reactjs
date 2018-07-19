@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import { Modal, Button } from "antd";
+import { Tooltip } from "antd";
+
+import Helmet from "react-helmet";
+
+//import styles from "./votacoes-semelhantes.css";
 
 class VotacoesSemelhantes extends Component {
   state = { visible: false };
@@ -27,7 +32,17 @@ class VotacoesSemelhantes extends Component {
   render() {
     return (
       <div>
-        <Button onClick={this.showModal}>{this.props.buttonName}</Button>
+        <Tooltip
+          title={
+            "Votações semelhantes entre você e " +
+            this.props.nomeDeputadoOuPartido +
+            ". Clique para ver mais detalhes."
+          }
+        >
+          <Button type="primary" ghost onClick={this.showModal}>
+            {this.props.buttonName}
+          </Button>
+        </Tooltip>
         <Modal
           title={this.props.modalTitle}
           visible={this.state.visible}

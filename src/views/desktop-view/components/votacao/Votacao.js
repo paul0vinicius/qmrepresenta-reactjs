@@ -15,6 +15,8 @@ import ControlledExpansionPanels from "./ExpansionPanel.js";
 import Card from "material-ui/Card";
 //import Button from '@material-ui/core/Button';
 
+import "./votacao.css";
+
 import { Row, Col } from "antd";
 import { Button, Radio, Icon } from "antd";
 import { Collapse } from "antd";
@@ -26,28 +28,35 @@ const voto = {
   NAO_SEI: 0
 };
 
+const COLOR_NAO = "#9b5dff";
+const COLOR_SIM = "#c4ff5d";
+
 const votoStyle = {
   //width: '40vh',
   margin: "5px"
 };
 
 const botaoSimStyle = {
-  //position: 'absolute',
-  //top:'10vh',
-  //left:'2vh',
-  backgroundColor: "#1D6B91",
+  //position: "relative",
+  //top: "1vh",
+  //left: "2vh",
+  backgroundColor: COLOR_SIM,
   display: "flex",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
+  textAlign: "center"
 };
 const botaoNaoStyle = {
-  //position: 'absolute',
-  //top:'10vh',
+  position: "relative",
+  //top: "50%",
   //left:'57vh',
-  backgroundColor: "#51269C",
-  display: "flex",
+  backgroundColor: COLOR_NAO,
+  //display: "inline",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
+  textAlign: "center",
+  verticalAlign: "middle"
+  //transform: `translateY(50%)`
 };
 
 /**
@@ -71,10 +80,10 @@ class Votacao extends Component {
   colorPicker() {
     switch (this.state.value) {
       case 1:
-        return "#1D6B91";
+        return COLOR_SIM;
         break;
       case -1:
-        return "#51269C";
+        return COLOR_NAO;
         break;
       default:
         return "#DBDBDB";
@@ -108,25 +117,44 @@ class Votacao extends Component {
         <Panel
           header={this.props.pergunta}
           key={this.props.key}
-          showArrow={false}
+          //showArrow={false}
           style={{ backgroundColor: this.colorPicker() }}
         >
-          <p>{this.props.descricao}</p>
+          <div style={{ backgroundColor: this.colorPicker() }}>
+            {this.props.descricao}
+          </div>
         </Panel>
       </Collapse>
     );
 
     return (
-      <div style={votoStyle}>
+      <div
+        style={{
+          backgroundColor: this.colorPicker(),
+          margin: "2px"
+        }}
+      >
         <Row>
-          <Col offset={1} span={1} style={botaoSimStyle}>
-            <Button icon="like-o" onClick={this.votaSim.bind(this)} />
+          <Col offset={1} span={1} style={{ position: "relative", top: "1vh" }}>
+            <Button
+              icon="like-o"
+              onClick={this.votaSim.bind(this)}
+              style={{ backgroundColor: COLOR_SIM }}
+            />
           </Col>
-          <Col offset={1} span={18}>
-            {newPainel}
+          <Col offset={1} span={18} style={{ textAlign: "center" }}>
+            <div>{newPainel}</div>
           </Col>
-          <Col offset={1} span={1} style={botaoNaoStyle}>
-            <Button icon="dislike-o" onClick={this.votaNao.bind(this)} />
+          <Col
+            offset={1}
+            span={1}
+            style={{ position: "relative", top: "1vh", left: "-1vw" }}
+          >
+            <Button
+              icon="dislike-o"
+              onClick={this.votaNao.bind(this)}
+              style={{ backgroundColor: COLOR_NAO }}
+            />
           </Col>
         </Row>
       </div>

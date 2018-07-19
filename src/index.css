@@ -8,7 +8,7 @@ body {
   opacity: 0.01;
 }
 
-.anim-appear.anim-appear-active{
+.anim-appear.anim-appear-active {
   opacity: 2;
   transition: opacity 2s ease-in;
 }

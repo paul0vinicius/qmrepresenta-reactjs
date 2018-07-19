@@ -1,0 +1,15 @@
+.iguais {
+  background: #c4ff5d;
+}
+
+.diferentes {
+  background: #9b5dff;
+}
+
+.nao-votou {
+  background: white;
+}
+
+.dep-nao-votou {
+  background: #8c8c8c;
+}

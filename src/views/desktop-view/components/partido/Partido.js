@@ -93,6 +93,7 @@ class Partido extends Component {
           <Col offset={1} span={8} style={{ textAlign: "left" }}>
             <VotacoesSemelhantes
               buttonName={buttonName}
+              nomeDeputadoOuPartido={this.props.sigla}
               modalTitle={modalTitle}
               content={content}
             />
