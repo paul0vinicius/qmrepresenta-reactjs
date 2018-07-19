@@ -61,6 +61,13 @@ class PartidosContainer extends Component {
     );
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      JSON.stringify(this.scorePartidos) !==
+      JSON.stringify(nextProps.scorePartidos)
+    );
+  }
+
   getVotacoesPartidos() {
     let todasVotacoes = {};
     for (let i = 0; i < infoPartidos.length; i++) {
