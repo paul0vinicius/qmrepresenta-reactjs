@@ -1,0 +1,26 @@
+.ant-collapse-content > .ant-collapse-content-box {
+  padding: 0px;
+}
+
+/* .ant-collapse > .ant-collapse-item > .ant-collapse-header .arrow {
+  top: 40px;
+  left: 8vw;
+} */
+
+/* .ant-collapse
+  > .ant-collapse-item
+  > .ant-collapse-header[aria-expanded="true"]
+  .arrow {
+  transform: rotate(270deg);
+}
+
+.ant-collapse
+  > .ant-collapse-item
+  > .ant-collapse-header[aria-expanded="false"]
+  .arrow {
+  transform: rotate(90deg);
+} */
+
+/* .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 12px 0px 20px 0px;
+} */
