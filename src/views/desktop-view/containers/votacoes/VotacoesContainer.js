@@ -16,14 +16,16 @@ import Typography from "material-ui/Typography";
 import ExpandMoreIcon from "material-ui-icons/ExpandMore";
 import ThumbUp from "material-ui-icons/ThumbUp";
 
+import "./votacoes-container.css";
+
 import { Collapse } from "antd";
 const Panel = Collapse.Panel;
 
 const cardStyle = {
   overflowY: "scroll",
   height: "78vh",
-  padding: "2vw"
-  //backgroundColor: "#DBDBDB"
+  padding: "2vw",
+  backgroundColor: "#f5f4f1"
   //width: "50vw",
   //left: "10vw"
 };
@@ -31,24 +33,6 @@ const cardStyle = {
 const divStyle = {
   //overflowY: 'scroll'
 };
-
-const styles = theme => ({
-  root: {
-    flexGrow: 1
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    flexBasis: "33.33%",
-    flexShrink: 0
-  },
-  secondaryHeading: {
-    fontSize: theme.typography.pxToRem(15),
-    color: theme.palette.text.secondary
-  },
-  voting: {
-    //backgroundColor: (${})
-  }
-});
 
 class VotacoesContainer extends Component {
   constructor(props) {
@@ -74,19 +58,6 @@ class VotacoesContainer extends Component {
     const { classes } = this.props;
     const { expanded } = this.state;
 
-    let painel = (
-      <Collapse
-        accordion
-        bordered={false}
-        defaultActiveKey={["1"]}
-        style={{ textAlign: "left" }}
-      >
-        <Panel header={"Educação"} key={1}>
-          <div>Votação 1</div>
-        </Panel>
-      </Collapse>
-    );
-
     let paineisVotacoes = votacoesTema
       .sort((a, b) => ("" + a.tema).localeCompare(b.tema))
       .map((elem, index) => {
@@ -107,7 +78,7 @@ class VotacoesContainer extends Component {
             accordion
             bordered={false}
             defaultActiveKey={[index + ""]}
-            style={{ textAlign: "left" }}
+            className="tema"
           >
             <Panel header={elem.tema} key={index}>
               {votacoesPorTema}
@@ -117,7 +88,7 @@ class VotacoesContainer extends Component {
       });
 
     return (
-      <div className={styles.root}>
+      <div>
         <Card style={cardStyle}>{paineisVotacoes}</Card>
       </div>
     );
