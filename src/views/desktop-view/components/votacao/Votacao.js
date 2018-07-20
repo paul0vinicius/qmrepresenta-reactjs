@@ -28,8 +28,8 @@ const voto = {
   NAO_SEI: 0
 };
 
-const COLOR_NAO = "#9b5dff";
-const COLOR_SIM = "#c4ff5d";
+const COLOR_NAO = "#966fd6";
+const COLOR_SIM = "#4682B4";
 
 const votoStyle = {
   //width: '40vh',
