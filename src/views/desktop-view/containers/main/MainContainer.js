@@ -15,6 +15,8 @@ import AnalisesContainer from "../analises/AnalisesContainer.js";
 import AboutContainer from "../about/AboutContainer.js";
 import FacebookContainer from "../facebook/FacebookContainer.js";
 import nomesVotacoes from "../../../../data/nomes_votacoes.json";
+
+import { Icon } from "antd";
 import { Tabs } from "antd";
 
 import { Row, Col } from "antd";
@@ -42,6 +44,7 @@ const mainGridStyle = {
   //height: "100vh",
   //overflowY: "hidden"
   // overflowX: "hidden"
+  //backgroundColor: "black"
 };
 
 const a = {
@@ -49,8 +52,8 @@ const a = {
   top: "0",
   left: "0",
   width: "100%",
-  height: "50%"
-  //backgroundColor: "#5dff98"
+  height: "100%",
+  backgroundColor: "#3a3f44"
 };
 
 const appBarStyle = {
@@ -134,7 +137,7 @@ class MainContainer extends Component {
       <Tabs
         defaultActiveKey="1"
         style={{
-          backgroundColor: "#DBDBDB",
+          backgroundColor: "#f1f2f5",
           position: "absolute"
         }}
       >
@@ -166,7 +169,7 @@ class MainContainer extends Component {
     var navigationBar = (
       <Tabs
         defaultActiveKey="1"
-        style={{ width: "80vw", left: "10vw", backgroundColor: "white" }}
+        style={{ width: "80vw", left: "10vw", backgroundColor: "#f1f2f5" }}
       >
         <TabPane tab="Home" key="1">
           {homeContainer}
@@ -188,7 +191,6 @@ class MainContainer extends Component {
         <Row>
           <Col>
             <div style={a} />
-            <div style={b} />
           </Col>
           <Col>
             <Layout>
@@ -197,8 +199,8 @@ class MainContainer extends Component {
                   position: "sticky",
                   width: "80vw",
                   height: "9vh",
-                  left: "10vw"
-                  //marginTop: "15px"
+                  left: "10vw",
+                  marginTop: "15px"
                 }}
               >
                 <img
@@ -207,7 +209,21 @@ class MainContainer extends Component {
                 />
               </Header>
               <Content>{navigationBar}</Content>
-              <Footer />
+              <Footer>
+                <Row>Quem Me Representa?&copy; {new Date().getFullYear()}</Row>
+                <Row>
+                  <Col offset={11} span={1}>
+                    <a href="https://github.com/paul0vinicius/qmrepresenta-reactjs">
+                      <Icon type="github" />
+                    </a>
+                  </Col>
+                  <Col span={1}>
+                    <a href="https://www.facebook.com/quemmerepresenta/">
+                      <Icon type="facebook" />
+                    </a>
+                  </Col>
+                </Row>
+              </Footer>
             </Layout>
           </Col>
         </Row>
