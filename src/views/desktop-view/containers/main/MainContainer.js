@@ -42,7 +42,7 @@ const deputadosGridStyle = {
 
 const mainGridStyle = {
   //height: "100vh",
-  //overflowY: "hidden"
+  overflowY: "hidden"
   // overflowX: "hidden"
   //backgroundColor: "black"
 };
@@ -158,11 +158,7 @@ class MainContainer extends Component {
       </Row>
     );
 
-    var analisesContainer = (
-      <Card>
-        <AnalisesContainer />
-      </Card>
-    );
+    var analisesContainer = <AnalisesContainer />;
     var facebookContainer = <FacebookContainer />;
     var aboutContainer = <AboutContainer />;
 
@@ -175,13 +171,17 @@ class MainContainer extends Component {
           {homeContainer}
         </TabPane>
         <TabPane tab="Análises" key="2">
-          {analisesContainer}
+          <Card style={{ overflowY: "scroll" }}>{analisesContainer}</Card>
         </TabPane>
         <TabPane tab="Contato" key="3">
-          {facebookContainer}
+          <Card style={{ height: "72vh", overflowY: "scroll" }}>
+            {facebookContainer}
+          </Card>
         </TabPane>
         <TabPane tab="Sobre" key="4">
-          {aboutContainer}
+          <Card style={{ height: "72vh", overflowY: "scroll" }}>
+            {aboutContainer}
+          </Card>
         </TabPane>
       </Tabs>
     );
@@ -198,7 +198,7 @@ class MainContainer extends Component {
                 style={{
                   position: "sticky",
                   width: "80vw",
-                  height: "9vh",
+                  height: "160",
                   left: "10vw",
                   marginTop: "15px"
                 }}
@@ -209,7 +209,15 @@ class MainContainer extends Component {
                 />
               </Header>
               <Content>{navigationBar}</Content>
-              <Footer>
+              <Footer
+                className="footer fixed-bottom"
+                style={{
+                  width: "80vw",
+                  height: "70px",
+                  left: "10vw",
+                  marginBottom: "15px"
+                }}
+              >
                 <Row>Quem Me Representa?&copy; {new Date().getFullYear()}</Row>
                 <Row>
                   <Col offset={11} span={1}>
