@@ -23,7 +23,8 @@ const Panel = Collapse.Panel;
 
 const cardStyle = {
   overflowY: "scroll",
-  height: "78vh",
+  height: "72vh",
+  position: "relative",
   padding: "2vw",
   backgroundColor: "#f5f4f1"
   //width: "50vw",
@@ -75,7 +76,8 @@ class VotacoesContainer extends Component {
 
         return (
           <Collapse
-            accordion
+            key={index}
+            accordion={true}
             bordered={false}
             defaultActiveKey={[index + ""]}
             className="tema"

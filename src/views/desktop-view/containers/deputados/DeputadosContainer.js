@@ -25,7 +25,7 @@ const Option = Select.Option;
 const cardStyle = {
   flexGrow: 1,
   overflowY: "scroll",
-  height: "68vh",
+  height: "72vh",
   //overflowX: 'hidden',
   //height: '90vh',
   position: "relative",
