@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { withStyles } from 'material-ui/styles';
-import Avatar from 'material-ui/Avatar';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import { withStyles } from "material-ui/styles";
+import Avatar from "material-ui/Avatar";
 
 const styles = {
   row: {
@@ -14,17 +14,17 @@ const styles = {
   avatar: {
     //marginTop: '1.8vh',
     //marginLeft: '1.8vh',
-    border: '2px solid blue',
+    border: "2px solid blue",
+    cursor: "pointer"
   },
   bigAvatar: {
     width: 60,
-    height: 60,
-  },
+    height: 60
+  }
 };
 
-class ImageAvatar extends Component{
-
-  render(){
+class ImageAvatar extends Component {
+  render() {
     const { classes } = this.props;
     return (
       <div className={classes.row}>
@@ -36,11 +36,10 @@ class ImageAvatar extends Component{
       </div>
     );
   }
-
 }
 
 ImageAvatar.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(ImageAvatar);
