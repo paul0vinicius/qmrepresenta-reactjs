@@ -14,6 +14,9 @@ import { Avatar } from "antd";
 import { Button } from "antd";
 import { Progress } from "antd";
 
+import { Modal } from "antd";
+import { Tooltip } from "antd";
+
 const styles = {
   height: "0.4vh"
 };
@@ -49,6 +52,7 @@ class Partido extends Component {
   constructor(props) {
     super(props);
     this.nVotosUsuario = 0;
+    this.state = { visible: false };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -56,6 +60,30 @@ class Partido extends Component {
       (elem, index, arr) => nextProps.votosUsuario[elem] !== 0
     ).length;
   }
+
+  onAvatarClick(e) {
+    e.preventDefault();
+    this.showModal();
+  }
+  showModal = () => {
+    this.setState({
+      visible: true
+    });
+  };
+
+  handleOk = e => {
+    console.log(e);
+    this.setState({
+      visible: false
+    });
+  };
+
+  handleCancel = e => {
+    console.log(e);
+    this.setState({
+      visible: false
+    });
+  };
 
   render() {
     let linearProgress = (
@@ -81,9 +109,34 @@ class Partido extends Component {
     return (
       <div className="Partido">
         <Row>
-          <Col offset={5} span={3} style={{ top: "10px" }}>
-            <ImageAvatar src={this.props.foto} />
-          </Col>
+          <Tooltip
+            arrowPointAtCenter={true}
+            title={
+              "Votações semelhantes entre você e " +
+              this.props.nome +
+              ". Clique para ver mais detalhes."
+            }
+          >
+            <Col
+              offset={5}
+              span={3}
+              style={{ top: "10px" }}
+              onClick={this.onAvatarClick.bind(this)}
+            >
+              <ImageAvatar src={this.props.foto} />
+            </Col>
+          </Tooltip>
+
+          <Modal
+            title={modalTitle}
+            visible={this.state.visible}
+            style={{ top: 10 }}
+            onOk={this.handleOk}
+            onCancel={this.handleCancel}
+            footer={[]}
+          >
+            {content}
+          </Modal>
           <Col offset={1} span={8}>
             <Progress
               percent={Math.round(this.props.score * 100)}
@@ -91,12 +144,7 @@ class Partido extends Component {
             />{" "}
           </Col>
           <Col offset={1} span={8} style={{ textAlign: "left" }}>
-            <VotacoesSemelhantes
-              buttonName={buttonName}
-              nomeDeputadoOuPartido={this.props.sigla}
-              modalTitle={modalTitle}
-              content={content}
-            />
+            {buttonName}
           </Col>
           <Col offset={1} span={12} style={{ textAlign: "left" }}>
             {this.props.nome}
