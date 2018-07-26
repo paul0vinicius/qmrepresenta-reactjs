@@ -140,7 +140,6 @@ class Deputado extends Component {
               span={3}
               style={{ top: "10px" }}
               onClick={this.onAvatarClick.bind(this)}
-              onMouseOver={this.onMouseOver.bind(this)}
             >
               <ImageAvatar src={this.props.foto} />
             </Col>
