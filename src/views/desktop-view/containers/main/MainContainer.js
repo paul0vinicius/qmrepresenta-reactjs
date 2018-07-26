@@ -52,8 +52,8 @@ const a = {
   top: "0",
   left: "0",
   width: "100%",
-  height: "100%",
-  backgroundColor: "#3a3f44"
+  height: "50%",
+  backgroundColor: "rgba(81, 38, 156, 0.3)"
 };
 
 const appBarStyle = {
@@ -71,8 +71,8 @@ const b = {
   top: "50%",
   left: "0",
   width: "100%",
-  height: "50%"
-  //backgroundColor: "#ff5dc4"
+  height: "50%",
+  backgroundColor: "rgba(29, 107, 145, 0.3)"
 };
 
 class MainContainer extends Component {
@@ -171,7 +171,9 @@ class MainContainer extends Component {
           {homeContainer}
         </TabPane>
         <TabPane tab="Análises" key="2">
-          <Card style={{ overflowY: "scroll" }}>{analisesContainer}</Card>
+          <Card style={{ height: "72vh", overflowY: "scroll" }}>
+            {analisesContainer}
+          </Card>
         </TabPane>
         <TabPane tab="Contato" key="3">
           <Card style={{ height: "72vh", overflowY: "scroll" }}>
@@ -191,6 +193,7 @@ class MainContainer extends Component {
         <Row>
           <Col>
             <div style={a} />
+            <div style={b} />
           </Col>
           <Col>
             <Layout>
@@ -210,27 +213,30 @@ class MainContainer extends Component {
               </Header>
               <Content>{navigationBar}</Content>
               <Footer
-                className="footer fixed-bottom"
+                className="footer"
                 style={{
+                  backgroundColor: "white",
                   width: "80vw",
-                  height: "70px",
+                  height: "60px",
                   left: "10vw",
-                  marginBottom: "15px"
+                  textAlign: "center",
+                  marginBottom: "15px",
+                  position: "relative"
                 }}
               >
-                <Row>Quem Me Representa?&copy; {new Date().getFullYear()}</Row>
-                <Row>
-                  <Col offset={11} span={1}>
-                    <a href="https://github.com/paul0vinicius/qmrepresenta-reactjs">
-                      <Icon type="github" />
-                    </a>
-                  </Col>
-                  <Col span={1}>
-                    <a href="https://www.facebook.com/quemmerepresenta/">
-                      <Icon type="facebook" />
-                    </a>
-                  </Col>
-                </Row>
+                Quem Me Representa?&copy; {new Date().getFullYear()}
+                <a
+                  href="https://github.com/paul0vinicius/qmrepresenta-reactjs"
+                  target="_blank"
+                >
+                  <Icon type="github" style={{ marginLeft: "1em" }} />
+                </a>
+                <a
+                  href="https://www.facebook.com/quemmerepresenta/"
+                  target="_blank"
+                >
+                  <Icon type="facebook" style={{ marginLeft: "1em" }} />
+                </a>
               </Footer>
             </Layout>
           </Col>
