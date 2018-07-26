@@ -132,7 +132,8 @@ class Votacao extends Component {
       <div
         style={{
           backgroundColor: this.colorPicker(),
-          margin: "2px"
+          margin: "2px",
+          borderRadius: "0.3em"
         }}
       >
         <Row>
