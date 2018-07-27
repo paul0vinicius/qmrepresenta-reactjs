@@ -14,21 +14,21 @@ class Equipe extends Component {
           <div className="row">
             <Membro
               nome="Andryw Marques"
-              foto="https://avatars2.githubusercontent.com/u/6682687?s=460&v=4"
+              foto="https://avatars2.githubusercontent.com/u/6682687"
               facebook="https://www.facebook.com/andrywmr"
               github="https://github.com/andryw"
               linkedin="https://www.linkedin.com/in/andryw/"
             />
             <Membro
               nome="Igleson Freire"
-              foto="https://avatars0.githubusercontent.com/u/2916896?s=460&v=4"
+              foto="https://avatars0.githubusercontent.com/u/2916896"
               facebook="https://www.facebook.com/igleson.freire"
               github="https://github.com/igleson"
               linkedin="https://www.linkedin.com/in/igleson/"
             />
             <Membro
               nome="João Arthur"
-              foto="https://avatars0.githubusercontent.com/u/5099338?s=460&v=4"
+              foto="https://avatars1.githubusercontent.com/u/5099338"
               facebook="https://www.facebook.com/joaoarthurbm"
               github="https://github.com/joaoarthurbm"
               linkedin=""
@@ -42,14 +42,14 @@ class Equipe extends Component {
             />
             <Membro
               nome="Paulo Soares"
-              foto="https://avatars0.githubusercontent.com/u/9946330?s=460&v=4"
+              foto="https://avatars0.githubusercontent.com/u/9946330"
               facebook="https://www.facebook.com/1bibiu"
               github="https://github.com/paul0vinicius"
               linkedin="https://linkedin.com/in/paulo-vinícius-soares-896909a1/"
             />
             <Membro
               nome="Rodolfo Viana"
-              foto="https://avatars3.githubusercontent.com/u/472331?s=460&v=4"
+              foto="https://avatars3.githubusercontent.com/u/472331"
               facebook="https://www.facebook.com/rodolfoo.viana"
               github="https://github.com/RodolfoViana"
               linkedin="https://www.linkedin.com/in/rodolfooviana/"
