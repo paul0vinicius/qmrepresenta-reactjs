@@ -13,7 +13,7 @@ const cardStyle = {
   //overflowX: 'hidden',
   height: "72vh",
   position: "relative",
-  backgroundColor: "#DBDBDB"
+  backgroundColor: "#f5f4f1"
   //width:'2000vh',
   //marginLeft: '7vh',
   //marginRight: '15vh'

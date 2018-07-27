@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { NetworkFrame } from "semiotic";
-import Typography from "@material-ui/core/Typography";
+//import Typography from "@material-ui/core/Typography";
 import graficoAnalise from "../../../../images/partidos_similares.png";
 import dadosGrafos from "../../../../data/partidos_semelhantes.json";
 
 import { Row, Col } from "antd";
+import { Divider } from "antd";
 
 class PartidosParecidos extends Component {
   render() {
@@ -42,16 +43,19 @@ class PartidosParecidos extends Component {
 
     return (
       <div style={{ textAlign: "left" }}>
-        <Typography variant="headline">Partidos mais parecidos</Typography>
-        <div style={{ flexFlow: 1 }}>
+        <Divider orientation="left">
+          <h2>Partidos mais parecidos</h2>
+        </Divider>
+
+        <div style={{ flexFlow: 1, marginLeft: "50px" }}>
           <Row>
             <Col span={14}>
               {/*<img src={graficoAnalise} alt="" />*/}
               {grafoPartidos}
             </Col>
             <Col span={10}>
-              <Typography variant="body2">Como o grafico foi feito?</Typography>
-              <ul>
+              <h3 variant="body2">Como o grafico foi feito?</h3>
+              <ul className="text-justify">
                 <li>
                   As análises foram feitas baseadas nas votações presentes no
                   Quem me representa.
@@ -68,33 +72,25 @@ class PartidosParecidos extends Component {
                   pelo menos 75% das votações eles concordam.
                 </li>
               </ul>
-              <Typography variant="body2">Discussão</Typography>
+              <h3 variant="body2">Discussão</h3>
               Dá para notar claramente 5 grupos:
-              <ol>
+              <ol className="text-justify">
                 <li>
-                  <b>
-                    <u> O grupo da esquerda (vermelho)</u>
-                  </b>, formado pelo PT, Rede, PSOL, PCdoB e PDT. Este grupo
-                  está desconectado dos demais partidos. Porém internamente ele
-                  não é tão coeso, que mostra que cada partido de esquerda tem
-                  sua bandeira.
+                  <b>O grupo da esquerda (vermelho)</b>, formado pelo PT, Rede,
+                  PSOL, PCdoB e PDT. Este grupo está desconectado dos demais
+                  partidos. Porém internamente ele não é tão coeso, que mostra
+                  que cada partido de esquerda tem sua bandeira.
                 </li>
                 <li>
-                  O grupo verde é formado por{" "}
-                  <b>
-                    <u> partidos menores</u>
-                  </b>. Este grupo é bem coeso, mostrando que eles votam de
-                  forma quase igual
+                  O grupo verde é formado por
+                  <b> partidos menores</b>. Este grupo é bem coeso, mostrando
+                  que eles votam de forma quase igual
                 </li>
                 <li>
-                  <b>
-                    <u> O grupo laranja é o grupo formado pelo PMDB </u>
-                  </b>.
+                  <b> O grupo laranja é o grupo formado pelo PMDB</b>.
                 </li>
                 <li>
-                  <b>
-                    <u> O grupo azul é o grupo do PSDB</u>
-                  </b>{" "}
+                  <b>O grupo azul é o grupo do PSDB </b>
                   (junto com solidariedade e DEM). Como em boa parte do período
                   2015-2018 o PSDB foi oposição, enquanto o PMDB era situação,
                   ele está um pouco afastado do grupo do PMDB. O partido que
@@ -103,10 +99,8 @@ class PartidosParecidos extends Component {
                 <li>
                   Os partidos em preto são os que{" "}
                   <b>
-                    <u>
-                      não tiveram concordância de pelo menos 75% das votações
-                      com nenhum outro partido{" "}
-                    </u>
+                    não tiveram concordância de pelo menos 75% das votações com
+                    nenhum outro partido
                   </b>.
                 </li>
               </ol>

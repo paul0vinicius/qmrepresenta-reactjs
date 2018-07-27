@@ -15,6 +15,8 @@ import AnalisesContainer from "../analises/AnalisesContainer.js";
 import AboutContainer from "../about/AboutContainer.js";
 import FacebookContainer from "../facebook/FacebookContainer.js";
 import nomesVotacoes from "../../../../data/nomes_votacoes.json";
+
+import { Icon } from "antd";
 import { Tabs } from "antd";
 
 import { Row, Col } from "antd";
@@ -40,8 +42,9 @@ const deputadosGridStyle = {
 
 const mainGridStyle = {
   //height: "100vh",
-  //overflowY: "hidden"
+  overflowY: "hidden"
   // overflowX: "hidden"
+  //backgroundColor: "black"
 };
 
 const a = {
@@ -49,8 +52,8 @@ const a = {
   top: "0",
   left: "0",
   width: "100%",
-  height: "50%"
-  //backgroundColor: "#5dff98"
+  height: "50%",
+  backgroundColor: "rgba(81, 38, 156, 0.3)"
 };
 
 const appBarStyle = {
@@ -68,8 +71,8 @@ const b = {
   top: "50%",
   left: "0",
   width: "100%",
-  height: "50%"
-  //backgroundColor: "#ff5dc4"
+  height: "50%",
+  backgroundColor: "rgba(29, 107, 145, 0.3)"
 };
 
 class MainContainer extends Component {
@@ -134,7 +137,7 @@ class MainContainer extends Component {
       <Tabs
         defaultActiveKey="1"
         style={{
-          backgroundColor: "#DBDBDB",
+          backgroundColor: "#f1f2f5",
           position: "absolute"
         }}
       >
@@ -155,30 +158,32 @@ class MainContainer extends Component {
       </Row>
     );
 
-    var analisesContainer = (
-      <Card>
-        <AnalisesContainer />
-      </Card>
-    );
+    var analisesContainer = <AnalisesContainer />;
     var facebookContainer = <FacebookContainer />;
     var aboutContainer = <AboutContainer />;
 
     var navigationBar = (
       <Tabs
         defaultActiveKey="1"
-        style={{ width: "80vw", left: "10vw", backgroundColor: "white" }}
+        style={{ width: "80vw", left: "10vw", backgroundColor: "#f1f2f5" }}
       >
         <TabPane tab="Home" key="1">
           {homeContainer}
         </TabPane>
         <TabPane tab="Análises" key="2">
-          {analisesContainer}
+          <Card style={{ height: "72vh", overflowY: "scroll" }}>
+            {analisesContainer}
+          </Card>
         </TabPane>
         <TabPane tab="Contato" key="3">
-          {facebookContainer}
+          <Card style={{ height: "72vh", overflowY: "scroll" }}>
+            {facebookContainer}
+          </Card>
         </TabPane>
         <TabPane tab="Sobre" key="4">
-          {aboutContainer}
+          <Card style={{ height: "72vh", overflowY: "scroll" }}>
+            {aboutContainer}
+          </Card>
         </TabPane>
       </Tabs>
     );
@@ -196,9 +201,9 @@ class MainContainer extends Component {
                 style={{
                   position: "sticky",
                   width: "80vw",
-                  height: "9vh",
-                  left: "10vw"
-                  //marginTop: "15px"
+                  height: "160",
+                  left: "10vw",
+                  marginTop: "15px"
                 }}
               >
                 <img
@@ -207,7 +212,32 @@ class MainContainer extends Component {
                 />
               </Header>
               <Content>{navigationBar}</Content>
-              <Footer />
+              <Footer
+                className="footer"
+                style={{
+                  backgroundColor: "white",
+                  width: "80vw",
+                  height: "60px",
+                  left: "10vw",
+                  textAlign: "center",
+                  marginBottom: "15px",
+                  position: "relative"
+                }}
+              >
+                Quem Me Representa?&copy; {new Date().getFullYear()}
+                <a
+                  href="https://github.com/paul0vinicius/qmrepresenta-reactjs"
+                  target="_blank"
+                >
+                  <Icon type="github" style={{ marginLeft: "1em" }} />
+                </a>
+                <a
+                  href="https://www.facebook.com/quemmerepresenta/"
+                  target="_blank"
+                >
+                  <Icon type="facebook" style={{ marginLeft: "1em" }} />
+                </a>
+              </Footer>
             </Layout>
           </Col>
         </Row>

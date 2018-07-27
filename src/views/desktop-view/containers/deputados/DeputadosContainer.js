@@ -23,13 +23,14 @@ const Search = Input.Search;
 const Option = Select.Option;
 
 const cardStyle = {
-  flexGrow: 1,
+  //flexGrow: 1,
   overflowY: "scroll",
-  height: "68vh",
+  height: "62vh",
   //overflowX: 'hidden',
   //height: '90vh',
   position: "relative",
-  backgroundColor: "#DBDBDB"
+  padding: "2vw",
+  backgroundColor: "#f5f4f1"
   //width:'2000vh',
   //marginLeft: '7vh',
   //marginRight: '15vh'

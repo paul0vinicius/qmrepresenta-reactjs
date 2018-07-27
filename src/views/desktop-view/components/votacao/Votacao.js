@@ -28,8 +28,9 @@ const voto = {
   NAO_SEI: 0
 };
 
-const COLOR_NAO = "#9b5dff";
-const COLOR_SIM = "#c4ff5d";
+const COLOR_SIM = "rgba(29, 107, 145, 0.1)";
+const COLOR_NAO = "rgba(81, 38, 156, 0.1)";
+const COLOR_NAO_SEI = "rgba(219, 219, 219, 0.4)";
 
 const votoStyle = {
   //width: '40vh',
@@ -86,7 +87,7 @@ class Votacao extends Component {
         return COLOR_NAO;
         break;
       default:
-        return "#DBDBDB";
+        return COLOR_NAO_SEI;
     }
   }
 
@@ -131,7 +132,8 @@ class Votacao extends Component {
       <div
         style={{
           backgroundColor: this.colorPicker(),
-          margin: "2px"
+          margin: "2px",
+          borderRadius: "0.3em"
         }}
       >
         <Row>

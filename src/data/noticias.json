@@ -1,0 +1,77 @@
+[
+  {
+    "link":
+      "https://link.estadao.com.br/noticias/inovacao,site-permite-que-eleitor-veja-se-posicoes-de-deputados-federais-batem-com-as-suas,10000029119",
+    "logo":
+      "https://statics.estadao.com.br/s2016/portal/img/sprites/logotipo-2x.png",
+    "titulo":
+      "Site permite que eleitor veja se posições de deputados federais batem com as suas"
+  },
+  {
+    "link":
+      "https://exame.abril.com.br/brasil/quem-me-representa-mostra-deputados-que-votam-como-voce/",
+    "logo":
+      "https://logodownload.org/wp-content/uploads/2018/03/exame-logo-3.png",
+    "titulo": "‘Quem me representa?’ mostra deputados que votam como você"
+  },
+  {
+    "link":
+      "https://www.infomoney.com.br/blogs/fora-do-mercado/blog-da-redacao/post/4212750/voce-votou-direito-site-mostra-qual-deputado-mais-representa-pelas",
+    "logo":
+      "http://www.isee.com.br/wp-content/uploads/2018/03/infomoney-logo.png",
+    "titulo":
+      "Você votou direito? Site mostra qual deputado mais te representa pelas suas posições"
+  },
+  {
+    "link":
+      "https://www.correiobraziliense.com.br/app/noticia/politica/2015/08/05/interna_politica,493473/site-mostra-compatibilidade-entre-sua-opiniao-e-votos-na-camara.shtml",
+    "logo": "https://imgs2.correiobraziliense.com.br/sede/logo_cb.png",
+    "titulo":
+      "Quem te representa? Teste compara ações dos deputados à opinião do eleitor"
+  },
+  {
+    "link":
+      "http://g1.globo.com/pb/paraiba/jpb-1edicao/videos/t/edicoes/v/pesquisadores-lancam-site-para-acompanhar-deputados/4382378/",
+    "logo":
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/G1_logo.svg/500px-G1_logo.svg.png",
+    "titulo": "Pesquisadores lançam site para acompanhar deputados"
+  },
+  {
+    "link":
+      "http://www.gazetadopovo.com.br/blogs/caixa-zero/site-ajuda-a-descobrir-quem-te-representa-na-camara-federal/",
+    "logo":
+      "https://s3-sa-east-1.amazonaws.com/engerey/uploads/artigos/engerey-artigo-77.jpg?1470846032",
+    "titulo": "Site ajuda a descobrir quem te representa na Câmara Federal"
+  },
+  {
+    "link":
+      "https://revistagalileu.globo.com/Sociedade/noticia/2015/08/descubra-quem-sao-os-deputados-que-te-representam-na-camara-federal.html",
+    "logo":
+      "https://e.glbimg.com/og/ed/edg2/static_files/galileu/img/fb-thumb.png",
+    "titulo":
+      "Descubra quem são os deputados que te representam na Câmara Federal"
+  },
+  {
+    "link":
+      "http://radios.ebc.com.br/nacional-jovem/edicao/2015-08/voce-sabe-quais-deputados-te-representam",
+    "logo":
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/EBC_logo.svg/1280px-EBC_logo.svg.png",
+    "titulo": "Você sabe quais deputados te representam?"
+  },
+  {
+    "link":
+      "http://www.verdinha.com.br/noticias/19041/saiba-qual-deputado-representa-suas-ideias-no-congresso-com-ajuda-do-site-quem-me-representa/",
+    "logo":
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/R%C3%A1dio_Verdes_Mares_logo.svg/1200px-R%C3%A1dio_Verdes_Mares_logo.svg.png",
+    "titulo":
+      "Saiba qual deputado representa suas ideias no Congresso com ajuda do site “Quem me representa?”"
+  },
+  {
+    "link":
+      "http://www.diariodepernambuco.com.br/app/noticia/politica/2015/08/05/interna_politica,590819/quem-te-representa-teste-compara-acoes-dos-deputados-a-opiniao-do-eleitor.shtml",
+    "logo":
+      "http://imgsapp.diariodepernambuco.com.br/portlet/673/22409/20180328152721147502e.jpg",
+    "titulo":
+      "Quem te representa? Teste compara ações dos deputados à opinião do eleitor"
+  }
+]
