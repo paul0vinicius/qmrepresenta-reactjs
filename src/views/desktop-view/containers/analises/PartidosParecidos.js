@@ -43,18 +43,21 @@ class PartidosParecidos extends Component {
 
     return (
       <div style={{ textAlign: "left" }}>
-        <Divider orientation="left">
-          <h2>Partidos mais parecidos</h2>
-        </Divider>
-
+        <Row>
+          <Col span={8}>
+            <Divider orientation="left">
+              <h2>Partidos mais parecidos</h2>
+            </Divider>
+          </Col>
+        </Row>
         <div style={{ flexFlow: 1, marginLeft: "50px" }}>
           <Row>
             <Col span={14}>
               {/*<img src={graficoAnalise} alt="" />*/}
-              {grafoPartidos}
+              {/*grafoPartidos*/}
             </Col>
             <Col span={10}>
-              <h3 variant="body2">Como o grafico foi feito?</h3>
+              <h3 variant="body2">Como o gráfico foi feito?</h3>
               <ul className="text-justify">
                 <li>
                   As análises foram feitas baseadas nas votações presentes no
