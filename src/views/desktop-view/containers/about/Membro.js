@@ -8,7 +8,7 @@ export default class Membro extends Component {
         this.props.facebook
       ) : (
         <a href={this.props.facebook} target="_blank">
-          <Icon type="facebook" style={{ marginRight: "1em" }} />
+          <Icon type="facebook" style={{ marginRight: "2px" }} />
         </a>
       );
 
@@ -17,7 +17,7 @@ export default class Membro extends Component {
         this.props.github
       ) : (
         <a href={this.props.github} target="_blank">
-          <Icon type="github" style={{ marginRight: "1em" }} />
+          <Icon type="github" style={{ marginRight: "2px" }} />
         </a>
       );
 
@@ -26,13 +26,13 @@ export default class Membro extends Component {
         this.props.linkedin
       ) : (
         <a href={this.props.linkedin} target="_blank">
-          <Icon type="linkedin" style={{ marginRight: "1em" }} />
+          <Icon type="linkedin" style={{ marginRight: "2px" }} />
         </a>
       );
     return (
-      <div className="col-2 col-md-2">
+      <div className="col-2 col-md-2 col-sm-1">
         <img
-          className="rounded-circle"
+          className="rounded-circle avatar-mobile"
           src={this.props.foto}
           alt=""
           width="120px"
