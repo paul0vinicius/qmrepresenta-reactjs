@@ -11,9 +11,10 @@ import FlipMove from "react-flip-move";
 const cardStyle = {
   overflowY: "scroll",
   //overflowX: 'hidden',
-  height: "72vh",
+  height: "62vh",
   position: "relative",
-  backgroundColor: "#f5f4f1"
+  backgroundColor: "#f5f4f1",
+  padding: "2vw"
   //width:'2000vh',
   //marginLeft: '7vh',
   //marginRight: '15vh'
